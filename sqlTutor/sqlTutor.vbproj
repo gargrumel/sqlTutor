@@ -34,6 +34,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -219,6 +220,8 @@
     <Content Include="Images\Search-64.png" />
     <Content Include="Images\SQL-100.png" />
     <Content Include="Images\sqlLogo.png" />
+    <Content Include="Members\docs.aspx" />
+    <Content Include="Members\topics.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -380,6 +383,7 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="connections.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
@@ -396,6 +400,20 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Members\docs.aspx.designer.vb">
+      <DependentUpon>docs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\docs.aspx.vb">
+      <DependentUpon>docs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\topics.aspx.designer.vb">
+      <DependentUpon>topics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\topics.aspx.vb">
+      <DependentUpon>topics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -462,9 +480,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Members\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

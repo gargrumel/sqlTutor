@@ -21,11 +21,20 @@ Partial Public Class Register
             ' Dim callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request)
             ' manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=""" & callbackUrl & """>here</a>.")
 
+            '*******Inserts registered user into access database
+            Dim c As New connections
+            c.register(Email.Text) 'Email.Text = Value from the Email textBox
+            '***************************************************
+
             signInManager.SignIn(user, isPersistent := False, rememberBrowser := False)
             IdentityHelper.RedirectToReturnUrl(Request.QueryString("ReturnUrl"), Response)
         Else
             ErrorMessage.Text = result.Errors.FirstOrDefault()
         End If
+    End Sub
+
+    Private Sub Register_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Email.Focus()
     End Sub
 End Class
 

@@ -65,7 +65,7 @@ a:focus {
   outline: thin dotted;
 }
 
-a:active,
+a:active, iconItem
 a:hover {
   outline: 0;
 }

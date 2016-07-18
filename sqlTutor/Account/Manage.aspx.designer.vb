@@ -12,4 +12,67 @@ Option Explicit On
 
 
 Partial Public Class Manage
+    
+    '''<summary>
+    '''icon control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents icon As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbCurrentName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbCurrentName As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbCurrentDesc control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbCurrentDesc As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbCurrentStatus control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbCurrentStatus As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbNextLesson control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbNextLesson As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbNextDesc control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbNextDesc As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbRank control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbRank As Global.System.Web.UI.WebControls.Label
 End Class

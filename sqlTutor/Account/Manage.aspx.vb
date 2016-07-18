@@ -8,6 +8,42 @@ Imports Owin
 
 Partial Public Class Manage
     Inherits System.Web.UI.Page
+    Dim queryConn As New connections
+    Dim nextLess As Integer = 0
+
+    Private Sub getLessons()
+        Try
+            queryConn.queryData("SELECT Rank.rn, Lessons.lessName, Lessons.lessDesc, lessonStatus.Status, Lessons.ID
+                                    FROM Users, Rank, Lessons, lessonStatus, userProgress                    
+                                    WHERE (Users.email = '" & User.Identity.GetUserName & "' AND
+                                    Users.userId = userProgress.userId AND userProgress.lessonId = Lessons.ID AND
+                                    userProgress.lessonStatus = lessonStatus.ID AND Users.rankId = Rank.ID)") 'SQL Query
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbCurrentName.Text = r("lessName") 'Sets the results of the query as the values for the respective controls
+                lbCurrentDesc.Text = r("lessDesc")
+                lbCurrentStatus.Text = r("Status")
+                lbRank.Text = r("rn")
+                nextLess = r("ID") + 1 'Retrieves the ID from the current lesson, adds 1 and sets the value to the nextLess variable
+            Next
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub getNextLesson()
+        Try
+            queryConn.queryData("SELECT lessName, lessDesc FROM Lessons WHERE ID = " & nextLess)
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbNextLesson.Text = r("lessName")
+                lbNextDesc.Text = r("lessDesc")
+                nextLess = 0
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Protected Property SuccessMessage() As String
         Get
             Return m_SuccessMessage
@@ -56,6 +92,7 @@ Partial Public Class Manage
     Public Property LoginsCount As Integer
 
     Protected Sub Page_Load() Handles Me.Load
+
         Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
 
         HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()))
@@ -65,9 +102,13 @@ Partial Public Class Manage
 
         TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId())
 
+
         LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count
 
         Dim authenticationManager = HttpContext.Current.GetOwinContext().Authentication
+
+        getLessons()
+        getNextLesson()
 
     End Sub
 
@@ -87,7 +128,7 @@ Partial Public Class Manage
         End If
         Dim userInfo = manager.FindById(User.Identity.GetUserId())
         If userInfo IsNot Nothing Then
-            signInManager.SignIn(userInfo, isPersistent := False, rememberBrowser := False)
+            signInManager.SignIn(userInfo, isPersistent:=False, rememberBrowser:=False)
             Response.Redirect("/Account/Manage?m=RemovePhoneNumberSuccess")
         End If
     End Sub
@@ -106,5 +147,9 @@ Partial Public Class Manage
         manager.SetTwoFactorEnabled(User.Identity.GetUserId(), True)
 
         Response.Redirect("/Account/Manage")
+    End Sub
+
+    Protected Sub icon_Click(sender As Object, e As ImageClickEventArgs) Handles icon.Click
+
     End Sub
 End Class

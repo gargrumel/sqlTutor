@@ -9,6 +9,8 @@ Imports Owin
 Partial Public Class Login
     Inherits Page
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Email.Focus()
+
         RegisterHyperLink.NavigateUrl = "Register"
         ' Enable this once you have account confirmation enabled for password reset functionality
         ' ForgotPasswordHyperLink.NavigateUrl = "Forgot"

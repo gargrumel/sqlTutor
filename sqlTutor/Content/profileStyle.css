@@ -5,11 +5,11 @@
     display:flex;
     height:calc(100vh - 350px);
     flex-wrap:wrap;  
-    color:white;
+    color:black;
     
 }
 
-.item{
+.item, .iconItem{
     width:20%;
     height:50%;
     background-color:deepskyblue;
@@ -17,8 +17,29 @@
     text-align:center;
     vertical-align:central;     
 }
-.item:hover{
-    border-color:red;
+
+
+/*Adjust the size of individual Tiles*/
+
+.item:nth-child(1){/*First Tile*/
+    display:flex;
+    flex-wrap:wrap;
+    background-color:forestgreen;
+    flex-grow:2}
+
+#icon{
+    width:10%;
+    height:10%;
+}
+
+.item:nth-child(5){
+    flex-grow:1;
+    background:white;
+}
+
+.iconItem{
+    background-color:blue;  
+    color:white;
 }
 
 

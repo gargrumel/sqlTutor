@@ -2,10 +2,14 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background:blue;
+    color:white;
+    font-family:'Segoe UI';
+     height:calc(100vh - 200px);  
 }
 
 /* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
+/* Set some basic padding to keep content from hitting  the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -36,3 +40,32 @@ input[type="select"] {
         padding: 0;
     }
 }
+
+/*Documents page Layout style*/
+.docBody{
+    font-weight:600;
+    display:flex;     
+    color:black;   
+}
+
+
+.docItem{
+    width:100%;  
+    height:500px;  
+    background-color:deepskyblue;
+    margin:5px; 
+    text-align:center;
+    vertical-align:central; 
+    flex-direction:column;   
+    }
+
+.docItem:nth-child(1){
+width:20%;
+background:forestgreen;
+}
+
+#lbDoc{
+    text-align:center;
+}
+
+

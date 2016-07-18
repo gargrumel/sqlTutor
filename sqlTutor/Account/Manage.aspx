@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Manage Account" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="sqlTutor.Manage" %>
+﻿<%@ Page Title="Your Profile" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Manage.aspx.vb" Inherits="sqlTutor.Manage" %>
 
 <%@ Import Namespace="sqlTutor" %>
 <%@ Import Namespace="Microsoft.AspNet.Identity" %>
@@ -6,16 +6,35 @@
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Content/profileStyle.css" rel="stylesheet" />
-    <h2><%: Title %>.</h2>
-     <h4>Your Profile</h4> 
-
+    
+    <h4>Your Profile</h4> 
     <div class="parent">
-        <div class="item">Personal Information</div>
-        <div class="item">Current Lesson</div>
-        <div class="item">Next Lesson</div>
-        <div class="item">Current Achievement</div>
+        <div class="item"><br />
+            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/Gender Neutral User-64.png" class="iconItem" />
+            <br />
+            <div class="iconItem">Info1<br /></div>
+            <div class="iconItem">Info2<br /></div>
+        </div>
+        <div class="item">Current Lesson<br />
+            <asp:Label ID="lbCurrentName" runat="server" Text="Lesson Name"></asp:Label>
+            <br />
+            <asp:Label ID="lbCurrentDesc" runat="server" Text="lesson Description"></asp:Label>
+            <br />
+            <asp:Label ID="lbCurrentStatus" runat="server" Text="Lesson Status" Font-Bold="True"></asp:Label>
+            <br />
+        </div>
+        <div class="item">Next Lesson<br />
+            <asp:Label ID="lbNextLesson" runat="server" Text="Lesson Name"></asp:Label>
+            <br />
+            <asp:Label ID="lbNextDesc" runat="server" Text="Lesson Description"></asp:Label>
+            <br />
+        </div>
+        <div class="item">Current Achievement<br />
+            <br />
+            <asp:Label ID="lbRank" runat="server" Text="Current Achievement"></asp:Label>
+        </div>
         <div class="item">Some graph here</div>
-        <div class="item">Another Graph here</div>
+        <div class="item">Another Graphs here</div>
              
         </div>                   
                  
@@ -29,17 +48,7 @@
                 <hr />
                 <dl class="dl-horizontal">
                     <dd>
-                        <% If TwoFactorEnabled Then %>
-                        <%--
-                        Enabled
-                        <asp:LinkButton Text="[Disable]" runat="server" CommandArgument="false" OnClick="TwoFactorDisable_Click" />
-                        --%>
-                        <% Else %>
-                       	<%--
-                       	Disabled
-                        <asp:LinkButton Text="[Enable]" CommandArgument="true" OnClick="TwoFactorEnable_Click" runat="server" />
-                        --%>
-                        <% End If %>
+                          
                     </dd>
                 </dl>
             </div>
