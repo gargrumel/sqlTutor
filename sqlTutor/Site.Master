@@ -37,6 +37,7 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+                 
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
@@ -51,12 +52,19 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">SQL Tutor</a>
                 </div>
-                <div class="navbar-collapse collapse">
+
+
+                <div class="navbar-collapse collapse" id="menu">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Account/Manage.aspx">Profile</a></li>
-                        <li><a runat="server" href="Members/topics.aspx">SQL Topics</a></li>
-                        <li><a runat="server" href="Members/docs.aspx">Documentation</a></li>
+                        <li><a runat="server" href="Members/lessons.aspx">SQL Topics</a>                            
+                        </li>                                          
+                        <li><a runat="server" href="Members/articles.aspx">Documentation</a>
+                            
+                        </li>
                     </ul>
+
+
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">

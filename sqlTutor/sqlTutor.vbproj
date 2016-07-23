@@ -208,6 +208,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\checked_checkbox.png" />
     <Content Include="Images\database.png" />
     <Content Include="Images\Gender Neutral User-100.png" />
     <Content Include="Images\Gender Neutral User-64.png" />
@@ -215,13 +216,16 @@
     <Content Include="Images\Home-icon.png" />
     <Content Include="Images\icon.png" />
     <Content Include="Images\Literature-64.png" />
+    <Content Include="Images\locked-icon.png" />
     <Content Include="Images\logogoeshere.gif" />
     <Content Include="Images\Logout Rounded Left-100.png" />
     <Content Include="Images\Search-64.png" />
+    <Content Include="Images\shield-ok-icon.png" />
     <Content Include="Images\SQL-100.png" />
     <Content Include="Images\sqlLogo.png" />
-    <Content Include="Members\docs.aspx" />
-    <Content Include="Members\topics.aspx" />
+    <Content Include="Members\articles.aspx" />
+    <Content Include="Members\introduction.aspx" />
+    <Content Include="Members\lessons.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -401,18 +405,26 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Members\docs.aspx.designer.vb">
-      <DependentUpon>docs.aspx</DependentUpon>
+    <Compile Include="Members\articles.aspx.designer.vb">
+      <DependentUpon>articles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Members\docs.aspx.vb">
-      <DependentUpon>docs.aspx</DependentUpon>
+    <Compile Include="Members\articles.aspx.vb">
+      <DependentUpon>articles.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Members\topics.aspx.designer.vb">
-      <DependentUpon>topics.aspx</DependentUpon>
+    <Compile Include="Members\introduction.aspx.designer.vb">
+      <DependentUpon>introduction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Members\topics.aspx.vb">
-      <DependentUpon>topics.aspx</DependentUpon>
+    <Compile Include="Members\introduction.aspx.vb">
+      <DependentUpon>introduction.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\lessonClass.vb" />
+    <Compile Include="Members\lessons.aspx.designer.vb">
+      <DependentUpon>lessons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\lessons.aspx.vb">
+      <DependentUpon>lessons.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\IdentityModels.vb" />

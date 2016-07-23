@@ -15,7 +15,23 @@
     background-color:deepskyblue;
     margin:5px; 
     text-align:center;
-    vertical-align:central;     
+    vertical-align:central; 
+    border:solid;
+    border-width:2px;
+    border-color:deepskyblue;    
+}
+
+.subIcon{
+    width:20%;
+    height:50%;
+    background-color:white;
+    margin:5px; 
+    text-align:center;
+    vertical-align:central; 
+    border:solid;
+    border-width:2px;
+    border-color:deepskyblue;  
+
 }
 
 
@@ -24,7 +40,7 @@
 .item:nth-child(1){/*First Tile*/
     display:flex;
     flex-wrap:wrap;
-    background-color:forestgreen;
+    background-color:deepskyblue;
     flex-grow:2}
 
 #icon{
@@ -34,12 +50,21 @@
 
 .item:nth-child(5){
     flex-grow:1;
-    background:white;
+    background-color:deepskyblue;
 }
 
 .iconItem{
-    background-color:blue;  
+    background-color:deepskyblue;  
     color:white;
+    
+}
+
+.subIcon:hover{
+border-color:red;
+}
+
+.iconItem, .item:hover{
+    border-color:white;
 }
 
 

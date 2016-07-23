@@ -2,11 +2,17 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background:blue;
-    color:white;
-    font-family:'Segoe UI';
-     height:calc(100vh - 200px);  
+    background:white;
+    color:black;    
+   
 }
+
+#menu ul li:hover{
+    display:block;
+    background-color:green;
+}
+
+
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting  the edges */
@@ -28,7 +34,7 @@ input[type="password"],
 input[type="email"],
 input[type="tel"],
 input[type="select"] {
-    max-width: 280px;
+max-width: 280px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -41,7 +47,7 @@ input[type="select"] {
     }
 }
 
-/*Documents page Layout style*/
+/******************************Documents page Layout style*********************************************/
 .docBody{
     font-weight:600;
     display:flex;     
@@ -50,22 +56,72 @@ input[type="select"] {
 
 
 .docItem{
-    width:100%;  
-    height:500px;  
-    background-color:deepskyblue;
-    margin:5px; 
-    text-align:center;
-    vertical-align:central; 
-    flex-direction:column;   
+    width:100%;height:500px;margin:20px;text-align:center;vertical-align:central;flex-direction:column;   
     }
 
 .docItem:nth-child(1){
-width:20%;
-background:forestgreen;
+width:30%;background:forestgreen;
 }
 
 #lbDoc{
-    text-align:center;
+text-align:center;
 }
+
+.txtInfo{
+width:100%;height:100%;
+}
+
+/*********************Lesson tiles content area:********************************/
+#content{
+text-decoration:none;
+list-style:none;
+display:flex;
+
+/*Flexbox*/
+
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+
+
+}
+
+/*Lesson Tiles*/
+.tile{
+flex-direction:row;
+width:200px;
+height:200px;
+margin:5px;
+background:green;
+border-style:solid;
+border-color:green;
+vertical-align:middle;
+text-align:center;
+color:white;
+font-weight:600;
+}
+
+.tile:hover{
+border-color:lightgreen;
+}
+
+#tileFrame{
+    width:100%;
+    height:100%;
+}
+
+#label{
+    font-size:larger;
+    color:green;
+}
+
+
+
+
+
+
+
+
+
 
 

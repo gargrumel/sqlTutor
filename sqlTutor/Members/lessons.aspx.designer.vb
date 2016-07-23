@@ -11,86 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Manage
+Partial Public Class lessons
     
     '''<summary>
-    '''icon control.
+    '''imgLess1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents icon As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents imgLess1 As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
-    '''lbCurrentName control.
+    '''lbLess1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbCurrentName As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbLess1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lbCurrentDesc control.
+    '''imgLess2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbCurrentDesc As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents imgLess2 As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
-    '''lbCurrentStatus control.
+    '''lbLess2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbCurrentStatus As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbLess2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Image2 control.
+    '''imgLess3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents imgLess3 As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
-    '''lbNextLesson control.
+    '''lbLess3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbNextLesson As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbLess3 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lbNextDesc control.
+    '''imgLess4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbNextDesc As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents imgLess4 As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
-    '''Image1 control.
+    '''lbLess4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
-    
-    '''<summary>
-    '''lbRank control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbRank As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbLess4 As Global.System.Web.UI.WebControls.Label
 End Class
