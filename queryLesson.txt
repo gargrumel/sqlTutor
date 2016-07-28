@@ -1,0 +1,13 @@
+ Try
+            queryConn.queryData("SELECT * from userProgress WHERE userID = " & userId)
+            If queryConn.count = 0 Then
+                queryConn.queryData("INSERT INTO userProgress (userId, lessonId, lessonStatus) VALUES (" & userId & ", 7, 1)")
+            Else
+                queryConn.queryData("UPDATE userProgress SET lessonId = 7, lessonStatus = 1 WHERE userId = '" & userId)
+            End If
+            Dim lc As New lessonClass(7, 1)
+            addLesson(lc)
+            queryConn.count = 0
+            Response.Redirect("/Members/lesson1.aspx")
+        Catch ex As Exception
+        End Try

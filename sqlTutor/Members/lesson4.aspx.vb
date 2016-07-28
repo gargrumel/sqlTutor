@@ -1,6 +1,9 @@
-﻿Public Class introduction
+﻿Public Class lesson4
     Inherits System.Web.UI.Page
-    Dim queryConn As New connections
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    End Sub
 
     Protected Sub btnComplete_Click(sender As Object, e As EventArgs) Handles btnComplete.Click
         Response.Redirect("/Members/lessons.aspx")

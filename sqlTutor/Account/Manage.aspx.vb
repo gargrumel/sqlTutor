@@ -13,16 +13,18 @@ Partial Public Class Manage
 
     Private Sub getLessons()
         Try
-            queryConn.queryData("SELECT Rank.rn, Lessons.lessName, Lessons.lessDesc, lessonStatus.Status, Lessons.ID
+            queryConn.queryData("SELECT Rank.rn, Lessons.lessName, Lessons.lessDesc, lessonStatus.Status, Lessons.ID, Users.email
                                     FROM Users, Rank, Lessons, lessonStatus, userProgress                    
                                     WHERE (Users.email = '" & User.Identity.GetUserName & "' AND
                                     Users.userId = userProgress.userId AND userProgress.lessonId = Lessons.ID AND
                                     userProgress.lessonStatus = lessonStatus.ID AND Users.rankId = Rank.ID)") 'SQL Query
+
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbCurrentName.Text = r("lessName") 'Sets the results of the query as the values for the respective controls
                 lbCurrentDesc.Text = r("lessDesc")
                 lbCurrentStatus.Text = r("Status")
                 lbRank.Text = r("rn")
+                lbEmail.Text = "Email: " & r("email") & " : "
                 nextLess = r("ID") + 1 'Retrieves the ID from the current lesson, adds 1 and sets the value to the nextLess variable
             Next
         Catch ex As Exception

@@ -23,6 +23,24 @@ Partial Public Class Manage
     Protected WithEvents icon As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
+    '''lbEmail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbEmail As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''cngPass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cngPass As Global.System.Web.UI.WebControls.HyperLink
+    
+    '''<summary>
     '''lbCurrentName control.
     '''</summary>
     '''<remarks>
@@ -48,15 +66,6 @@ Partial Public Class Manage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbCurrentStatus As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Image2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
     '''lbNextLesson control.

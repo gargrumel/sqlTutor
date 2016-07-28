@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class lesson1
+Partial Public Class lesson4
     
     '''<summary>
     '''btnComplete control.

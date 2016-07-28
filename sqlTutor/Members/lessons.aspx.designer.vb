@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class lessons
     
     '''<summary>
-    '''imgLess1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents imgLess1 As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
     '''lbLess1 control.
     '''</summary>
     '''<remarks>
@@ -30,6 +21,15 @@ Partial Public Class lessons
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbLess1 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''imgLess1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLess1 As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
     '''imgLess2 control.
@@ -56,7 +56,7 @@ Partial Public Class lessons
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents imgLess3 As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents imgLess3 As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
     '''lbLess3 control.
@@ -74,7 +74,7 @@ Partial Public Class lessons
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents imgLess4 As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents imgLess4 As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
     '''lbLess4 control.

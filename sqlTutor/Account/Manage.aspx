@@ -12,11 +12,19 @@
         <div class="item"><br />
             <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png" class="subIcon" ToolTip="Click to change picture" />
             <br />
-            <div class="subIcon">Info1<br /></div>
-            <div class="subIcon">Info2<br /></div>
-        </div>
-        <div class="item">
             <br />
+            <div class="subIcon"><br /></div>
+            <div class="subIcon">
+            <br />
+            </div>
+            <asp:Label ID="lbEmail" runat="server" Text="Email"></asp:Label></br>
+            <br />
+            <br />
+            <asp:HyperLink ID="cngPass" runat="server" NavigateUrl="~/Account/ManagePassword.aspx">Edit Password</asp:HyperLink>            
+             
+
+        </div>
+        <div class="item">            
             <br />
             Current Lesson<br />
             <asp:Label ID="lbCurrentName" runat="server" Text="Lesson Name"></asp:Label>
@@ -26,14 +34,12 @@
             <asp:Label ID="lbCurrentStatus" runat="server" Text="Lesson Status" Font-Bold="True"></asp:Label>
             <br />
             <br />
-            <asp:Image ID="Image2" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Height="45px" ImageUrl="~/Images/database.png" Width="45px" />
-            &nbsp;Click to continue..<br />
+            &nbsp;<br />
             <br />
             <br />
             <br />
         </div>
         <div class="item">
-            <br />
             <br />
             Next Lesson<br />
             <asp:Label ID="lbNextLesson" runat="server" Text="Lesson Name"></asp:Label>
@@ -42,8 +48,6 @@
             <br />
         </div>
         <div class="item" style="vertical-align: middle; text-align: center">
-            <br />
-            <br />
             Current Achievement<br />
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/shield-ok-icon.png" />
             <br />

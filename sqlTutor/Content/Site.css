@@ -102,7 +102,7 @@ font-weight:600;
 }
 
 .tile:hover{
-border-color:lightgreen;
+border-color:red;
 }
 
 #tileFrame{
