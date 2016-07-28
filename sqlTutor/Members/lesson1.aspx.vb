@@ -3,6 +3,7 @@ Public Class lesson1
     Inherits System.Web.UI.Page
 
     Dim queryConn As New connections
+    Dim r As New record
     Dim userId As Integer
     Dim lessId As Integer
 
@@ -21,7 +22,7 @@ Public Class lesson1
     End Sub
 
     Protected Sub btnComplete_Click(sender As Object, e As EventArgs) Handles btnComplete.Click
-        queryConn.queryData("INSERT into complete (userId, lessonId) VALUES (" & userId & ", " & lessId & ")")
+        r.completeLesson(userId, lessId)
         Response.Redirect("/Members/lessons.aspx")
     End Sub
 

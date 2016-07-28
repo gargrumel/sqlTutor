@@ -49,7 +49,7 @@ Partial Public Class Manage
 
     Private Sub getCount()
         Try
-            queryConn.queryData("SELECT * FROM Users, complete WHERE Users.email = '" & User.Identity.GetUserName & "', AND Users.userId = complete.userId")
+            queryConn.queryData("SELECT * FROM complete, Users WHERE Users.email = '" & User.Identity.GetUserName & "' AND Users.userId = complete.userId")
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbAmount.Text = queryConn.count
             Next
@@ -121,10 +121,10 @@ Partial Public Class Manage
         LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count
 
         Dim authenticationManager = HttpContext.Current.GetOwinContext().Authentication
-
+        getCount()
         getLessons()
         getNextLesson()
-        getCount()
+
 
     End Sub
 

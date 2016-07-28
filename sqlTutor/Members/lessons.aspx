@@ -15,7 +15,7 @@
             <br />
             <asp:Label ID="lbLess2" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="tile"><a href="#">STAGE 3="#">STAGE 3</a><br />
+        <div class="tile"><a href="#">STAGE 3</a><br />
             <asp:ImageButton ID="imgLess3" runat="server" ImageUrl="~/Images/locked-icon.png" height="74px" width="96px" />
             <br />  
             <br />            

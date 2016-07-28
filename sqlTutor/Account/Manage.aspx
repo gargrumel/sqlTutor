@@ -54,10 +54,11 @@
             <asp:Label ID="lbRank" runat="server" Text="Current Achievement"></asp:Label>
         </div>
         <div class="item">Some graph here</div>
-        <div class="item">Another Graphs here<br />
+        <div class="item">
+            <br />
             Number of Lessons Completed<br />
             <br />
-            <asp:Label ID="lbAmount" runat="server" Text="amount"></asp:Label>
+            <asp:Label ID="lbAmount" runat="server"></asp:Label>
             <br />
         </div>
              
