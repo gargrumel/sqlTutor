@@ -9,13 +9,14 @@ Public Class lesson1
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Try
-            queryConn.queryData("SELECT Users.userId, Lessons.ID FROM Users, Lessons WHERE User.email = " & User.Identity.GetUserName & " AND Lessons.ID = 7")
+            queryConn.queryData("SELECT Users.userId, userProgress.lessonId
+                                From Users, userProgress
+                                Where (Users.email = '" & User.Identity.GetUserName & "') AND (userProgress.lessonId = 8)")
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 userId = r("userId")
-                lessId = r("ID")
+                lessId = r("lessonId")
             Next
         Catch ex As Exception
-
         End Try
     End Sub
 

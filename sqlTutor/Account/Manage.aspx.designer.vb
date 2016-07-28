@@ -102,4 +102,13 @@ Partial Public Class Manage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbRank As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbAmount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbAmount As Global.System.Web.UI.WebControls.Label
 End Class

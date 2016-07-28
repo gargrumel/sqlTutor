@@ -11,6 +11,7 @@ Partial Public Class Manage
     Dim queryConn As New connections
     Dim nextLess As Integer = 0
 
+
     Private Sub getLessons()
         Try
             queryConn.queryData("SELECT Lessons.lessName,Lessons.lessDesc,Status.lessStatus, Lessons.ID, Users.email
@@ -45,6 +46,19 @@ Partial Public Class Manage
 
         End Try
     End Sub
+
+    Private Sub getCount()
+        Try
+            queryConn.queryData("SELECT * FROM Users, complete WHERE Users.email = '" & User.Identity.GetUserName & "', AND Users.userId = complete.userId")
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbAmount.Text = queryConn.count
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
 
     Protected Property SuccessMessage() As String
         Get
@@ -94,7 +108,6 @@ Partial Public Class Manage
     Public Property LoginsCount As Integer
 
     Protected Sub Page_Load() Handles Me.Load
-
         Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
 
         HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()))
@@ -111,6 +124,7 @@ Partial Public Class Manage
 
         getLessons()
         getNextLesson()
+        getCount()
 
     End Sub
 
