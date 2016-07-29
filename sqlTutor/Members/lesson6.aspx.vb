@@ -1,5 +1,6 @@
-﻿Imports Microsoft.AspNet.Identity
-Public Class lesson3
+﻿
+Imports Microsoft.AspNet.Identity
+Public Class lesson6
     Inherits System.Web.UI.Page
     Dim queryConn As New connections
     Dim r As New record
@@ -10,7 +11,7 @@ Public Class lesson3
         Try
             queryConn.queryData("SELECT Users.userId, userProgress.lessonId
                                 From Users, userProgress
-                                Where (Users.email = '" & User.Identity.GetUserName & "') AND (userProgress.lessonId = 10)")
+                                Where (Users.email = '" & User.Identity.GetUserName & "') AND (userProgress.lessonId = 13)")
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 userId = r("userId")
                 lessId = r("lessonId")

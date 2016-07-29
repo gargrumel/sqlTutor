@@ -27,11 +27,11 @@
         <div class="item">            
             <br />
             Current Lesson<br />
-            <asp:Label ID="lbCurrentName" runat="server" Text="Lesson Name"></asp:Label>
+            <asp:Label ID="lbCurrentName" runat="server"></asp:Label>
             <br />
-            <asp:Label ID="lbCurrentDesc" runat="server" Text="lesson Description"></asp:Label>
+            <asp:Label ID="lbCurrentDesc" runat="server"></asp:Label>
             <br />
-            <asp:Label ID="lbCurrentStatus" runat="server" Text="Lesson Status" Font-Bold="True"></asp:Label>
+            <asp:Label ID="lbCurrentStatus" runat="server" Font-Bold="True"></asp:Label>
             <br />
             <br />
             &nbsp;<br />
@@ -42,9 +42,9 @@
         <div class="item">
             <br />
             Next Lesson<br />
-            <asp:Label ID="lbNextLesson" runat="server" Text="Lesson Name"></asp:Label>
+            <asp:Label ID="lbNextLesson" runat="server"></asp:Label>
             <br />
-            <asp:Label ID="lbNextDesc" runat="server" Text="Lesson Description"></asp:Label>
+            <asp:Label ID="lbNextDesc" runat="server"></asp:Label>
             <br />
         </div>
         <div class="item" style="vertical-align: middle; text-align: center">

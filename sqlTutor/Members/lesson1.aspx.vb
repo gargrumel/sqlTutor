@@ -8,7 +8,6 @@ Public Class lesson1
     Dim lessId As Integer
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
         Try
             queryConn.queryData("SELECT Users.userId, userProgress.lessonId
                                 From Users, userProgress
@@ -19,15 +18,12 @@ Public Class lesson1
             Next
         Catch ex As Exception
         End Try
+
     End Sub
 
     Protected Sub btnComplete_Click(sender As Object, e As EventArgs) Handles btnComplete.Click
         r.completeLesson(userId, lessId)
         Response.Redirect("/Members/lessons.aspx")
-    End Sub
-
-    Protected Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtSelect.TextChanged
-
     End Sub
 
     Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles btnExecute.Click

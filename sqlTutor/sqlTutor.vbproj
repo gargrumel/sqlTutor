@@ -233,6 +233,9 @@
     <Content Include="Members\lesson2.aspx" />
     <Content Include="Members\lesson3.aspx" />
     <Content Include="Members\lesson4.aspx" />
+    <Content Include="Members\lesson5.aspx" />
+    <Content Include="Members\lesson6.aspx" />
+    <Content Include="Members\lesson7.aspx" />
     <Content Include="Members\lessons.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -453,6 +456,27 @@
     </Compile>
     <Compile Include="Members\lesson4.aspx.vb">
       <DependentUpon>lesson4.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\lesson5.aspx.designer.vb">
+      <DependentUpon>lesson5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\lesson5.aspx.vb">
+      <DependentUpon>lesson5.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\lesson6.aspx.designer.vb">
+      <DependentUpon>lesson6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\lesson6.aspx.vb">
+      <DependentUpon>lesson6.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\lesson7.aspx.designer.vb">
+      <DependentUpon>lesson7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\lesson7.aspx.vb">
+      <DependentUpon>lesson7.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Members\lessonClass.vb" />

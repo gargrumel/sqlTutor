@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class lessons
     
     '''<summary>
-    '''lbLess1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbLess1 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''imgLess1 control.
     '''</summary>
     '''<remarks>
@@ -30,6 +21,15 @@ Partial Public Class lessons
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents imgLess1 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbLess1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbLess1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''imgLess2 control.
@@ -84,4 +84,94 @@ Partial Public Class lessons
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbLess4 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''imgLess5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLess5 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbLess5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbLess5 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''imgLess6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLess6 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbLess6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbLess6 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''imgLess7 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLess7 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbLess7 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbLess7 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''imgLess8 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLess8 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbLess8 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbLess8 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''imgLess9 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgLess9 As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''lbLess9 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbLess9 As Global.System.Web.UI.WebControls.Label
 End Class

@@ -16,15 +16,20 @@ Public Class lessons
         loadLesson2()
         loadLesson3()
         loadLesson4()
+        loadLesson5()
+        loadLesson6()
+        loadLesson7()
     End Sub
 
     Private Sub loadLesson1()
+
         Try
-            queryConn.queryData("SELECT * FROM Lessons WHERE ID = 7")
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & 7)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess1.Text = r("lessName")
                 imgLess1.ToolTip = r("lessDesc")
             Next
+
         Catch ex As Exception
 
         End Try
@@ -32,40 +37,131 @@ Public Class lessons
     End Sub
 
     Private Sub loadLesson2()
+        Dim l As Integer = 7
         Try
-            queryConn.queryData("SELECT * FROM Lessons WHERE ID = 8")
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess2.Text = r("lessName")
                 imgLess2.ToolTip = r("lessDesc")
             Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess2.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
         Catch ex As Exception
+
         End Try
 
     End Sub
 
     Private Sub loadLesson3()
+        Dim l As Integer = 8
         Try
-            queryConn.queryData("SELECT * FROM Lessons WHERE ID = 9")
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess3.Text = r("lessName")
                 imgLess3.ToolTip = r("lessDesc")
             Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess3.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
         Catch ex As Exception
+
         End Try
 
     End Sub
 
     Private Sub loadLesson4()
+        Dim l As Integer = 9
         Try
-            queryConn.queryData("SELECT * FROM Lessons WHERE ID = 10")
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess4.Text = r("lessName")
                 imgLess4.ToolTip = r("lessDesc")
             Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess4.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
         Catch ex As Exception
+
         End Try
 
     End Sub
+
+    Private Sub loadLesson5()
+        Dim l As Integer = 10
+        Try
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbLess5.Text = r("lessName")
+                imgLess5.ToolTip = r("lessDesc")
+            Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess5.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub loadLesson6()
+        Dim l As Integer = 11
+        Try
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbLess6.Text = r("lessName")
+                imgLess6.ToolTip = r("lessDesc")
+            Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess6.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub loadLesson7()
+        Dim l As Integer = 12
+        Try
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbLess7.Text = r("lessName")
+                imgLess7.ToolTip = r("lessDesc")
+            Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess7.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+
 
 
 
@@ -90,6 +186,22 @@ Public Class lessons
     Protected Sub imgLess4_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess4.Click
         startLesson(10, "/Members/lesson3.aspx")
     End Sub
+
+    Protected Sub imgLess5_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess5.Click
+        startLesson(11, "/Members/lesson4.aspx")
+    End Sub
+
+    Protected Sub imgLess6_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess6.Click
+        startLesson(12, "/Members/lesson5.aspx")
+    End Sub
+
+    Protected Sub imgLess7_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess7.Click
+        startLesson(13, "/Members/lesson6.aspx")
+    End Sub
+
+
+
+
     Public Sub startLesson(ByVal less As Integer, ByVal page As String)
         Try
             queryConn.queryData("SELECT * from userProgress WHERE userID = " & userId)
@@ -106,6 +218,4 @@ Public Class lessons
         End Try
 
     End Sub
-
-
 End Class
