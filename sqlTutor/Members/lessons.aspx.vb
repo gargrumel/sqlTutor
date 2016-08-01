@@ -5,6 +5,7 @@ Public Class lessons
     Dim queryConn As New connections
     Dim lessArray As New ArrayList
     Dim userId As Integer
+    Dim imgUrl As String = "~/Images/checked_checkbox.png"
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -47,7 +48,7 @@ Public Class lessons
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess2.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess2.ImageUrl = imgUrl
                     imgLess2.Enabled = True
                 End If
             Next
@@ -69,7 +70,8 @@ Public Class lessons
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess3.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess3.ImageUrl = imgUrl
+                    imgLess3.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -90,7 +92,8 @@ Public Class lessons
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess4.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess4.ImageUrl = imgUrl
+                    imgLess4.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -111,7 +114,8 @@ Public Class lessons
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess5.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess5.ImageUrl = imgUrl
+                    imgLess5.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -131,7 +135,8 @@ Public Class lessons
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess6.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess6.ImageUrl = imgUrl
+                    imgLess6.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -152,7 +157,8 @@ Public Class lessons
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess7.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess7.ImageUrl = imgUrl
+                    imgLess7.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -173,7 +179,8 @@ Public Class lessons
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
-                    imgLess7.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess8.ImageUrl = imgUrl
+                    imgLess8.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -181,10 +188,6 @@ Public Class lessons
         End Try
 
     End Sub
-
-
-
-
 
     Public Sub addLesson(ByVal obj As lessonClass)
         lessArray.Add(obj)

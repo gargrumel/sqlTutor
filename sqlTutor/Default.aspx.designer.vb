@@ -14,11 +14,47 @@ Option Explicit On
 Partial Public Class _Default
     
     '''<summary>
-    '''txtSearch control.
+    '''lbWelcome control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbWelcome As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbUser control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbUser As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbTopic control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbTopic As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbPercent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbPercent As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''btnContinue control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnContinue As Global.System.Web.UI.WebControls.Button
 End Class
