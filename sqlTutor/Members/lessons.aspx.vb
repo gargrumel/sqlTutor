@@ -19,6 +19,7 @@ Public Class lessons
         loadLesson5()
         loadLesson6()
         loadLesson7()
+        loadLesson8()
     End Sub
 
     Private Sub loadLesson1()
@@ -29,7 +30,6 @@ Public Class lessons
                 lbLess1.Text = r("lessName")
                 imgLess1.ToolTip = r("lessDesc")
             Next
-
         Catch ex As Exception
 
         End Try
@@ -45,10 +45,10 @@ Public Class lessons
                 imgLess2.ToolTip = r("lessDesc")
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
-
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
                     imgLess2.ImageUrl = "~/Images/checked_checkbox.png"
+                    imgLess2.Enabled = True
                 End If
             Next
         Catch ex As Exception
@@ -161,6 +161,27 @@ Public Class lessons
 
     End Sub
 
+    Private Sub loadLesson8()
+        Dim l As Integer = 13
+        Try
+            queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbLess8.Text = r("lessName")
+                imgLess8.ToolTip = r("lessDesc")
+            Next
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                If queryConn.count > 0 Then
+                    imgLess7.ImageUrl = "~/Images/checked_checkbox.png"
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
 
 
 
@@ -217,5 +238,10 @@ Public Class lessons
         Catch ex As Exception
         End Try
 
+    End Sub
+
+    
+    Protected Sub imgLess8_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess8.Click
+        startLesson(14, "/Members/lesson7.aspx")
     End Sub
 End Class

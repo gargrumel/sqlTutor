@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class lesson2
     
     '''<summary>
+    '''txtAns control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtAns As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''btnExecute control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnExecute As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''btnComplete control.
     '''</summary>
     '''<remarks>

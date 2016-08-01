@@ -2,10 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <br />
       <br />
-      <h1>Insert Statement</h1>
+      <h1>Create table statement</h1>
+      <p>Scenario: To insert a new record into a table </p>
       <p>&nbsp;</p>
+      <p>CREATE TABLE STATEMENT</p>
       <p>&nbsp;</p>
       <p>
-  <asp:Button ID="btnComplete" runat="server" Height="68px" Text="Complete Lesson" Width="173px" />    
+          &nbsp;</p>
+      <p>
+      &nbsp;
       </p>
+      <p>&nbsp;</p>
+      <p>
+          &nbsp;</p>
 </asp:Content>

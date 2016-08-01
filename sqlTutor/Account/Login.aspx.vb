@@ -10,18 +10,12 @@ Partial Public Class Login
     Inherits Page
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         Email.Focus()
-
-        RegisterHyperLink.NavigateUrl = "Register"
-        ' Enable this once you have account confirmation enabled for password reset functionality
-        ' ForgotPasswordHyperLink.NavigateUrl = "Forgot"
-        OpenAuthLogin.ReturnUrl = Request.QueryString("ReturnUrl")
-        Dim returnUrl = HttpUtility.UrlEncode(Request.QueryString("ReturnUrl"))
-        If Not [String].IsNullOrEmpty(returnUrl) Then
-            RegisterHyperLink.NavigateUrl += "?ReturnUrl=" & returnUrl
-        End If
     End Sub
 
-    Protected Sub LogIn(sender As Object, e As EventArgs)
+    Protected Sub LogIn(sender As Object, e As EventArgs) Handles btnLogin.Click, btnLogin.Click
+        btnLogin.Enabled = False
+
+
         If IsValid Then
             ' Validate the user password
             Dim manager = Context.GetOwinContext().GetUserManager(Of ApplicationUserManager)()
@@ -29,7 +23,7 @@ Partial Public Class Login
 
             ' This doen't count login failures towards account lockout
             ' To enable password failures to trigger lockout, change to shouldLockout := True
-            Dim result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout := False)
+            Dim result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout:=False)
 
             Select Case result
                 Case SignInStatus.Success
@@ -47,8 +41,21 @@ Partial Public Class Login
                 Case Else
                     FailureText.Text = "Invalid login attempt"
                     ErrorMessage.Visible = True
+                    Email.Text = ""
+                    Password.Text = ""
+
                     Exit Select
             End Select
+        End If
+
+    End Sub
+
+
+
+    Protected Sub Email_TextChanged(sender As Object, e As EventArgs) Handles Email.TextChanged
+        Dim watermark As String = "E-Mail"
+        If Email.Text = "" Then
+
         End If
     End Sub
 End Class

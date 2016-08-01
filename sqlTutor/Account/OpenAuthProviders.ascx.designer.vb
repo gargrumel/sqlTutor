@@ -12,13 +12,4 @@ Option Explicit On
 
 
 Partial Public Class OpenAuthProviders
-
-    '''<summary>
-    '''providerDetails control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents providerDetails As Global.System.Web.UI.WebControls.ListView
 End Class

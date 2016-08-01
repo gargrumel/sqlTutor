@@ -1,11 +1,19 @@
 ﻿
+.body{
+    background-color:white;
+    height:100%;
+    
+}
+
 .parent{
     font-family:'Segoe UI';
     font-weight:600;
     display:flex;
-    height:calc(100vh - 350px);
-    flex-wrap:wrap;  
-    color:black;
+    height:calc(100vh - 300px);     
+    color:white; 
+    flex-wrap:wrap; 
+    width:100%; 
+  
     
 }
 
@@ -23,7 +31,7 @@
 
 .subIcon{
     width:30%;
-    height:50%;
+    height:30%;
     background-color:white;
     margin:5px; 
     text-align:center;
@@ -37,20 +45,27 @@
 
 /*Adjust the size of individual Tiles*/
 
-.item:nth-child(1){/*First Tile*/
-    display:flex;
+.item:nth-child(1){/*First Tile*/    
     flex-wrap:wrap;
-    background-color:deepskyblue;
-    flex-grow:2}
+    background-color:green; 
+    border-color:green;
+    flex-grow:1;
+   }
 
 #icon{
     width:10%;
     height:10%;
 }
 
-.item:nth-child(5){
+.item:nth-child(5){   
+    background-color:green;
+    border-color:green;
     flex-grow:1;
-    background-color:deepskyblue;
+}
+
+.item:nth-child(4){   
+    background-color:blue;
+    
 }
 
 .iconItem{
@@ -59,12 +74,9 @@
     
 }
 
-.subIcon:hover{
-border-color:red;
-}
 
 .iconItem, .item:hover{
-    border-color:white;
+    border-color:red;
 }
 
 

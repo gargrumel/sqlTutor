@@ -1,14 +1,54 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background: white;
     color: black;
+    padding-top: 70px;   
+    padding-left:0px;
+    padding-right:0px;
+    justify-content:center;   
+    background-color:transparent;   
 }
+
+#MainContent {
+    
+}
+
+#txtSearch {
+    width: 90%;
+}
+
+#loginHead {
+    text-align: center;
+    background-color:lightgray;
+}
+
+#headLabel {
+    font-size: x-large;
+
+}
+
+
+
+#loginControls{
+   
+    background-color:lightgray;
+    width:100%;
+   
+  
+}
+
+
+
+
+#footer {
+    background-color:aliceblue;
+     height:100px;
+}
+
 
 #menu ul li:hover {
     display: block;
     background-color: green;
+   
 }
 
 
@@ -16,8 +56,8 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting  the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -48,25 +88,81 @@ input[type="select"] {
 }
 
 /******************************Documents page Layout style*********************************************/
-.docBody {
-    font-weight: 600;
-    display: flex;
-    color: black;
+#lessonBody{
+    display:flex;
+    justify-content:center;
+
+}
+
+.lessonHeader{
+    height:50px;
+    background-color:lightgray;  
+    padding:0px; 
+  text-align:center;
+
 }
 
 
-.docItem {
-    width: 100%;
-    height: 500px;
-    margin: 20px;
-    text-align: center;
-    vertical-align: central;
-    flex-direction: column;
+.docItem {   
+    height:calc(100vh - 200px);   
+    text-align: center; 
+    background-color:blue;      
+    width:30%;
+    margin:5px;  
+    flex-wrap:wrap;
+    padding:5px;
+    color:white;
+    text-align:left;
+    
+      
 }
 
-    .docItem:nth-child(1) {
-        width: 30%;
-        background: forestgreen;
+#updatePanel{
+    height:500px;
+}
+
+
+#queryWindow{
+background-color:black;
+}
+
+#resultWindow{
+
+
+}
+
+#txtRunSql{
+   
+}
+
+#panelLesson1{
+    height:40px;
+    border-color:black;
+    border-style:solid;
+    border-width:2px;
+    padding:2px;
+    
+}
+
+
+  .docItem:nth-child(1) {
+       
+        color:black;
+        background-color:white;
+               
+    }
+
+
+    .docItem:nth-child(2) {
+      
+        background-color:lightgray;
+        
+    }
+
+     .docItem:nth-child(3) {
+       
+        background-color:white;
+        
     }
 
 #lbDoc {
@@ -105,7 +201,7 @@ input[type="select"] {
 }
 
     .tile:hover {
-        border-color: red;
+        border-color: deepskyblue;
     }
 
 #tileFrame {
@@ -119,25 +215,8 @@ input[type="select"] {
 }
 
 
-#mainLessonContent {
-    display: flex;
-}
 
-#lContent1 {
-    color: white;
-    padding: 5px;
-    padding: 5px;
-    width: 40%;
-    background-color: green;
-    color: white;
-    height: 100%;
-    margin: 40px;
-}
 
-#lContent2 {
-    width: 70%;
-    background-color: green;
-    color: white;
-    height: 100%;
-    margin: 40px;
-}
+
+
+

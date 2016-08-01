@@ -13,17 +13,11 @@
             <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png" class="subIcon" ToolTip="Click to change picture" />
             <br />
             <br />
-            <div class="subIcon"><br /></div>
-            <div class="subIcon">
-            <br />
-            </div>
-            <asp:Label ID="lbEmail" runat="server" Text="Email"></asp:Label></br>
-            <br />
-            <br />
-            <asp:HyperLink ID="cngPass" runat="server" NavigateUrl="~/Account/ManagePassword.aspx">Edit Password</asp:HyperLink>            
-             
-
-        </div>
+            <asp:Label ID="lbEmail" runat="server"></asp:Label>
+            <br />            
+            <asp:HyperLink ID="cngPass" runat="server" NavigateUrl="~/Account/ManagePassword.aspx">Edit Password</asp:HyperLink>   
+</div>
+       
         <div class="item">            
             <br />
             Current Lesson<br />
@@ -34,11 +28,17 @@
             <asp:Label ID="lbCurrentStatus" runat="server" Font-Bold="True"></asp:Label>
             <br />
             <br />
+            <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            </asp:UpdateProgress>
+            <br />
+            <br />
             &nbsp;<br />
             <br />
             <br />
             <br />
         </div>
+
+
         <div class="item">
             <br />
             Next Lesson<br />
@@ -47,13 +47,18 @@
             <asp:Label ID="lbNextDesc" runat="server"></asp:Label>
             <br />
         </div>
+
+
         <div class="item" style="vertical-align: middle; text-align: center">
             Current Achievement<br />
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/shield-ok-icon.png" />
             <br />
             <asp:Label ID="lbRank" runat="server" Text="Current Achievement"></asp:Label>
         </div>
+
         <div class="item">Some graph here</div>
+
+
         <div class="item">
             <br />
             Number of Lessons Completed<br />

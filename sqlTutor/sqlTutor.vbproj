@@ -212,13 +212,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\89.gif" />
     <Content Include="Images\checked_checkbox.png" />
     <Content Include="Images\database.png" />
+    <Content Include="Images\emailBack.png" />
     <Content Include="Images\Gender Neutral User-100.png" />
     <Content Include="Images\Gender Neutral User-64.png" />
     <Content Include="Images\Home-64.png" />
     <Content Include="Images\Home-icon.png" />
     <Content Include="Images\icon.png" />
+    <Content Include="Images\keyboard.jpg" />
     <Content Include="Images\Literature-64.png" />
     <Content Include="Images\locked-icon.png" />
     <Content Include="Images\logogoeshere.gif" />

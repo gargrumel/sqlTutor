@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
        <br />
     <br />
-    <h1>Select Statement - Multiple Tables</h1>
+    <h1></h1>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>
