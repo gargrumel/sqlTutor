@@ -50,6 +50,24 @@ Partial Public Class _Default
     Protected WithEvents lbPercent As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''lbComplete control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbComplete As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbValue control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbValue As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''btnContinue control.
     '''</summary>
     '''<remarks>

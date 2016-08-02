@@ -6,7 +6,7 @@
      Structured Query Language is a standard programming language for accessing databases.
      </p>
 
-      <asp:Button class ="cButton" ID ="btnComplete" runat="server" Text="Complete" />
+      <asp:Button class ="cButton" ID ="btnComplete" runat="server" Text="Complete" BackColor="#0099FF" CssClass="btn btn-default" ForeColor="White" />
    </div>
 </asp:Content>
 

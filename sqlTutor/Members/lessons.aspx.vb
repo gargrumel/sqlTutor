@@ -9,18 +9,22 @@ Public Class lessons
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        queryConn.queryData("SELECT UserId FROM Users WHERE Email = '" & User.Identity.GetUserName() & "'")
-        For Each r As DataRow In queryConn.ds.Tables(0).Rows
-            userId = r("userId")
-        Next
-        loadLesson1()
-        loadLesson2()
-        loadLesson3()
-        loadLesson4()
-        loadLesson5()
-        loadLesson6()
-        loadLesson7()
-        loadLesson8()
+        If User.Identity.GetUserName = "" Then
+            Response.Redirect("/loggedOut.aspx")
+        Else
+            queryConn.queryData("SELECT UserId FROM Users WHERE Email = '" & User.Identity.GetUserName() & "'")
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                userId = r("userId")
+            Next
+            loadLesson1()
+            loadLesson2()
+            loadLesson3()
+            loadLesson4()
+            loadLesson5()
+            loadLesson6()
+            loadLesson7()
+            loadLesson8()
+        End If
     End Sub
 
     Private Sub loadLesson1()

@@ -229,7 +229,9 @@
     <Content Include="Images\Search-64.png" />
     <Content Include="Images\shield-ok-icon.png" />
     <Content Include="Images\SQL-100.png" />
+    <Content Include="Images\sqlBackdrop.jpg" />
     <Content Include="Images\sqlLogo.png" />
+    <Content Include="loggedOut.aspx" />
     <Content Include="Members\articles.aspx" />
     <Content Include="Members\introduction.aspx" />
     <Content Include="Members\lesson1.aspx" />
@@ -418,6 +420,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="loggedOut.aspx.designer.vb">
+      <DependentUpon>loggedOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loggedOut.aspx.vb">
+      <DependentUpon>loggedOut.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Members\articles.aspx.designer.vb">
       <DependentUpon>articles.aspx</DependentUpon>

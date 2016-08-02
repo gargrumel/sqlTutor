@@ -2,7 +2,33 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-   <div id ="graphArea" class="text-center">      
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {      
+                       
+            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML  
+           
+
+            animateProgressBar(amount);
+           
+
+            function animateProgressBar(p)
+            {                
+                outerWidth = $("#outer").width();
+                $('#inner').animate({                 
+                    'width': (outerWidth * p) / 100
+                }, 3000);
+            }        
+        });
+   
+    </script>
+    
+
+<div id="window">
+  <div id ="welcomeArea">
+
+            
    <br />
     <br />
        <br />
@@ -11,12 +37,16 @@
     <br />
        <br />
        <asp:Label ID="lbTopic" runat="server" ForeColor="Black"></asp:Label>
+       &nbsp;
+               <asp:Label ID="lbPercent" runat="server" ForeColor="Black" Font-Size="Larger" ToolTip="Percent complete">0</asp:Label>
+      <asp:Label ID="lbComplete" runat="server" Text="% Complete"></asp:Label>
+           
        <br />
     <br />
-      <div id ="outer">            
-           <div id="inner" style="vertical-align: bottom">
+
+      <div id ="outer" width="500px" class="text-center">            
+           <div id= "inner" style="vertical-align: bottom" ;width="0px">
                <br />
-               <asp:Label ID="lbPercent" runat="server" ForeColor="White" Text="10% Complete"></asp:Label>
            </div>
           
                   
@@ -24,12 +54,23 @@
            <br />
        </div>
        <br />
+          <asp:Label ID="lbValue" runat="server"></asp:Label>
+          <br />       
           <br />
          <div id="continueButton">
-             <asp:Button ID="btnContinue" runat="server" Text="Continue Lesson" CssClass="btn btn-default" />
-         </div>
+             <asp:Button ID="btnContinue" runat="server" Text="" CssClass="btn btn-default" />
+   
+    </div>
+
+  </div>
+
+   
+    </div>
 
 
-   </div>
+
+ 
+
+
 
 </asp:Content>

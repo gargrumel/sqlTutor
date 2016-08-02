@@ -1,7 +1,12 @@
 ﻿
 
 Public Class connections
-    Dim conn As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\watchtower\Dropbox\EAAD\sqlTutor\sqlTutor\App_Data\eLearning.accdb;Persist Security Info=True")
+    ' Dim conn As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\watchtower\Dropbox\EAAD\sqlTutor\sqlTutor\App_Data\eLearning.accdb;Persist Security Info=True")
+
+    Dim data As String = My.Settings.connection
+    Dim conn As New OleDb.OleDbConnection(data)
+
+
     Dim cmd As New OleDb.OleDbCommand
     Public da As OleDb.OleDbDataAdapter
     Public ds As DataSet
@@ -52,6 +57,8 @@ Public Class connections
         Dim newParam As New OleDb.OleDbParameter(Name, Value)
         params.Add(newParam)
     End Sub
+
+
 
 
 
