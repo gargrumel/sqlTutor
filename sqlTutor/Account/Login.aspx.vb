@@ -38,11 +38,14 @@ Partial Public Class Login
                                                     RememberMe.Checked),
                                       True)
                     Exit Select
+
+
                 Case Else
                     FailureText.Text = "Invalid login attempt"
                     ErrorMessage.Visible = True
                     Email.Text = ""
                     Password.Text = ""
+                    btnLogin.Enabled = True
 
                     Exit Select
             End Select
@@ -53,9 +56,10 @@ Partial Public Class Login
 
 
     Protected Sub Email_TextChanged(sender As Object, e As EventArgs) Handles Email.TextChanged
-        Dim watermark As String = "E-Mail"
+        Dim watermark As String = "E-Mail" 'Expiremtal
         If Email.Text = "" Then
-
+            btnLogin.Enabled = False
         End If
     End Sub
+
 End Class
