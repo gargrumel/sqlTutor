@@ -140,6 +140,15 @@ Partial Public Class lesson1
     Protected WithEvents btnOk As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''pointValue control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pointValue As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
     '''updatePane2 control.
     '''</summary>
     '''<remarks>

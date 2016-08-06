@@ -1,32 +1,40 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="lessons.aspx.vb" Inherits="sqlTutor.lessons" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="content">    
-    <div class="tile"><a href="#">STAGE 1</a><br />
+    <div class="tile"><a href="#">LEVEL 1</a><br />
         <asp:ImageButton ID="imgLess1" runat="server" Height="74px" ImageUrl="~/Images/checked_checkbox.png" Width="96px" />
         <br />
         <br />
         <asp:Label ID="lbLess1" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="tile"><a href="#">STAGE 2</a><br />
+        <div class="tile"><a href="#">LEVEL 2</a><br />
             <asp:ImageButton ID="imgLess2" runat="server" Height="74px" ImageUrl="~/Images/locked-icon.png" Width="96px" Enabled="False" />
             <br />
             <br />
             <asp:Label ID="lbLess2" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="tile"><a href="#">STAGE 3</a><br />
+        <div class="tile"><a href="#">LEVEL 3</a><br />
             <asp:ImageButton ID="imgLess3" runat="server" ImageUrl="~/Images/locked-icon.png" height="74px" width="96px" Enabled="False" />
             <br />  
             <br />            
             <asp:Label ID="lbLess3" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="tile"><a href="#">STAGE 4</a><br />
+        <div class="tile"><a href="#">LEVEL 4</a><br />
             <asp:ImageButton ID="imgLess4" runat="server" ImageUrl="~/Images/locked-icon.png" height="74px" width="96px" Enabled="False" />
             <br />  
             <br />            
             <asp:Label ID="lbLess4" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="tile"><a href="#">BONUS STAGE</a></div>
-        <div class="tile"><a href="#">STAGE 6</a><br />
+        <div class="tile"><a href="#">BONUS STAGE</a>
+
+            <div id="bonusBar">
+                <asp:Label ID="Label1" runat="server" Text="QP Earned: "></asp:Label>
+                <asp:Label ID="lbQp" runat="server" ForeColor="White"></asp:Label>
+            </div>
+
+        </div>
+
+        <div class="tile"><a href="#">LEVEL 6</a><br />
             <br />
             <asp:ImageButton ID="imgLess5" runat="server" ImageUrl="~/Images/locked-icon.png" height="74px" width="96px" Enabled="False" />
             <br />

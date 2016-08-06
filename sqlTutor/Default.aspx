@@ -58,7 +58,7 @@
           <br />       
           <br />
          <div id="continueButton">
-             <asp:Button ID="btnContinue" runat="server" Text="" CssClass="btn btn-default" />
+             <asp:Button ID="btnContinue" runat="server" Text="" CssClass="btn btn-default" BackColor="#0033CC" ForeColor="White" />
    
     </div>
 

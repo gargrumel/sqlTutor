@@ -63,6 +63,7 @@
                 <asp:Button ID="btnOk" runat="server" Text="NEXT >>" CssClass="btn btn-default" BackColor="#0099FF" ForeColor="White" />
                 <br />
                 <br />
+                        <asp:HiddenField ID="pointValue" runat="server" />
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>

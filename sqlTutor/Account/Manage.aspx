@@ -28,6 +28,9 @@
             <asp:Label ID="lbCurrentStatus" runat="server" Font-Bold="True"></asp:Label>
             <br />
             <br />
+            <asp:Button ID="btnContinue" runat="server" CssClass="btn btn-default" Text="Continue Lesson" ToolTip="Continue Lesson" />
+            <br />
+            <br />
             <asp:UpdateProgress ID="UpdateProgress1" runat="server">
             </asp:UpdateProgress>
             <br />

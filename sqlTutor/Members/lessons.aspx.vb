@@ -25,6 +25,8 @@ Public Class lessons
             loadLesson7()
             loadLesson8()
         End If
+
+        getQp()
     End Sub
 
     Private Sub loadLesson1()
@@ -236,7 +238,7 @@ Public Class lessons
             If queryConn.count = 0 Then
                 queryConn.queryData("INSERT INTO userProgress (userId, lessonId, lessonStatus) VALUES (" & userId & "," & less & ", 1)")
             Else
-                queryConn.queryData("UPDATE userProgress SET lessonId = " & less & ", lessonStatus = 1 WHERE userId = " & userId)
+                queryConn.queryData("UPDATE userProgress SET lessonId = " & less & ", lessonStatus = 1, seqId = 0 WHERE userId = " & userId)
             End If
             Dim lc As New lessonClass(less, 1)
             addLesson(lc) 'Experimental
@@ -247,8 +249,20 @@ Public Class lessons
 
     End Sub
 
-    
+
     Protected Sub imgLess8_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess8.Click
         startLesson(14, "/Members/lesson7.aspx")
+    End Sub
+
+    Private Sub getQp()
+        Try
+            queryConn.queryData("SELECT queryPoints FROM queryPoints WHERE userId = " & userId)
+            For Each r As DataRow In queryConn.ds.Tables(0).Rows
+                lbQp.Text = r("queryPoints")
+            Next
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 End Class

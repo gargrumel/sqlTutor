@@ -24,8 +24,28 @@
 
         Catch ex As Exception
         End Try
+    End Sub
+
+    Public Sub addQp(ByVal id As Integer, ByVal qp As Integer)
+        Try
+            queryConn.queryData("SELECT * from queryPoints WHERE userID = " & id)
+            If queryConn.count = 0 Then
+                queryConn.queryData("INSERT INTO queryPoints (userId, queryPoints) VALUES (" & id & "," & qp & ")")
+            Else
+                queryConn.queryData("UPDATE queryPoints SET userId = " & id & ", queryPoints = " & qp)
+            End If
+
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Public Sub minusQp(ByVal id As Integer, ByVal qp As Integer)
+
 
     End Sub
+
+
+
 
 
 

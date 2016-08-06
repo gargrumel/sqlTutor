@@ -10,6 +10,8 @@ Partial Public Class Manage
     Inherits System.Web.UI.Page
     Dim queryConn As New connections
     Dim nextLess As Integer = 0
+    Dim navPage As String = ""
+    Dim newUser As Boolean = False
 
 
     Private Sub getLessons()
@@ -20,27 +22,41 @@ Partial Public Class Manage
                                     UserProgress.lessonId = Lessons.ID
                                     AND userProgress.lessonStatus = Status.ID )") 'SQL Query
 
-            For Each r As DataRow In queryConn.ds.Tables(0).Rows
-                lbCurrentName.Text = r("lessName") 'Sets the results of the query as the values for the respective controls
-                lbCurrentDesc.Text = r("lessDesc")
-                lbCurrentStatus.Text = r("lessStatus")
-                'lbRank.Text = r("rn")
-                lbEmail.Text = "Email: " & r("email") & " : "
-                nextLess = r("ID") + 1 'Retrieves the ID from the current lesson, adds 1 and sets the value to the nextLess variable
-            Next
+            If queryConn.count = 0 Then 'If no result is found.
+                newUser = True
+                btnContinue.Text = "Start Learning SQL"
+                lbNextLesson.Text = "You have not started any lessons yet"
+            Else
+                For Each r As DataRow In queryConn.ds.Tables(0).Rows
+
+                    lbCurrentName.Text = r("lessName") 'Sets the results of the query as the values for the respective controls
+                    lbCurrentDesc.Text = r("lessDesc")
+                    lbCurrentStatus.Text = r("lessStatus")
+
+                    lbEmail.Text = "Email: " & r("email")
+                    nextLess = r("ID") + 1 'Retrieves the ID from the current lesson, adds 1 and sets the value to the nextLess variable
+
+                Next
+            End If
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
+
+
+
+
+
 
     End Sub
 
     Private Sub getNextLesson()
         Try
-            queryConn.queryData("SELECT lessName, lessDesc FROM Lessons WHERE ID = " & nextLess)
+            queryConn.queryData("SELECT lessName, lessDesc, pageName FROM Lessons WHERE ID = " & nextLess)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbNextLesson.Text = r("lessName")
                 lbNextDesc.Text = r("lessDesc")
                 nextLess = 0
+                page = r("pageName")
             Next
         Catch ex As Exception
 
@@ -117,7 +133,7 @@ Partial Public Class Manage
 
         TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId())
 
-
+        lbEmail.Text = User.Identity.GetUserName
         LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count
 
         Dim authenticationManager = HttpContext.Current.GetOwinContext().Authentication
@@ -167,5 +183,11 @@ Partial Public Class Manage
 
     Protected Sub icon_Click(sender As Object, e As ImageClickEventArgs) Handles icon.Click
 
+    End Sub
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
+        If newUser = True Then
+            Response.Redirect("/Members/lessons.aspx")
+        End If
     End Sub
 End Class

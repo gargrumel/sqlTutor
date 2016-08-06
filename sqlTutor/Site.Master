@@ -59,7 +59,7 @@
                         <li><a runat="server" href="~/Account/Manage.aspx">Profile</a></li>
                         <li><a runat="server" href="Members/lessons.aspx">SQL Topics</a></li>                                          
                         <li><a runat="server" href="Members/articles.aspx">Documentation</a></li>
-                           <li></li>
+                         
                        
                        
                     </ul>

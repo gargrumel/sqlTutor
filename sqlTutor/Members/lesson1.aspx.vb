@@ -6,6 +6,7 @@ Public Class lesson1
     Dim r As New record 'New instance of the record Class
     Dim userId As Integer 'Variable to store the user id
     Dim lessId As Integer 'Variable to store the lesson id
+
     Dim seq As Integer ''Variable to store the sequence id from the current lesson
     Dim ANS1 As String = "SELECT * FROM Cars" 'String value for the first answer
     Dim ANS2 As String = "SELECT * FROM Employees" 'String value for the second answer
@@ -37,6 +38,7 @@ Public Class lesson1
                 userId = r("userId")
                 lessId = r("lessonId")
                 seq = r("seqId")
+
             Next
         Catch ex As Exception
         End Try
@@ -113,6 +115,7 @@ Public Class lesson1
             btnNext.BackColor = Drawing.Color.Blue
             r.updateLesson(8, userId, 32)
             disable()
+
         Else
             lbResult.Text = error1
             btnNext.Enabled = False
@@ -132,6 +135,7 @@ Public Class lesson1
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
             r.updateLesson(8, userId, 80)
+            r.addQp(userId, 15)
             disable()
         Else
             lbResult.Text = error1
@@ -143,13 +147,12 @@ Public Class lesson1
     '@if Statement - Updates the database, based on the current task
 
     Protected Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
-        enable()
-
         If lbTask.Text = task1 Then
             r.updateLesson(8, userId, 16)
         Else
             r.updateLesson(8, userId, 64)
         End If
+        enable()
     End Sub
 
 
@@ -174,6 +177,7 @@ Public Class lesson1
         ElseIf btnNext.Text = back Then
             redirect()
         Else
+            btnNext.Enabled = False
             nextLesson()
 
         End If
