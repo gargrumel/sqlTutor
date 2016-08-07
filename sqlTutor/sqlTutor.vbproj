@@ -215,6 +215,7 @@
     <Content Include="Images\89.gif" />
     <Content Include="Images\checked_checkbox.png" />
     <Content Include="Images\database.png" />
+    <Content Include="Images\database_2.jpg" />
     <Content Include="Images\emailBack.png" />
     <Content Include="Images\Gender Neutral User-100.png" />
     <Content Include="Images\Gender Neutral User-64.png" />
@@ -226,13 +227,16 @@
     <Content Include="Images\locked-icon.png" />
     <Content Include="Images\logogoeshere.gif" />
     <Content Include="Images\Logout Rounded Left-100.png" />
+    <Content Include="Images\ok-icon.png" />
     <Content Include="Images\Search-64.png" />
     <Content Include="Images\shield-ok-icon.png" />
     <Content Include="Images\SQL-100.png" />
     <Content Include="Images\sqlBackdrop.jpg" />
     <Content Include="Images\sqlLogo.png" />
+    <Content Include="Images\tick.png" />
     <Content Include="loggedOut.aspx" />
     <Content Include="Members\articles.aspx" />
+    <Content Include="Members\bonus.aspx" />
     <Content Include="Members\introduction.aspx" />
     <Content Include="Members\lesson1.aspx" />
     <Content Include="Members\lesson2.aspx" />
@@ -433,6 +437,13 @@
     </Compile>
     <Compile Include="Members\articles.aspx.vb">
       <DependentUpon>articles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\bonus.aspx.designer.vb">
+      <DependentUpon>bonus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\bonus.aspx.vb">
+      <DependentUpon>bonus.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Members\introduction.aspx.designer.vb">

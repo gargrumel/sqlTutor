@@ -56,7 +56,7 @@ Partial Public Class Manage
                 lbNextLesson.Text = r("lessName")
                 lbNextDesc.Text = r("lessDesc")
                 nextLess = 0
-                page = r("pageName")
+                navPage = r("pageName")
             Next
         Catch ex As Exception
 
@@ -185,9 +185,13 @@ Partial Public Class Manage
 
     End Sub
 
+    'Checks if the did not start any lessons yet and if true, redirects to the lessons page, if false
+    'redirects to the current lesson.
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         If newUser = True Then
             Response.Redirect("/Members/lessons.aspx")
+        Else
+            Response.Redirect(navPage)
         End If
     End Sub
 End Class

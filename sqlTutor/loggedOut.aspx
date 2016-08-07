@@ -14,6 +14,7 @@
                     <br/>
                 <h1>Learn SQL Now</h1>
                 <br />
+                    <asp:Image ID="Image1" runat="server" Height="89px" ImageUrl="~/Images/database.png" Width="107px" />
                 <br />
                 <br />
                 <br />

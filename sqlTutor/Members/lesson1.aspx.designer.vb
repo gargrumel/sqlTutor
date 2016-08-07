@@ -68,6 +68,15 @@ Partial Public Class lesson1
     Protected WithEvents updatePanel1 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
+    '''Panel3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel3 As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''lbTask control.
     '''</summary>
     '''<remarks>
@@ -194,6 +203,24 @@ Partial Public Class lesson1
     Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''panLess1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panLess1 As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''panLess2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panLess2 As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''btnNext control.
     '''</summary>
     '''<remarks>
@@ -201,4 +228,13 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnNext As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''imgCorrect control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgCorrect As Global.System.Web.UI.WebControls.Image
 End Class

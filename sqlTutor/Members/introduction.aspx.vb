@@ -25,7 +25,7 @@ Public Class introduction
     Protected Sub btnComplete_Click(sender As Object, e As EventArgs) Handles btnComplete.Click
         r.completeLesson(userId, lessId)
         r.updateLesson(7, userId, 100)
-        r.addQp(userId, 5)
+        r.addQp(userId, 10)
         Response.Redirect("/Members/lessons.aspx")
     End Sub
 

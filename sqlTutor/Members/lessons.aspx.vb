@@ -5,7 +5,8 @@ Public Class lessons
     Dim queryConn As New connections
     Dim lessArray As New ArrayList
     Dim userId As Integer
-    Dim imgUrl As String = "~/Images/checked_checkbox.png"
+    Dim imgUrl2 As String = "~/Images/locked-icon.png"
+    Dim imgUrl As String = "~/Images/database.png"
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -50,11 +51,13 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess2.Text = r("lessName")
                 imgLess2.ToolTip = r("lessDesc")
+                imgLess2.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
                     imgLess2.ImageUrl = imgUrl
+
                     imgLess2.Enabled = True
                 End If
             Next
@@ -71,6 +74,7 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess3.Text = r("lessName")
                 imgLess3.ToolTip = r("lessDesc")
+                imgLess3.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
 
@@ -93,6 +97,7 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess4.Text = r("lessName")
                 imgLess4.ToolTip = r("lessDesc")
+                imgLess4.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
 
@@ -100,6 +105,7 @@ Public Class lessons
                 If queryConn.count > 0 Then
                     imgLess4.ImageUrl = imgUrl
                     imgLess4.Enabled = True
+
                 End If
             Next
         Catch ex As Exception
@@ -115,6 +121,7 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess5.Text = r("lessName")
                 imgLess5.ToolTip = r("lessDesc")
+                imgLess5.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
 
@@ -136,6 +143,7 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess6.Text = r("lessName")
                 imgLess6.ToolTip = r("lessDesc")
+                imgLess6.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
 
@@ -158,6 +166,7 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess7.Text = r("lessName")
                 imgLess7.ToolTip = r("lessDesc")
+                imgLess7.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
 
@@ -180,6 +189,7 @@ Public Class lessons
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 lbLess8.Text = r("lessName")
                 imgLess8.ToolTip = r("lessDesc")
+                imgLess8.ImageUrl = imgUrl2
             Next
             queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
 
@@ -258,11 +268,20 @@ Public Class lessons
         Try
             queryConn.queryData("SELECT queryPoints FROM queryPoints WHERE userId = " & userId)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
-                lbQp.Text = r("queryPoints")
+                lbPercent.Text = r("queryPoints")
             Next
         Catch ex As Exception
 
         End Try
 
+        If lbPercent.Text > 99 Then
+            lbBonus.Text = "Congratulations, Bonus stage unlocked."
+            imgBonus.Enabled = True
+        End If
+
+    End Sub
+
+    Protected Sub imgBonus_Click(sender As Object, e As ImageClickEventArgs) Handles imgBonus.Click
+        Response.Redirect("/Members/bonus.aspx")
     End Sub
 End Class

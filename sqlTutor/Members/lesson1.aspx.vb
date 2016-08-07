@@ -83,7 +83,9 @@ Public Class lesson1
         btnNext.Text = completeText
         btnNext.BackColor = Drawing.Color.Blue
         r.updateLesson(8, userId, 100)
+        lbPercent.Text = 100
         r.completeLesson(userId, lessId)
+        r.addQp(userId, 30)
     End Sub
 
 
@@ -96,10 +98,10 @@ Public Class lesson1
     'executes a specific method, based on the lbTask text
     Public Sub loadLesson()
         If lbTask.Text = task1 Then
-            execute1()
+            execute1() 'Calls the execute1 method
 
         ElseIf lbTask.Text = task2 Then
-            execute2()
+            execute2() 'Calls the execute2 method
 
         End If
     End Sub
@@ -108,16 +110,17 @@ Public Class lesson1
     '@If statement - Defines what string is used as the answer (Task 1) and updates the database with the relevant information and displays the appropriate feedback label
     Public Sub execute1()
         lbResult.Visible = True
-        If txtRunSql.Text = ANS1 Then
-            lbResult.Text = feedback
-            txtRunSql.Text = ""
-            btnNext.Enabled = True
-            btnNext.BackColor = Drawing.Color.Blue
-            r.updateLesson(8, userId, 32)
-            disable()
-
+        If txtRunSql.Text = ANS1 Then 'If the user's entered text and the answer matches
+            lbResult.Text = feedback 'Shows the feedback message
+            txtRunSql.Text = "" 'Resets the txtRunSql control text to Blank
+            btnNext.Enabled = True 'Enables the btnNext control
+            btnNext.BackColor = Drawing.Color.Blue 'Changes the btnNext control background to blue
+            r.updateLesson(8, userId, 32) 'Calls the updateLesson method from the record class
+            disable() 'Calls the disable method
+            panLess1.Visible = True
+            imgCorrect.Visible = True
         Else
-            lbResult.Text = error1
+            lbResult.Text = error1 'Displays the error message label
             btnNext.Enabled = False
         End If
     End Sub
@@ -125,7 +128,7 @@ Public Class lesson1
 
     '@If statement - Defines what string is used as the answer (Task 2) and updates the database with the relavant information and displays the appropriate feedback label
 
-    Public Sub execute2()
+    Public Sub execute2() 'Same logic as execute1
         lbResult.Visible = True
         If txtRunSql.Text = ANS2 Then
             lbResult.Text = feedback
@@ -135,8 +138,9 @@ Public Class lesson1
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
             r.updateLesson(8, userId, 80)
-            r.addQp(userId, 15)
-            disable()
+
+            panLess2.Visible = True
+            imgCorrect.Visible = True
         Else
             lbResult.Text = error1
             btnNext.Enabled = False
@@ -149,8 +153,10 @@ Public Class lesson1
     Protected Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         If lbTask.Text = task1 Then
             r.updateLesson(8, userId, 16)
+            lbPercent.Text = 16
         Else
             r.updateLesson(8, userId, 64)
+            lbPercent.Text = 64
         End If
         enable()
     End Sub
@@ -179,6 +185,7 @@ Public Class lesson1
         Else
             btnNext.Enabled = False
             nextLesson()
+            imgCorrect.Visible = False
 
         End If
 
@@ -190,11 +197,13 @@ Public Class lesson1
         If lbTask.Text = task1 Then
             loadTask2()
             btnNext.BackColor = Drawing.Color.LightGray
+            panLess1.Visible = False
         ElseIf lbTask.text = task2 Then
             finish()
         End If
         If seq <> 100 Then
             r.updateLesson(8, userId, 48)
+            lbPercent.Text = 48
         End If
     End Sub
 

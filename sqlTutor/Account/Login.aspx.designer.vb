@@ -59,6 +59,15 @@ Partial Public Class Login
     Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
     
     '''<summary>
+    '''Label1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''btnLogin control.
     '''</summary>
     '''<remarks>
@@ -77,11 +86,11 @@ Partial Public Class Login
     Protected WithEvents RegisterHyperLink As Global.System.Web.UI.WebControls.HyperLink
     
     '''<summary>
-    '''OpenAuthLogin control.
+    '''Image1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents OpenAuthLogin As Global.sqlTutor.OpenAuthProviders
+    Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
 End Class

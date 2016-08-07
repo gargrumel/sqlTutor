@@ -19,6 +19,15 @@
                 $('#inner').animate({                 
                     'width': (outerWidth * p) / 100
                 }, 3000);
+
+                $({ counter: 1 }).animate({ counter: p }, {
+
+                    duration: 3000,
+                    step: function () {
+                        $('#inner').text(Math.ceil(this.counter) + ' %');
+                    }
+                })
+
             }        
         });
    

@@ -8,6 +8,10 @@
       <p>CREATE TABLE STATEMENT</p>
       <p>&nbsp;</p>
       <p>
+          <asp:Button ID="btnComplete" runat="server" BackColor="#0099FF" CssClass="btn btn-default" Height="63px" Text="Complete Lesson" Width="159px" />
+      </p>
+      <p>&nbsp;</p>
+      <p>
           &nbsp;</p>
       <p>
       &nbsp;

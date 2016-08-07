@@ -6,13 +6,11 @@ body {
     padding-left:0px;
     padding-right:0px;    
      
-
-  
 }
 
 #logOut{
 
-    height:calc(100vh - 300px);
+    height:calc(100vh - 230px);
 }
 
 
@@ -21,9 +19,7 @@ body {
   height:calc(100vh - 200px);   
 }
 
-#txtSearch {
-    width: 90%;
-}
+
 
 #loginHead {
     text-align: center;
@@ -77,7 +73,7 @@ input[type="password"],
 input[type="email"],
 input[type="tel"],
 input[type="select"] {
-    max-width: 280px;
+    max-width: 100%;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -94,7 +90,7 @@ input[type="select"] {
 /******************************Documents page Layout style*********************************************/
 #lessonBody{
     display:flex;
-    justify-content:center;
+    justify-content:center
 
 }
 
@@ -103,31 +99,70 @@ input[type="select"] {
     background-color:lightgray;  
     padding:0px; 
   text-align:center;
+  }
+
+@media only screen and (max-width : 1224px) {
+    body{
+        background-color:deeppink;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    body{
+        background-color:red;
+    }
+
+}
+
+@media only screen and (max-width : 500px) {
+    body{
+        background-color:blue;  
+            
+    }
+    
+    #lessonBody{
+       
+        flex-direction:column;
+    }
+
+    .docItem{
+     width:100%;
+     
+      
+    }
+
+    .lessonHeader{
+        height:80px;
+    }
+
+     #inner{
+         background-color:green;
+     }
+
 
 }
 
 
 .docItem {   
-    height:calc(100vh - 200px);   
+     
     text-align: center; 
     background-color:blue;      
-    width:30%;
-    margin:5px;  
-    flex-wrap:wrap;
+    width:100%;
+    margin:5px;      
     padding:5px;
-    color:white;
+    color:black;
     text-align:left;
     
       
 }
 
 #updatePanel{
-    height:500px;
+   
 }
 
 
 #queryWindow{
-background-color:black;
+   background-color:#2A3034;
 }
 
 #resultWindow{
@@ -136,11 +171,15 @@ background-color:black;
 }
 
 #txtRunSql{
-   
+   width:100%;
+}
+
+#updatePane2{
+    width:100%;
 }
 
 #panelLesson1{
-    height:40px;
+   
     border-color:black;
     border-style:solid;
     border-width:2px;
@@ -158,14 +197,15 @@ background-color:black;
 
 
     .docItem:nth-child(2) {
-      
-        background-color:lightgray;
-        
+         background-color:#354551; 
     }
 
      .docItem:nth-child(3) {
        
         background-color:white;
+        color:black;
+        border-style:solid;
+        border-width:2px;
         
     }
 
@@ -174,11 +214,20 @@ background-color:black;
 }
 
 .txtInfo {
-    width: 100%;
-    height: 100%;
+    
+}
+    
+/*********************Lesson tiles content area:********************************/
+
+#lessonPageHeader{
+   width:100%;
+   display:flex;
 }
 
-/*********************Lesson tiles content area:********************************/
+
+
+
+
 #content {
     text-decoration: none;
     list-style: none;
@@ -196,9 +245,9 @@ background-color:black;
     width: 200px;
     height: 200px;
     margin: 5px;
-    background-color:deepskyblue;
+    background-color:white;
     border-style: solid;
-    border-color: deepskyblue;
+    border-color: white;
     vertical-align: middle;
     text-align: center;
     color: black;
@@ -206,7 +255,12 @@ background-color:black;
 }
 
     .tile:hover {
-        border-color: red;
+       background-color:#34B3A0;
+       color:white;
+    }
+
+    .tile:nth-child(3){
+       
     }
 
 #tileFrame {
@@ -218,6 +272,35 @@ background-color:black;
     font-size: larger;
     color: black;
 }
+
+#bonus{
+    background-color:gold;
+}
+
+/*Lesson 2*******************************************************************/
+
+#lesson2{    
+    display:flex;
+     justify-content:center 
+    
+}
+
+#window1, #window2{
+    width:50%;
+    text-align: center; 
+    background-color:deepskyblue;      
+  
+    flex-direction:row;
+    height:500px;
+    margin:5px;  
+    
+    padding:5px;
+    color:black;
+    text-align:left;
+    
+   
+}
+
 
 
 /**Graph area***************************************/
@@ -238,7 +321,7 @@ background-color:black;
 
 #outer{
     width:100%;
-    height:40px;
+    height:20px;
     background-color:gray;
     
 }
@@ -246,7 +329,10 @@ background-color:black;
 #inner{
     width:0px;
     height:100%;
-    background-color:lightseagreen
+    background-color:blue;
+    color:white;
+    text-align:center;
+        
 }
 
 #btnLogin:hover{
@@ -263,6 +349,8 @@ background-color:black;
    border-width:2px;
    border-color:white;
 }
+
+
 
 
 

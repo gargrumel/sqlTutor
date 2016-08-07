@@ -25,8 +25,7 @@
                 T1.style.borderColor = 'white'
                 T2.style.borderColor = 'deepSkyBlue'
                 T3.style.borderColor = 'white'
-                $('#task3')[0].scrollIntoView(true);
-                
+                $('#task3')[0].scrollIntoView(true);          
                 
                 
             });
@@ -35,16 +34,17 @@
                 T1.style.borderColor = 'white'
                 T2.style.borderColor = 'white'
                 T3.style.borderColor = 'deepSkyBlue'
-               
-                
-                
-            });
+             });
 
             $("#btnTask3").click(function () {
                 T1.style.borderColor = 'white'
                 T2.style.borderColor = 'white'
                 T3.style.borderColor = 'white'                             
-                alert("You have sucessfully complete this lesson. Click Complete to finish")
+                
+            });
+
+            $('btnComplete').click(function () {
+                alert("You have sucessfully completed Stage 1. Reward: 10qp")
             });
 
          
@@ -67,16 +67,16 @@
 
         <div id ="task1">
              <br/>
-         What is SQL? Structured Query Language (SQL) is a standard computer language used to manipulate data within a database<br />
+         What is SQL? Structured Query Language (SQL) is a standard computer language used to manipulate data within a database.<br />
             
         <br />
-            <input id="btnTask1" type="button" value="I Got It" class="btn default-default" />
+            <input id="btnTask1" type="button" value="I Understand" class="btn default-default" />
         </div>
         <br />
         <div id ="task2">
             <br />
-        What is a database? A database is like a container that stores data within tables<br />
-             <input id="btnTask2" type="button" value="I Got It" class="btn default-default" hidden="hidden"  />
+        What is a database? A database is like a container that stores data within tables.<br />
+             <input id="btnTask2" type="button" value="I Understand" class="btn default-default" hidden="hidden"  />
         <br />
 
         </div>
@@ -112,13 +112,13 @@
                 <td>row3</td>
             </tr>
         </table>
-             <input id="btnTask3" type="button" value="I Got It" class="btn default-default" hidden="hidden"/>
+             <input id="btnTask3" type="button" value="I Understand" class="btn default-default" hidden="hidden"/>
 
         </div>
         <br />
         <br />
 
-      <asp:Button class ="cButton" ID ="btnComplete" runat="server" Text="Complete" BackColor="#0099FF" CssClass="btn btn-default" ForeColor="White"/>
+      <asp:Button class ="cButton" ID ="btnComplete" runat="server" Text="Complete Lesson" BackColor="#0099FF" CssClass="btn btn-default" ForeColor="White"/>
    </div>
     </div>
 </asp:Content>

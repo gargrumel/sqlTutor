@@ -10,17 +10,13 @@
 
         $(document).ready(function () {      
                        
-            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML 
+            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML
+            go = document.getElementById("#btnOk")
            
             if (amount > 99) {
                 alert("You have already completed this lesson")                
             }
-
-         
-            $("")
-
-
-                 
+            
         });
    
     </script>
@@ -32,35 +28,36 @@
                
                 <asp:Label ID="lbTopic" runat="server" Text="SELECT ALL STATEMENT"></asp:Label>
                  <br />
-                   &nbsp;<asp:Label ID="lbPercent" runat="server" Font-Bold="true"></asp:Label>
-                        <asp:Label ID="Label1" runat="server" Text="% complete"></asp:Label>
-                
+                   &nbsp;<asp:Label ID="lbPercent" runat="server" Font-Bold="True" ForeColor="White">0</asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="% complete"></asp:Label>                
             </div>
 
             <asp:Panel ID="Panel2" runat="server" ScrollBars="Auto">
                    <asp:UpdatePanel ID="updatePanel1" runat="server">
                 <ContentTemplate>
                     <fieldset>
-                        <asp:Label ID="lbTask" runat="server" Text="Task 1" Font-Size="Larger"></asp:Label>
-                       
-                        <br />
-                        <br />
-                        <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: "></asp:Label>
-                        <br />
-                        <asp:Label ID="lbScenario" runat="server" Text="To SELECT all the records FROM a table"></asp:Label>
-                        <br />
-                        <br />
-                        <asp:Label ID="lbExample" runat="server" Text="For example, to SELECT all the records FROM a table named Cars "></asp:Label>
-                        <br />
-                        <br />
-                        <asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
-                        <br />
-                        <br />
-                        <asp:Label ID="lbAnswer" runat="server" Text="SELECT * FROM "></asp:Label>
-                        &nbsp;<asp:Label ID="lbTable" runat="server" Text="Cars"></asp:Label>
-                <br />
-                <br />
-                <asp:Button ID="btnOk" runat="server" Text="NEXT >>" CssClass="btn btn-default" BackColor="#0099FF" ForeColor="White" />
+                        <asp:Panel ID="Panel3" runat="server">
+                            <asp:Label ID="lbTask" runat="server" Font-Size="Larger" Text="Task 1"></asp:Label>
+                            <br />
+                            <br />
+                            <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: "></asp:Label>
+                            <br />
+                            <asp:Label ID="lbScenario" runat="server" Text="To SELECT all the records FROM a table"></asp:Label>
+                            <br />
+                            <br />
+                            <asp:Label ID="lbExample" runat="server" Text="For example, to SELECT all the records FROM a table named Cars "></asp:Label>
+                            <br />
+                            <br />
+                            <asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
+                            <br />
+                            <br />
+                            <asp:Label ID="lbAnswer" runat="server" Text="SELECT * FROM "></asp:Label>
+                            &nbsp;<asp:Label ID="lbTable" runat="server" Text="Cars"></asp:Label>
+                            <br />
+                            <br />
+                            <asp:Button ID="btnOk" runat="server" CssClass="btn btn-default" Text="I Understand" />
+                            &nbsp;<br />
+                        </asp:Panel>
                 <br />
                 <br />
                         <asp:HiddenField ID="pointValue" runat="server" />
@@ -83,7 +80,7 @@
             <asp:UpdatePanel ID="updatePane2" runat="server">
                 <ContentTemplate>
                     <fieldset>
-                        <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" Enabled="False" Width="100%"></asp:TextBox>
+                        <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" Enabled="False" Width="100%" height="36px"></asp:TextBox>
                           <br /> 
                          <br /> 
             <asp:Button ID="btnRun" runat="server" Text="Run SQL >>" Enabled="False" CssClass="btn btn-default" /> 
@@ -93,8 +90,7 @@
                 <Triggers>
                     <asp:AsyncPostBackTrigger ControlID="btnOk" />
                 </Triggers>
-            </asp:UpdatePanel>
-           
+            </asp:UpdatePanel>           
         </div>
 
 
@@ -104,10 +100,65 @@
              <asp:UpdatePanel ID="updatePanel3" runat="server">
                 <ContentTemplate>
                     <fieldset>
-                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="Black"></asp:Label>  
+                        <div id="message">
                         <br />
+                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="Black"></asp:Label>  
+                            <br />
+                            <br />
+                            <asp:Panel ID="panLess1" runat="server" Visible="False">
+                                <table style="width: 100%; height: 100%">
+                                    <tr>
+                                        <td style="border: thin solid #000000"><b>Make</b></td>
+                                        <td style="border: thin solid #000000"><b>Model</b></td>
+                                        <td style="border: thin solid #000000"><b>Year</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: thin solid #000000">Jaguar</td>
+                                        <td style="border: thin solid #000000">XJ</td>
+                                        <td style="border: thin solid #000000">2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: thin solid #000000">Bently</td>
+                                        <td style="border: thin solid #000000">Bentayga</td>
+                                        <td style="border: thin solid #000000">2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: thin solid #000000">Lotus</td>
+                                        <td style="border: thin solid #000000">Exos</td>
+                                        <td style="border: thin solid #000000">2012</td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                            <br />
+                            <asp:Panel ID="panLess2" runat="server" Visible="False">
+                                <table style="width: 100%; height: 100%">
+                                    <tr>
+                                        <td style="border: thin solid #000000">ID</td>
+                                        <td style="border: thin solid #000000">FirstName</td>
+                                        <td style="border: thin solid #000000">LastName</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: thin solid #000000">001</td>
+                                        <td style="border: thin solid #000000">Frank</td>
+                                        <td style="border: thin solid #000000">Markson</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: thin solid #000000">002</td>
+                                        <td style="border: thin solid #000000">Jeffery</td>
+                                        <td style="border: thin solid #000000">Smith</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: thin solid #000000">003</td>
+                                        <td style="border: thin solid #000000">Christene</td>
+                                        <td style="border: thin solid #000000">McKelly</td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                            <br />
+                            </div>
                         <br />
                         <asp:Button ID="btnNext" runat="server" Enabled="False" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="btn btn-default" />
+                        &nbsp;<asp:Image ID="imgCorrect" runat="server" ImageUrl="~/Images/ok-icon.png" Visible="False" />
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>

@@ -3,9 +3,7 @@
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
-
-
+  
     <script src="Scripts/jquery-1.10.2.js"></script>
     <script type="text/javascript">
     
@@ -23,36 +21,31 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
-                        <div class="col-md-10">
+                        <div class="col-md-10" style="text-align: left">
+                            <div class="text-center">
                             <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeHolder="Email" >lennon@gmail.com</asp:TextBox>
+                            </div>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                                 CssClass="text-danger" ErrorMessage="The email field is required." />
                         </div>
                     </div>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
-                        <div class="col-md-10">
+                        <div class="col-md-10" style="text-align: left">
+                            <div class="text-center">
                             <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeHolder="Password" >Test123?</asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <div class="checkbox">
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
                             </div>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
+                            <br />
+                                <asp:CheckBox runat="server" ID="RememberMe" />
+                                <asp:Label runat="server" AssociatedControlID="RememberMe" ID="Label1">Remember me?</asp:Label>
+                            <br />
+                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" ID="btnLogin" BackColor="#2461BF" ForeColor="White" Width="140px" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" ID="btnLogin" BackColor="#2461BF" ForeColor="White" />
-                        &nbsp;
-                        </div>
                     </div>
                 </div>
-                <p>
+                <p class="text-left">
                     <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" NavigateUrl="~/Account/Register.aspx">Register as a new user</asp:HyperLink>
                 </p>
                 <p>
@@ -64,13 +57,7 @@
         </div>
 
         <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-                <p>
-                    test what section we are at???
-
-                </p>
-            </section>
+            <asp:Image ID="Image1" runat="server" Height="100%" ImageUrl="~/Images/database_2.jpg" Width="100%" />
         </div>
     </div>
 </asp:Content>

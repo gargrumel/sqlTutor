@@ -19,8 +19,9 @@ Public Class lesson3
         End Try
     End Sub
 
-
-
-
-
+    Protected Sub btnComplete_Click(sender As Object, e As EventArgs) Handles btnComplete.Click
+        r.completeLesson(userId, lessId)
+        r.addQp(userId, 100)
+        Response.Redirect("/Members/lessons.aspx")
+    End Sub
 End Class
