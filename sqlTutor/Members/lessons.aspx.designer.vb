@@ -122,6 +122,15 @@ Partial Public Class lessons
     Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''imgBonus control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgBonus As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
     '''lbQptitle control.
     '''</summary>
     '''<remarks>
@@ -147,15 +156,6 @@ Partial Public Class lessons
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbBonus As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''imgBonus control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents imgBonus As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
     '''imgLess5 control.

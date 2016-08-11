@@ -16,11 +16,12 @@ Partial Public Class Manage
 
     Private Sub getLessons()
         Try
-            queryConn.queryData("SELECT Lessons.lessName,Lessons.lessDesc,Status.lessStatus, Lessons.ID, Users.email
-                                    FROM Users, Lessons, userProgress , Status                  
+            queryConn.queryData("SELECT Lessons.lessName,Lessons.lessDesc,Status.lessStatus, Lessons.ID, Users.email, queryPoints.queryPoints, Lessons.lesRank, Rank.rn
+                                    FROM Users, Lessons, userProgress , Status, queryPoints, Rank                  
                                     WHERE (Users.email = '" & User.Identity.GetUserName & "' AND
-                                    UserProgress.lessonId = Lessons.ID
-                                    AND userProgress.lessonStatus = Status.ID )") 'SQL Query
+                                    UserProgress.lessonId = Lessons.ID AND
+                                    Lessons.lesRank = Rank.ID
+                                    AND userProgress.lessonStatus = Status.ID AND Users.userId = queryPoints.userId )") 'SQL Query
 
             If queryConn.count = 0 Then 'If no result is found.
                 newUser = True
@@ -32,6 +33,8 @@ Partial Public Class Manage
                     lbCurrentName.Text = r("lessName") 'Sets the results of the query as the values for the respective controls
                     lbCurrentDesc.Text = r("lessDesc")
                     lbCurrentStatus.Text = r("lessStatus")
+                    lbQp.Text = r("queryPoints")
+                    lbRank.Text = r("rn")
 
                     lbEmail.Text = "Email: " & r("email")
                     nextLess = r("ID") + 1 'Retrieves the ID from the current lesson, adds 1 and sets the value to the nextLess variable

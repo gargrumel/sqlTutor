@@ -39,14 +39,15 @@
                                 <asp:CheckBox runat="server" ID="RememberMe" />
                                 <asp:Label runat="server" AssociatedControlID="RememberMe" ID="Label1">Remember me?</asp:Label>
                             <br />
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" ID="btnLogin" BackColor="#2461BF" ForeColor="White" Width="140px" />
+                            <asp:Button runat="server" OnClick="LogIn" Text="LOG IN" CssClass="btn btn-default" ID="btnLogin" BackColor="#34B3A0" ForeColor="White" Width="189px" Height="52px" />
                         </div>
-                    </div>
-                    <div class="form-group">
                     </div>
                 </div>
                 <p class="text-left">
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" NavigateUrl="~/Account/Register.aspx">Register as a new user</asp:HyperLink>
+                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" NavigateUrl="~/Account/Register.aspx">Dont have an account yet? Register as a new user</asp:HyperLink>
+                </p>
+                <p class="text-left">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/Forgot.aspx">Forgot Password?</asp:HyperLink>
                 </p>
                 <p>
                     <%-- Enable this once you have account confirmation enabled for password reset functionality

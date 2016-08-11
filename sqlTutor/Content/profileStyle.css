@@ -1,13 +1,14 @@
 ﻿
 .body{
-  background-color:pink;  
-    height:calc(100vh - 50px)   
+     
     
 }
 
 .parent{    
     text-decoration: none;
     list-style: none;
+    font-family:'Segoe UI';
+    
     
     /*Flexbox*/
     display: flex;
@@ -19,20 +20,19 @@
 
 .item, .iconItem{    
    width:300px;
-   height:300px;
+
     margin: 5px;
-    background-color:deepskyblue;
+    background-color:white;
     border-style: solid;
-    border-color: deepskyblue;
+    border-color: white;
     vertical-align: middle;
     text-align: center;
     color: black;
     font-weight: 600;  
 }
 
-.subIcon{
-  
-    background-color:white;
+.subIcon{  
+    background-color:lightgrey;
     margin:5px; 
     text-align:center;
     vertical-align:central; 
@@ -46,9 +46,7 @@
 /*Adjust the size of individual Tiles*/
 
 .item:nth-child(1){/*First Tile*/    
-    flex-wrap:wrap;
-    background-color:green; 
-    border-color:green;
+    flex-wrap:wrap;   
    flex-grow:1;
    }
 
@@ -58,14 +56,13 @@
 }
 
 .item:nth-child(5){   
-    background-color:green;
-    border-color:green;
+   
      flex-grow:1;  
   
 }
 
 .item:nth-child(4){   
-    background-color:blue;
+   
    
 }
 
@@ -77,7 +74,13 @@
 
 
 .iconItem, .item:hover{
-    border-color:red;
+   background-color:#34B3A0;
+   color:white;
+}
+
+#divQp{
+    background-color:Highlight;
+    color:white;
 }
 
 @media only screen and (max-width : 1224px) {

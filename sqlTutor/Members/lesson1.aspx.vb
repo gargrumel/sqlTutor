@@ -17,7 +17,7 @@ Public Class lesson1
     'Dim lessonCompleteText As String = "You have already completed this level" - No longer required, handled by javaScript
     Dim table1 As String = "Cars" 'String value for the first table
     Dim table2 As String = "Employees" 'String value for the second table
-
+    Dim complete As Boolean = False
 
     Dim task1 As String = "Task 1" 'String value for the first task
     Dim task2 As String = "Task 2" 'String value for the second task
@@ -42,50 +42,31 @@ Public Class lesson1
             Next
         Catch ex As Exception
         End Try
-        If seq = 16 Then
-            lbTask.Text = task1
-            enable()
-        ElseIf seq = 64 Then
-            lbTask.Text = task2
-            loadTask2()
-            enable()
-        ElseIf seq = 32 Then
-            nextLesson()
-        ElseIf seq = 80 Then
-            btnOk.Enabled = False
-            btnNext.Enabled = True
-            btnNext.Text = completeText
-            btnNext.BackColor = Drawing.Color.Blue
-        ElseIf seq = 100 Then 'Disables buttons if task is already completed, based on seq value
-            lbPercent.Text = seq
-            btnNext.Enabled = True
-            btnNext.Text = back
-            btnOk.Enabled = False
-            btnNext.BackColor = Drawing.Color.Blue
+        lbPercent.Text = seq
+
+        r.getComplete(userId, lessId) 'Calls a method of the record class to check if the lesson was already completed
+        If r.complete = True Then
+            complete = True 'Sets the complete variable to true if Method returns true otherwise, the value is false
         End If
+
     End Sub
 
     Public Sub redirect()
         Response.Redirect("/Members/lessons.aspx")
     End Sub
 
-
-    'Disables buttons
-    Public Sub disable()
-        btnRun.Enabled = False
-        txtRunSql.Enabled = False
-    End Sub
-
     'Updates the database and enables \ updates the btnNext control text and color
 
     Public Sub finish()
-        btnNext.Enabled = True
         btnNext.Text = completeText
         btnNext.BackColor = Drawing.Color.Blue
         r.updateLesson(8, userId, 100)
         lbPercent.Text = 100
-        r.completeLesson(userId, lessId)
-        r.addQp(userId, 30)
+        If complete = False Then
+            r.completeLesson(userId, lessId)
+            r.updateQp(userId, 30)
+        End If
+
     End Sub
 
 
@@ -111,17 +92,22 @@ Public Class lesson1
     Public Sub execute1()
         lbResult.Visible = True
         If txtRunSql.Text = ANS1 Then 'If the user's entered text and the answer matches
+            panRun.Visible = False
             lbResult.Text = feedback 'Shows the feedback message
             txtRunSql.Text = "" 'Resets the txtRunSql control text to Blank
-            btnNext.Enabled = True 'Enables the btnNext control
+            btnNext.Visible = True 'Enables the btnNext control
             btnNext.BackColor = Drawing.Color.Blue 'Changes the btnNext control background to blue
-            r.updateLesson(8, userId, 32) 'Calls the updateLesson method from the record class
-            disable() 'Calls the disable method
             panLess1.Visible = True
             imgCorrect.Visible = True
+            lbPercent.Text = 32
+            r.updateLesson(8, userId, 32) 'Calls the updateLesson method from the record class
+
         Else
             lbResult.Text = error1 'Displays the error message label
-            btnNext.Enabled = False
+            btnNext.Visible = False
+            MsgBox(wrongAns.Value)
+            addWrong()
+
         End If
     End Sub
 
@@ -132,18 +118,21 @@ Public Class lesson1
         lbResult.Visible = True
         If txtRunSql.Text = ANS2 Then
             lbResult.Text = feedback
-            txtRunSql.Text = ""
-            btnNext.Enabled = True
-            btnNext.BackColor = Drawing.Color.LightGray
+            panRun.Visible = False
+            btnNext.Visible = True
+            btnNext.Enabled = True 'Control disabled when state is changed to visible
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
             r.updateLesson(8, userId, 80)
-
             panLess2.Visible = True
             imgCorrect.Visible = True
+            lbPercent.Text = 80
+
         Else
             lbResult.Text = error1
             btnNext.Enabled = False
+            addWrong()
+
         End If
     End Sub
 
@@ -154,7 +143,8 @@ Public Class lesson1
         If lbTask.Text = task1 Then
             r.updateLesson(8, userId, 16)
             lbPercent.Text = 16
-        Else
+
+        ElseIf lbTask.Text = task2 Then
             r.updateLesson(8, userId, 64)
             lbPercent.Text = 64
         End If
@@ -164,11 +154,10 @@ Public Class lesson1
 
     'Enables controls
     Public Sub enable()
-        btnOk.Enabled = False
-        txtRunSql.Enabled = True
+        btnOk.Visible = False
+        panRun.Visible = True
         txtRunSql.BorderColor = Drawing.Color.DeepSkyBlue
         txtRunSql.Focus()
-        btnRun.Enabled = True
         btnRun.BackColor = Drawing.Color.Orange
     End Sub
 
@@ -183,7 +172,7 @@ Public Class lesson1
         ElseIf btnNext.Text = back Then
             redirect()
         Else
-            btnNext.Enabled = False
+            btnNext.Visible = False
             nextLesson()
             imgCorrect.Visible = False
 
@@ -209,12 +198,22 @@ Public Class lesson1
 
     'Sets the value and state of associated controls for task 2
     Public Sub loadTask2()
+        lbExample.Text = "Now test your understanding of the SELECT Statement. Select all the records FROM a table named Employees"
         lbTask.Text = task2
-        btnOk.Enabled = True
-        btnRun.Enabled = False
+        btnOk.Visible = True
+        panRun.Visible = False
         txtRunSql.BorderColor = Drawing.Color.LightGray
         lbTable.Text = table2
-        btnNext.Enabled = False
+        btnNext.Visible = False
         lbResult.Visible = False
+        panelAns.Visible = False
+    End Sub
+
+    Protected Sub btnShowAns_Click(sender As Object, e As EventArgs) Handles btnShowAns.Click
+        panelAns.Visible = True
+    End Sub
+
+    Public Sub addWrong()
+        wrongAns.Value = wrongAns.Value + 1
     End Sub
 End Class

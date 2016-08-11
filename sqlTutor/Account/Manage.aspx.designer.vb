@@ -41,6 +41,15 @@ Partial Public Class Manage
     Protected WithEvents cngPass As Global.System.Web.UI.WebControls.HyperLink
     
     '''<summary>
+    '''Label1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''lbCurrentName control.
     '''</summary>
     '''<remarks>
@@ -77,13 +86,13 @@ Partial Public Class Manage
     Protected WithEvents btnContinue As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''UpdateProgress1 control.
+    '''Label2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UpdateProgress1 As Global.System.Web.UI.UpdateProgress
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''lbNextLesson control.
@@ -102,6 +111,24 @@ Partial Public Class Manage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbNextDesc As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Image2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
+    
+    '''<summary>
+    '''Label3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Image1 control.
@@ -129,4 +156,13 @@ Partial Public Class Manage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbAmount As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbQp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbQp As Global.System.Web.UI.WebControls.Label
 End Class

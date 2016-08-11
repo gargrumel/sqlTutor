@@ -47,7 +47,7 @@
                 </div>
 
                 <div id="runSql">
-                    <asp:Panel ID="panelTry" runat="server" Visible="False">
+                    <asp:Panel ID="panelTry" runat="server" Visible="False" BackColor="#CCCCCC">
                         <asp:Label ID="Label7" runat="server" Font-Size="Larger" Text="Try It"></asp:Label>
                         ..<br />
                         <asp:TextBox ID="txtRunSql" runat="server" BorderStyle="None" Height="34px" Width="100%"></asp:TextBox>

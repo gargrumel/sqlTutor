@@ -7,6 +7,7 @@ Public Class lessons
     Dim userId As Integer
     Dim imgUrl2 As String = "~/Images/locked-icon.png"
     Dim imgUrl As String = "~/Images/database.png"
+    Dim imgUrl3 As String = "~/Images/star.png"
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -277,6 +278,7 @@ Public Class lessons
         If lbPercent.Text > 99 Then
             lbBonus.Text = "Congratulations, Bonus stage unlocked."
             imgBonus.Enabled = True
+            imgBonus.ImageUrl = imgUrl3
         End If
 
     End Sub

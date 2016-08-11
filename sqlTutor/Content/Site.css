@@ -1,54 +1,50 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    background-color:lightgray;
-    color: black;    
-    padding-top: 70px;   
-    padding-left:0px;
-    padding-right:0px;    
-     
+    background-color: lightgray;
+    color: black;
+    padding-top: 70px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-#logOut{
-
-    height:calc(100vh - 230px);
+#logOut {
+    height: calc(100vh - 230px);
 }
 
 
 
 #MainContent {
-  height:calc(100vh - 200px);   
+    height: calc(100vh - 200px);
 }
 
 
 
 #loginHead {
     text-align: center;
-    background-color:lightgray;
+    background-color: lightgray;
 }
 
 #headLabel {
     font-size: x-large;
-
 }
 
 
 
-#loginControls{
-   
-    background-color:lightgray;
-    width:100%;  
+#loginControls {
+    background-color: lightgray;
+    width: 100%;
 }
 
 #footer {
-    background-color:aliceblue;
-    height:100px;
-   text-align:center;
+    background-color: aliceblue;
+    height: 100px;
+    text-align: center;
 }
 
 
 #menu ul li:hover {
     display: block;
-    background-color: green;   
+    background-color: green;
 }
 
 
@@ -88,140 +84,121 @@ input[type="select"] {
 }
 
 /******************************Documents page Layout style*********************************************/
-#lessonBody{
-    display:flex;
-    justify-content:center
-
+#lessonBody {
+    display: flex;
+    justify-content: center;
 }
 
-.lessonHeader{
-    height:50px;
-    background-color:lightgray;  
-    padding:0px; 
-  text-align:center;
-  }
+#lessonsHeader {
+   width:100%;
+}
 
 @media only screen and (max-width : 1224px) {
-    body{
-        background-color:deeppink;
+    body {
+        background-color: deeppink;
     }
 }
 
 @media only screen and (max-width : 768px) {
-    body{
-        background-color:red;
+    body {
+        background-color: red;
     }
-
 }
 
 @media only screen and (max-width : 500px) {
-    body{
-        background-color:blue;  
-            
-    }
-    
-    #lessonBody{
-       
-        flex-direction:column;
-    }
-
-    .docItem{
-     width:100%;
-     
-      
-    }
-
-    .lessonHeader{
-        height:80px;
-    }
-
-     #inner{
-         background-color:green;
-     }
-
-
-}
-
-
-.docItem {   
-     
-    text-align: center; 
-    background-color:blue;      
-    width:100%;
-    margin:5px;      
-    padding:5px;
-    color:black;
-    text-align:left;
-    
-      
-}
-
-#updatePanel{
-   
-}
-
-
-#queryWindow{
-   background-color:#2A3034;
-}
-
-#resultWindow{
-
-
-}
-
-#txtRunSql{
-   width:100%;
-}
-
-#updatePane2{
-    width:100%;
-}
-
-#panelLesson1{
-   
-    border-color:black;
-    border-style:solid;
-    border-width:2px;
-    padding:2px;
-    
-}
-
-
-  .docItem:nth-child(1) {
-       
-        color:black;
-        background-color:white;
-               
+    body {
+        background-color: lightGray;
+        width: 100%;
     }
 
 
-    .docItem:nth-child(2) {
-         background-color:#354551; 
+
+    #lessonBody {
+        flex-direction: column;
     }
 
-     .docItem:nth-child(3) {
-       
-        background-color:white;
-        color:black;
-        border-style:solid;
-        border-width:2px;
-        
+    .docItem {
+        width: 100%;
     }
+
+    .lessonHeader {
+        height: 80px;
+    }
+
+    #inner {
+        background-color: green;
+    }
+}
+
+
+.docItem {
+    text-align: center;
+    background-color: blue;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    text-align: left;
+}
+
+#updatePanel {
+}
+
+
+#queryWindow {
+    background-color: #2A3034;
+}
+
+#resultWindow {
+}
+
+#txtRunSql {
+    width: 100%;
+}
+
+#updatePane2 {
+    width: 100%;
+}
+
+#panelLesson1 {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    padding: 2px;
+}
+
+
+.docItem:nth-child(1) {
+    color: black;
+    background-color: white;
+}
+
+
+.docItem:nth-child(2) {
+    background-color: #354551;
+}
+
+.docItem:nth-child(3) {
+    background-color: white;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+}
 
 #lbDoc {
     text-align: center;
 }
 
 .txtInfo {
-    
 }
-    
+
 /*********************Lesson tiles content area:********************************/
 
-#lessonPageHeader{
-   width:100%;
-   display:flex;
+
+
+#lessonPageHeader {
+    width: 100%;
+    display: flex;
 }
 
 
@@ -236,7 +213,6 @@ input[type="select"] {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
 
 /*Lesson Tiles*/
@@ -245,7 +221,7 @@ input[type="select"] {
     width: 200px;
     height: 200px;
     margin: 5px;
-    background-color:white;
+    background-color: white;
     border-style: solid;
     border-color: white;
     vertical-align: middle;
@@ -255,12 +231,12 @@ input[type="select"] {
 }
 
     .tile:hover {
-       background-color:#34B3A0;
-       color:white;
+        background-color: #34B3A0;
+        color: white;
     }
 
-    .tile:nth-child(3){
-       
+    .tile:nth-child(5) {
+        
     }
 
 #tileFrame {
@@ -273,93 +249,105 @@ input[type="select"] {
     color: black;
 }
 
-#bonus{
-    background-color:gold;
+#bonus {
+    background-color: gold;
+}
+
+#bonus:hover{
+    color:red;
 }
 
 /*Lesson 2*******************************************************************/
 
-#lesson2{    
-    display:flex;
-     justify-content:center 
-    
+#lesson2 {
+    display: flex;
+    justify-content: center;
 }
 
-#window1, #window2{
-    width:50%;
-    text-align: center; 
-    background-color:deepskyblue;      
-  
-    flex-direction:row;
-    height:500px;
-    margin:5px;  
-    
-    padding:5px;
-    color:black;
-    text-align:left;
-    
-   
+
+#window1, #window2 {
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    flex-direction: row;
+    height: 500px;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    text-align: left;
 }
+
 
 
 
 /**Graph area***************************************/
 
-#window{    
-    text-align:center;    
-    width:100%;
-    height:calc(100vh - 250px)
+#welcomeArea{
+    justify-content:center;
+    display:flex;
+    flex-direction:column;
+}
+
+#window {
+    text-align: center;    
+    height: calc(100vh - 250px);
 }
 
 
-#continueButton{
-    width:10%;   
-    text-align:center;
-}
-
-
-
-#outer{
-    width:100%;
-    height:20px;
-    background-color:gray;
-    
-}
-
-#inner{
-    width:0px;
-    height:100%;
-    background-color:blue;
-    color:white;
-    text-align:center;
-        
-}
-
-#btnLogin:hover{
-    border-color:deepskyblue;
-    border-width:2px;
-    border-style:solid
-}
-
-#introWindow{
-    height:calc(100vh - 200);
-}
-#task1,#task2,#task3{
-   border-style:solid;
-   border-width:2px;
-   border-color:white;
+#continueButton {
+    width: 10%;
+    text-align: center;
 }
 
 
 
+#outer {
+   width:100%;
+    height: 20px;
+    background-color: gray;
+}
 
+#inner {
+    width: 0px;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
 
+#btnLogin:hover {
+    border-color: deepskyblue;
+    border-width: 2px;
+    border-style: solid;
+}
 
+#introWindow {
+    height: calc(100vh - 200);
+}
 
+#task1, #task2, #task3 {
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
 
+#docs {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+}
 
+#docWindow1 {
+    width: 40%;
+    height: 500px;
+    background-color: white;
+}
 
-
-
-
-
+#docWindow2 {
+    width: 60%;
+    height: 500px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+}

@@ -20,7 +20,10 @@
        
         <div class="item">            
             <br />
-            Current Lesson<br />
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Font-Size="Larger" Text="Current Lesson"></asp:Label>
+            <br />
             <asp:Label ID="lbCurrentName" runat="server"></asp:Label>
             <br />
             <asp:Label ID="lbCurrentDesc" runat="server"></asp:Label>
@@ -28,14 +31,8 @@
             <asp:Label ID="lbCurrentStatus" runat="server" Font-Bold="True"></asp:Label>
             <br />
             <br />
-            <asp:Button ID="btnContinue" runat="server" BackColor="#34B3A0" BorderStyle="None" ForeColor="White" Height="53px" Text="Continue Lesson" ToolTip="Continue Lesson" />
+            <asp:Button ID="btnContinue" runat="server" BackColor="#0066CC" BorderStyle="None" ForeColor="White" Height="53px" Text="Continue Lesson" ToolTip="Continue Lesson" Width="133px" />
             <br />
-            <br />
-            <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-            </asp:UpdateProgress>
-            <br />
-            <br />
-            &nbsp;<br />
             <br />
             <br />
             <br />
@@ -44,22 +41,30 @@
 
         <div class="item">
             <br />
-            Next Lesson<br />
+            <br />
+            <br />
+            <asp:Label ID="Label2" runat="server" Font-Size="Larger" Text="Next Lesson"></asp:Label>
+            <br />
             <asp:Label ID="lbNextLesson" runat="server"></asp:Label>
             <br />
             <asp:Label ID="lbNextDesc" runat="server"></asp:Label>
+            <br />
+            <asp:Image ID="Image2" runat="server" Height="83px" ImageUrl="~/Images/database.png" Width="95px" />
             <br />
         </div>
 
 
         <div class="item" style="vertical-align: middle; text-align: center">
-            Current Achievement<br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Font-Size="Larger" Text="Current Rank"></asp:Label>
+            <br />
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/shield-ok-icon.png" />
             <br />
-            <asp:Label ID="lbRank" runat="server" Text="Current Achievement"></asp:Label>
+            <asp:Label ID="lbRank" runat="server" Text="Current Rank"></asp:Label>
         </div>
 
-        <div class="item">Some graph here</div>
+        <div class="item">Some graph here<br />
+        </div>
 
 
         <div class="item">
@@ -67,6 +72,16 @@
             Number of Lessons Completed<br />
             <br />
             <asp:Label ID="lbAmount" runat="server"></asp:Label>
+            /10<br />
+            <br />
+            <div id ="divQp">
+
+                Query Points Earned<br />
+                <br />
+&nbsp;<asp:Label ID="lbQp" runat="server">0</asp:Label>
+
+                /350</div>
+            <br />
             <br />
         </div>
              

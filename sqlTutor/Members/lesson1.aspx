@@ -9,15 +9,23 @@
 
 
         $(document).ready(function () {      
-                       
-            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML
             go = document.getElementById("#btnOk")
-           
-            if (amount > 99) {
-                alert("You have already completed this lesson")                
-            }
+            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML
             
+        
         });
+
+        function checkWrong() {
+            
+            wa = document.getElementById('<%= wrongAns.ClientID %>').innerHTML;
+            alert(wa)
+            if (wa.value < 3) {
+                alert("Please double check your SQL command")
+            } else if (wa.value > 4) {
+                alert("The correct command is: SELECT * FROM Employees")
+                wa.value = 2
+            }
+        }
    
     </script>
 
@@ -25,10 +33,9 @@
          <div id="lessonBody">
         <div class="docItem">
             <div class="lessonHeader">
-               
-                <asp:Label ID="lbTopic" runat="server" Text="SELECT ALL STATEMENT"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="SELECT ALL STATEMENT - Reward: 20qp" Font-Size="Larger" Font-Bold="true"></asp:Label>
                  <br />
-                   &nbsp;<asp:Label ID="lbPercent" runat="server" Font-Bold="True" ForeColor="White">0</asp:Label>
+                   &nbsp;<asp:Label ID="lbPercent" runat="server" Font-Bold="True" ForeColor="Black">0</asp:Label>
                         <asp:Label ID="Label1" runat="server" Text="% complete"></asp:Label>                
             </div>
 
@@ -42,6 +49,7 @@
                             <br />
                             <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: "></asp:Label>
                             <br />
+                            <br />
                             <asp:Label ID="lbScenario" runat="server" Text="To SELECT all the records FROM a table"></asp:Label>
                             <br />
                             <br />
@@ -51,16 +59,16 @@
                             <asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
                             <br />
                             <br />
-                            <asp:Label ID="lbAnswer" runat="server" Text="SELECT * FROM "></asp:Label>
-                            &nbsp;<asp:Label ID="lbTable" runat="server" Text="Cars"></asp:Label>
-                            <br />
-                            <br />
-                            <asp:Button ID="btnOk" runat="server" CssClass="btn btn-default" Text="I Understand" />
+                            <asp:Panel ID="panelAns" runat="server" BackColor="#0099FF">
+                                <asp:Label ID="lbAnswer" runat="server" Font-Bold="True" Font-Italic="True" Text="SELECT * FROM "></asp:Label>
+                                <asp:Label ID="lbTable" runat="server" Font-Bold="True" Font-Italic="True" Text="Cars"></asp:Label>
+                            </asp:Panel>
+                            &nbsp;<br />&nbsp;&nbsp;<br />&nbsp;<asp:Button ID="btnOk" runat="server" CssClass="btn btn-default" Text="I Understand" />
                             &nbsp;<br />
                         </asp:Panel>
                 <br />
                 <br />
-                        <asp:HiddenField ID="pointValue" runat="server" />
+                        <asp:HiddenField ID="wrongAns" runat="server" />
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>
@@ -80,10 +88,16 @@
             <asp:UpdatePanel ID="updatePane2" runat="server">
                 <ContentTemplate>
                     <fieldset>
-                        <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" Enabled="False" Width="100%" height="36px"></asp:TextBox>
+                        <asp:Panel ID="panRun" runat="server" Visible="False">
+                            <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" height="36px" Width="100%"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button ID="btnRun" onclientclick="javascript:return checkWrong();" runat="server" CssClass="btn btn-default" Text="Run SQL &gt;&gt;" />
+                            &nbsp;
+                            <asp:Button ID="btnShowAns" runat="server" height="36px" Text="Show answer" Visible="False" width="140px" />
+                        </asp:Panel>
                           <br /> 
                          <br /> 
-            <asp:Button ID="btnRun" runat="server" Text="Run SQL >>" Enabled="False" CssClass="btn btn-default" /> 
                          <br /> 
                     </fieldset>
                 </ContentTemplate>
@@ -102,7 +116,7 @@
                     <fieldset>
                         <div id="message">
                         <br />
-                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="Black"></asp:Label>  
+                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="#FF3300" Font-Size="Larger"></asp:Label>  
                             <br />
                             <br />
                             <asp:Panel ID="panLess1" runat="server" Visible="False">
@@ -157,7 +171,7 @@
                             <br />
                             </div>
                         <br />
-                        <asp:Button ID="btnNext" runat="server" Enabled="False" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="btn btn-default" />
+                        <asp:Button ID="btnNext" runat="server" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="btn btn-default" Visible="False" />
                         &nbsp;<asp:Image ID="imgCorrect" runat="server" ImageUrl="~/Images/ok-icon.png" Visible="False" />
                     </fieldset>
                 </ContentTemplate>

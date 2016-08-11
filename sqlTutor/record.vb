@@ -1,6 +1,7 @@
 ﻿Public Class record
     'This class holds the methods to update the Lesson and User records. 
     Dim queryConn As New connections
+    Public complete As Boolean
 
 
     'Accepts two parameters and updates the 'Complete' table
@@ -32,24 +33,24 @@
         End Try
     End Sub
 
-    'Method to add queryPoints to the queryPoints table
-
-    Public Sub addQp(ByVal id As Integer, ByVal qp As Integer)
+    Public Sub updateQp(ByVal id As Integer, ByVal qp As Integer)
         Try
+            queryConn.queryData("UPDATE queryPoints SET queryPoints = " & qp & " WHERE userId = " & id)
 
         Catch ex As Exception
 
         End Try
 
-        Try
-            queryConn.queryData("SELECT * queryPoints WHERE userID = " & id)
-            If queryConn.count = 0 Then
-                queryConn.queryData("INSERT INTO queryPoints (userId, queryPoints) VALUES (" & id & "," & qp & ")")
-            Else
-                queryConn.queryData("UPDATE queryPoints SET userId = " & id & ", queryPoints = " & qp)
-            End If
+    End Sub
 
+
+    'Method to add queryPoints to the queryPoints table
+
+    Public Sub addQp(ByVal id As Integer, ByVal qp As Integer)
+        Try
+            queryConn.queryData("INSERT INTO queryPoints (userId, queryPoints) VALUES (" & id & "," & qp & ")")
         Catch ex As Exception
+
         End Try
     End Sub
 
@@ -58,9 +59,17 @@
 
     End Sub
 
+    Public Sub getComplete(ByVal id As Integer, ByVal lessid As Integer)
+        Try
+            queryConn.queryData("SELECT * FROM complete WHERE userId = " & id & "AND lessonId = " & lessid)
+            If queryConn.count = 0 Then
+                complete = False
+            Else
+                complete = True
+            End If
+        Catch ex As Exception
+        End Try
 
-
-
-
+    End Sub
 
 End Class

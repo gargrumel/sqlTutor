@@ -183,6 +183,8 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
+    height: 53px;
+    width: 118px;
 }
 
 button[disabled],
@@ -1678,7 +1680,6 @@ input[type="file"] {
 
 select[multiple],
 select[size] {
-  height: auto;
 }
 
 select optgroup {

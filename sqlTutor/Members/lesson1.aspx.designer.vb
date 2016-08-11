@@ -23,13 +23,13 @@ Partial Public Class lesson1
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''lbTopic control.
+    '''Label2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbTopic As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''lbPercent control.
@@ -122,6 +122,15 @@ Partial Public Class lesson1
     Protected WithEvents lbCommand As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''panelAns control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelAns As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''lbAnswer control.
     '''</summary>
     '''<remarks>
@@ -149,13 +158,13 @@ Partial Public Class lesson1
     Protected WithEvents btnOk As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''pointValue control.
+    '''wrongAns control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents pointValue As Global.System.Web.UI.WebControls.HiddenField
+    Protected WithEvents wrongAns As Global.System.Web.UI.WebControls.HiddenField
     
     '''<summary>
     '''updatePane2 control.
@@ -165,6 +174,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents updatePane2 As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
+    '''panRun control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panRun As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''txtRunSql control.
@@ -183,6 +201,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnRun As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnShowAns control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnShowAns As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''updatePanel3 control.

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <br />
     <br />
-    <h1>Update Statement</h1>
+    <h1>Create Table Statement</h1>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>

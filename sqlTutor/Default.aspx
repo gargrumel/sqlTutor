@@ -7,17 +7,14 @@
     <script type="text/javascript">
         $(document).ready(function () {      
                        
-            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML  
-           
+            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML             
 
-            animateProgressBar(amount);
-           
+            animateProgressBar(amount);          
 
-            function animateProgressBar(p)
-            {                
-                outerWidth = $("#outer").width();
-                $('#inner').animate({                 
-                    'width': (outerWidth * p) / 100
+            function animateProgressBar(p) {
+                oW = $("#outer").width();              
+                $('#inner').animate({
+                    'width': (oW * p) / 100
                 }, 3000);
 
                 $({ counter: 1 }).animate({ counter: p }, {
@@ -46,19 +43,20 @@
     <br />
        <br />
        <asp:Label ID="lbTopic" runat="server" ForeColor="Black"></asp:Label>
-       &nbsp;
-               <asp:Label ID="lbPercent" runat="server" ForeColor="Black" Font-Size="Larger" ToolTip="Percent complete">0</asp:Label>
-      <asp:Label ID="lbComplete" runat="server" Text="% Complete"></asp:Label>
-           
-       <br />
-    <br />
-
-      <div id ="outer" width="500px" class="text-center">            
+      <div id ="outer" class="text-center">  
+         
+                   
            <div id= "inner" style="vertical-align: bottom" ;width="0px">
+                 <asp:Label ID="lbPercent" runat="server" ForeColor="Black" Font-Size="Larger" ToolTip="Percent complete">0</asp:Label> 
                <br />
            </div>
-          
-                  
+       &nbsp;
+              
+      <asp:Label ID="lbComplete" runat="server" Text="" Visible="false"></asp:Label>
+           
+       <br />
+    <br />   
+                           
        
            <br />
        </div>

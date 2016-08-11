@@ -21,10 +21,6 @@ Public Class lesson2
 
     Dim wrong As Integer = 0
 
-
-
-
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             queryConn.queryData("SELECT Users.userId, userProgress.lessonId, userProgress.seqId
@@ -35,37 +31,10 @@ Public Class lesson2
                 userId = r("userId")
                 lessId = r("lessonId")
                 seq = r("seqId")
-
             Next
         Catch ex As Exception
         End Try
-
-        If seq = 16 Then
-            lbTask.Text = task1
-            enable()
-        ElseIf seq = 64 Then
-            lbTask.Text = task2
-            loadTask2()
-            enable()
-        ElseIf seq = 32 Then
-            nextLesson()
-        ElseIf seq = 80 Then
-            btnOk.Visible = False
-            btnNext.Visible = True
-            btnNext.Text = completeText
-            btnNext.BackColor = Drawing.Color.Blue
-        ElseIf seq = 100 Then 'Disables buttons if task is already completed, based on seq value
-            lbPercent.Text = seq
-            btnNext.Visible = True
-            btnNext.Text = back
-            btnOk.Visible = False
-            btnNext.BackColor = Drawing.Color.Blue
-        End If
-
     End Sub
-
-
-
 
 
     Public Sub redirect()
@@ -87,7 +56,7 @@ Public Class lesson2
         r.updateLesson(9, userId, 100)
         lbPercent.Text = 100
         r.completeLesson(userId, lessId)
-        r.addQp(userId, 60)
+        r.updateQp(userId, 60)
         redirect()
     End Sub
 
@@ -154,6 +123,7 @@ Public Class lesson2
             imgCorrect.Visible = True
             lbPercent.Text = 80
             panLess2.Visible = True
+
         Else
             lbResult.Text = error1
             btnOk.Visible = False
@@ -175,17 +145,6 @@ Public Class lesson2
 
     End Sub
 
-    Private Sub nextLesson()
-        If lbTask.Text = task1 Then
-            loadTask2()
-        ElseIf lbTask.Text = task2 Then
-            finish()
-        End If
-        If seq <> 100 Then
-            r.updateLesson(9, userId, 48)
-            lbPercent.Text = 48
-        End If
-    End Sub
 
 
     'Enables controls
@@ -214,6 +173,7 @@ Public Class lesson2
         lbCommand.Visible = False
         txtRunSql.BorderColor = Drawing.Color.LightGray
         btnNext.Visible = False
+        imgCorrect.Visible = False
         lbResult.Visible = False
         panLess1.Visible = False
         lbTryIt.Text = "Test your understanding"
@@ -223,16 +183,10 @@ Public Class lesson2
 
     'Handles action based on button text
     Protected Sub btnNext_Click1(sender As Object, e As EventArgs) Handles btnNext.Click
-
         If btnNext.Text = completeText Then
             finish()
-            redirect()
-        ElseIf btnOk.Text = back Then
-            redirect()
         Else
-            btnNext.Visible = False
-            nextLesson()
-            imgCorrect.Visible = False
+            loadTask2()
         End If
     End Sub
 End Class

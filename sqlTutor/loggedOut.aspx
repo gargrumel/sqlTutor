@@ -19,9 +19,9 @@
                 <br />
                 <br />
                 <br />
-                <asp:Button ID="btnLogin" runat="server" Text="Login" BackColor="#00CCFF" ForeColor="White" BorderWidth="1px" Height="60px" ToolTip="Login" Width="101px" />
+                <asp:Button ID="btnLogin" runat="server" Text="LOG IN" BackColor="#34B3A0" ForeColor="White" BorderWidth="1px" Height="69px" ToolTip="Login" Width="142px" />
 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnRegister" runat="server" Text="Register" BackColor="#FF3300" CssClass="btn default-default" ForeColor="White" height="60px" ToolTip="Register" width="101px" />
+                <asp:Button ID="btnRegister" runat="server" Text="REGISTER" BackColor="#FF3300" CssClass="btn default-default" ForeColor="White" height="69px" ToolTip="Register" width="142px" />
                 <br />
                 <br />
                 <br />
