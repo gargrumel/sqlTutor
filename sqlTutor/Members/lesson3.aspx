@@ -70,7 +70,7 @@
                     </asp:Panel>
                     <br />
                     <br />
-                        <asp:Button ID="btnOk" runat="server" ForeColor="Black" Text="I Understand" CssClass="btn btn-default" />
+                        <asp:Button ID="btnOk" runat="server" ForeColor="Black" Text="I Understand" CssClass="button" BorderStyle="None" />
                     &nbsp;<br />
                     <br />
                     <br />
@@ -84,7 +84,7 @@
                         <asp:TextBox ID="txtRunSql" runat="server" BorderStyle="None" Height="34px" Width="100%"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Button ID="btnRun" runat="server" BackColor="#FF3300" CssClass="btn btn-default" ForeColor="White" Text="Run SQL &gt;&gt;" />
+                        <asp:Button ID="btnRun" runat="server" BackColor="#FF3300" CssClass="button" ForeColor="White" Text="Run SQL &gt;&gt;" BorderStyle="None" />
                     </asp:Panel>
                 </div>
 
@@ -136,7 +136,7 @@
                 <br />
                 <br />
             </asp:Panel>
-            <asp:Button ID="btnNext" runat="server" BackColor="#0033CC" CssClass="btn btn-default" ForeColor="White" height="36px" Text="Next Task &gt;&gt;" Visible="False" width="140px" />
+            <asp:Button ID="btnNext" runat="server" BackColor="#0033CC" CssClass="button" ForeColor="White" height="36px" Text="Next Task &gt;&gt;" Visible="False" width="140px" BorderStyle="None" />
 &nbsp; <asp:Image ID="imgCorrect" runat="server" ImageUrl="~/Images/ok-icon.png" Visible="False" />
 
         </div>

@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <div class="col-md-10" style="text-align: left">
                             <div class="text-center">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeHolder="Email" >lennon@gmail.com</asp:TextBox>
+                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeHolder="Email" Width="50%" >lennon@gmail.com</asp:TextBox>
                             </div>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                                 CssClass="text-danger" ErrorMessage="The email field is required." />
@@ -32,14 +32,14 @@
                     <div class="form-group">
                         <div class="col-md-10" style="text-align: left">
                             <div class="text-center">
-                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeHolder="Password" >Test123?</asp:TextBox>
+                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeHolder="Password" Width="50%" >Test123?</asp:TextBox>
                             </div>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
                             <br />
                                 <asp:CheckBox runat="server" ID="RememberMe" />
                                 <asp:Label runat="server" AssociatedControlID="RememberMe" ID="Label1">Remember me?</asp:Label>
                             <br />
-                            <asp:Button runat="server" OnClick="LogIn" Text="LOG IN" CssClass="btn btn-default" ID="btnLogin" BackColor="#34B3A0" ForeColor="White" Width="189px" Height="52px" />
+                            <asp:Button runat="server" class="button" OnClick="LogIn" Text="LOG IN" ID="btnLogin" Width="189px" Height="52px" BorderStyle="None" />
                         </div>
                     </div>
                 </div>
@@ -59,6 +59,10 @@
 
         <div class="col-md-4">
             <asp:Image ID="Image1" runat="server" Height="100%" ImageUrl="~/Images/database_2.jpg" Width="100%" />
+            <br />
+            <p>
+                Learn one of the most powerful programming languages in the World!!
+            </p>
         </div>
     </div>
 </asp:Content>

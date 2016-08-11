@@ -63,8 +63,8 @@
                                 <asp:Label ID="lbAnswer" runat="server" Font-Bold="True" Font-Italic="True" Text="SELECT * FROM "></asp:Label>
                                 <asp:Label ID="lbTable" runat="server" Font-Bold="True" Font-Italic="True" Text="Cars"></asp:Label>
                             </asp:Panel>
-                            &nbsp;<br />&nbsp;&nbsp;<br />&nbsp;<asp:Button ID="btnOk" runat="server" CssClass="btn btn-default" Text="I Understand" />
-                            &nbsp;<br />
+                            &nbsp;<br />&nbsp;&nbsp;<br />&nbsp;<asp:Button CssClass="button" ID="btnOk" runat="server" Text="I Understand" BorderStyle="None" />
+                            &nbsp;<br /> 
                         </asp:Panel>
                 <br />
                 <br />
@@ -92,9 +92,9 @@
                             <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" height="36px" Width="100%"></asp:TextBox>
                             <br />
                             <br />
-                            <asp:Button ID="btnRun" onclientclick="javascript:return checkWrong();" runat="server" CssClass="btn btn-default" Text="Run SQL &gt;&gt;" />
+                            <asp:Button ID="btnRun" onclientclick="javascript:return checkWrong();" runat="server" CssClass="button" Text="Run SQL &gt;&gt;" />
                             &nbsp;
-                            <asp:Button ID="btnShowAns" runat="server" height="36px" Text="Show answer" Visible="False" width="140px" />
+                            <asp:Button ID="btnShowAns" runat="server" height="36px" Text="Show answer" Visible="False" width="140px" CssClass="button" />
                         </asp:Panel>
                           <br /> 
                          <br /> 

@@ -21,10 +21,10 @@
             {                
                 /**oW = $("#outer").width();/*The current with of the outer Div element of the progress bar*/
                 $('#inner').animate({                 
-                    'width': (450 * p) / 100 
+                    'width': (350 * p) / 100 
                 }, 3000);
 
-                val = p / 450 * 100 /*points gained / total points * 100 to display text as a percentage of the total points*/
+                val = p / 350 * 100 /*points gained / total points * 100 to display text as a percentage of the total points*/
 
                 $({ counter: 1 }).animate({ counter: val }, {
 

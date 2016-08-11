@@ -50,10 +50,10 @@ Public Class lesson3
         btnOk.Visible = True
         btnNext.Text = completeText
         btnNext.BackColor = Drawing.Color.Blue
-        r.updateLesson(9, userId, 100)
+        r.updateLesson(10, userId, 100)
         lbPercent.Text = 100
         r.completeLesson(userId, lessId)
-        r.updateQp(userId, 60)
+        r.updateQp(userId, 100)
         redirect()
     End Sub
 

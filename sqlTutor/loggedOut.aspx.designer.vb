@@ -41,6 +41,15 @@ Partial Public Class loggedOut
     Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
+    '''Label2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''btnLogin control.
     '''</summary>
     '''<remarks>

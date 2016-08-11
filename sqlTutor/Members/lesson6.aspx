@@ -6,6 +6,6 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>
-  <asp:Button ID="btnComplete" runat="server" Height="68px" Text="Complete Lesson" Width="173px" />    
+  <asp:Button ID="btnComplete" runat="server" Height="68px" Text="Complete Lesson" Width="173px" BorderStyle="None" CssClass="button" />    
     </p>
 </asp:Content>

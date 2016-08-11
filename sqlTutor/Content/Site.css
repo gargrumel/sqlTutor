@@ -5,8 +5,42 @@ body {
     padding-top: 70px;
     padding-left: 0px;
     padding-right: 0px;
+    font-family: 'Segoe UI';
 }
 
+#logo{
+    background-color:black;
+    color:white;
+}
+
+#logo:hover{
+    background-color:#34B3A0;
+}
+
+
+
+
+#menuHeader{
+    background-color:white;
+    color:black;
+ 
+}
+
+#loginForm{
+    align-content:center;
+}
+
+.button{
+    color:black;
+    height:70px;
+    width:140px;
+    border-style:none;
+}
+
+.button:hover{
+    background-color:#34B3A0;
+}
+    
 #logOut {
     height: calc(100vh - 230px);
 }
@@ -44,7 +78,7 @@ body {
 
 #menu ul li:hover {
     display: block;
-    background-color: green;
+    background-color: #34B3A0;
 }
 
 
