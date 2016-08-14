@@ -224,6 +224,7 @@
     <Content Include="Images\icon.png" />
     <Content Include="Images\keyboard.jpg" />
     <Content Include="Images\Learn-SQL.jpg" />
+    <Content Include="Images\learn-sql.png" />
     <Content Include="Images\Literature-64.png" />
     <Content Include="Images\locked-icon.png" />
     <Content Include="Images\logogoeshere.gif" />
@@ -248,6 +249,7 @@
     <Content Include="Members\lesson6.aspx" />
     <Content Include="Members\lesson7.aspx" />
     <Content Include="Members\lessons.aspx" />
+    <Content Include="Members\videos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\WebForms\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -280,6 +282,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Videos\selectMp4.mp4" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
@@ -510,6 +513,13 @@
     </Compile>
     <Compile Include="Members\lessons.aspx.vb">
       <DependentUpon>lessons.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Members\videos.aspx.designer.vb">
+      <DependentUpon>videos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\videos.aspx.vb">
+      <DependentUpon>videos.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\IdentityModels.vb" />

@@ -162,8 +162,9 @@ Public Class lesson3
     'Sets the value and state of associated controls for task 2
     Public Sub loadTask2()
         lbTask.Text = task2
-        lbTable.Text = "Employees"
-        lbColumn.Text = "ID"
+        lbTable.Text = "Cars"
+        lbColumn.Text = "Make"
+        lbCondition.Text = "Year equals '2007'"
         btnOk.Visible = True
         btnRun.Visible = False
         lbCommand.Text = ANS2

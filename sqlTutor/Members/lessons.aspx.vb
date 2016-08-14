@@ -50,16 +50,16 @@ Public Class lessons
         Try
             queryConn.queryData("SELECT * FROM Lessons WHERE ID = " & l + 1)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
-                lbLess2.Text = r("lessName")
+                lbLess2.Text = r("lessName") & "- Completed"
                 imgLess2.ToolTip = r("lessDesc")
                 imgLess2.ImageUrl = imgUrl2
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
                     imgLess2.ImageUrl = imgUrl
-
                     imgLess2.Enabled = True
+
                 End If
             Next
         Catch ex As Exception
@@ -77,7 +77,7 @@ Public Class lessons
                 imgLess3.ToolTip = r("lessDesc")
                 imgLess3.ImageUrl = imgUrl2
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
@@ -100,7 +100,7 @@ Public Class lessons
                 imgLess4.ToolTip = r("lessDesc")
                 imgLess4.ImageUrl = imgUrl2
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
@@ -124,7 +124,7 @@ Public Class lessons
                 imgLess5.ToolTip = r("lessDesc")
                 imgLess5.ImageUrl = imgUrl2
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
@@ -146,7 +146,7 @@ Public Class lessons
                 imgLess6.ToolTip = r("lessDesc")
                 imgLess6.ImageUrl = imgUrl2
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
@@ -168,8 +168,9 @@ Public Class lessons
                 lbLess7.Text = r("lessName")
                 imgLess7.ToolTip = r("lessDesc")
                 imgLess7.ImageUrl = imgUrl2
+
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then
@@ -192,7 +193,7 @@ Public Class lessons
                 imgLess8.ToolTip = r("lessDesc")
                 imgLess8.ImageUrl = imgUrl2
             Next
-            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l)
+            queryConn.queryData("SELECT * FROM complete WHERE lessonId = " & l & " AND userId = " & userId)
 
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 If queryConn.count > 0 Then

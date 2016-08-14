@@ -7,7 +7,7 @@
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <link href="../Content/profileStyle.css" rel="stylesheet" />
     
-    <h4>Your Profile</h4> 
+    <h4>Your Dashboard</h4> 
     <div class="parent">
         <div class="item"><br />
             <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png" class="subIcon" ToolTip="Click to change picture" />

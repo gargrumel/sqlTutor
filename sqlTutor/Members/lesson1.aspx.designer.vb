@@ -86,6 +86,15 @@ Partial Public Class lesson1
     Protected WithEvents lbTask As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''ScriptManager1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+    
+    '''<summary>
     '''lbOutcome control.
     '''</summary>
     '''<remarks>
@@ -93,6 +102,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbOutcome As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''panelInstructions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelInstructions As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''lbScenario control.
@@ -212,6 +230,15 @@ Partial Public Class lesson1
     Protected WithEvents btnShowAns As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''panelVideo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelVideo As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''updatePanel3 control.
     '''</summary>
     '''<remarks>
@@ -264,4 +291,13 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents imgCorrect As Global.System.Web.UI.WebControls.Image
+    
+    '''<summary>
+    '''btnWatch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnWatch As Global.System.Web.UI.WebControls.Button
 End Class

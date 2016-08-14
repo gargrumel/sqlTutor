@@ -22,12 +22,12 @@
    width:300px;
 
     margin: 5px;
-    background-color:white;
+    background-color:#354551;
     border-style: solid;
     border-color: white;
     vertical-align: middle;
     text-align: center;
-    color: black;
+    color: white;
     font-weight: 600;  
 }
 
@@ -80,7 +80,7 @@
 
 #divQp{
     background-color:Highlight;
-    color:white;
+    color:black;
 }
 
 @media only screen and (max-width : 1224px) {

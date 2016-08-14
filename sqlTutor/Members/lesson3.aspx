@@ -60,7 +60,7 @@
                         &nbsp;FROM
                         <asp:Label ID="lbTable" runat="server" Font-Bold="True" Font-Italic="True" Text="Employees"></asp:Label>
                         &nbsp;WHERE
-                        <asp:Label ID="Label8" runat="server" Text="FirstName equals Frank"></asp:Label>
+                        <asp:Label ID="lbCondition" runat="server" Text="FirstName equals Frank" Font-Bold="True"></asp:Label>
                         <br />
                         <br />
                         SQL Command:

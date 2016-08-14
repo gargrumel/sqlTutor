@@ -15,7 +15,7 @@
                     <asp:Image ID="Image1" runat="server" Height="89px" ImageUrl="~/Images/database.png" Width="107px" />
                 <br />
                     <br />
-                    <asp:Label ID="Label2" runat="server" Text="Log in to start learning SQL"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Log in to start learning SQL" Font-Size="Larger"></asp:Label>
                 <br />
                 <br />
                 <br />
@@ -25,15 +25,7 @@
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-            </div>
+                    &nbsp;&nbsp;<br /><br /><br /><br /><br /><br /><br /><br /></div>
 
 
 

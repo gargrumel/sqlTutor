@@ -49,6 +49,7 @@ Public Class lesson1
             complete = True 'Sets the complete variable to true if Method returns true otherwise, the value is false
         End If
 
+
     End Sub
 
     Public Sub redirect()
@@ -105,7 +106,6 @@ Public Class lesson1
         Else
             lbResult.Text = error1 'Displays the error message label
             btnNext.Visible = False
-            MsgBox(wrongAns.Value)
             addWrong()
 
         End If
@@ -123,10 +123,11 @@ Public Class lesson1
             btnNext.Enabled = True 'Control disabled when state is changed to visible
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
-            r.updateLesson(8, userId, 80)
+            r.updateLesson(8, userId, 100)
             panLess2.Visible = True
             imgCorrect.Visible = True
-            lbPercent.Text = 80
+            lbPercent.Text = 100
+            btnWatch.Visible = True
 
         Else
             lbResult.Text = error1
@@ -207,13 +208,23 @@ Public Class lesson1
         btnNext.Visible = False
         lbResult.Visible = False
         panelAns.Visible = False
+        btnShowAns.Visible = False
     End Sub
 
     Protected Sub btnShowAns_Click(sender As Object, e As EventArgs) Handles btnShowAns.Click
         panelAns.Visible = True
+        btnRun.Visible = True
     End Sub
 
     Public Sub addWrong()
-        wrongAns.Value = wrongAns.Value + 1
+        wrongAns.Value += 1
+        If wrongAns.Value = 5 Then
+            btnShowAns.Visible = True
+            btnRun.Visible = False
+        End If
+    End Sub
+
+    Protected Sub btnWatch_Click(sender As Object, e As EventArgs) Handles btnWatch.Click
+        panelVideo.Visible = True
     End Sub
 End Class

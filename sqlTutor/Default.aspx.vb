@@ -5,10 +5,15 @@ Public Class _Default
     Dim queryConn As New connections
     Dim pageName As String
     Dim progress As Integer
+    Dim r As record
+
+
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
         getLessons()
+        getCompete()
+
         If lbUser.Text = "" Then
             Response.Redirect("~/loggedOut.aspx")
         ElseIf lbTopic.Text <> "" Then
@@ -19,6 +24,15 @@ Public Class _Default
 
         End If
 
+        showProgressBar()
+    End Sub
+
+    Public Sub showProgressBar()
+        If lbPercent.Text < 2 Then
+            panelProgress.Visible = False
+        Else
+            panelProgress.Visible = True
+        End If
     End Sub
 
     Private Sub getLessons()
@@ -36,12 +50,10 @@ Public Class _Default
                 lbPercent.Text = r("seqId")
                 progress = r("seqId")
 
-
-
             Next
         Catch ex As Exception
-
         End Try
+
 
     End Sub
 
@@ -57,4 +69,20 @@ Public Class _Default
         End If
 
     End Sub
+
+    Public Sub getCompete()
+        Try
+            queryConn.queryData("SELECT * FROM Complete, Users WHERE Users.email = " & User.Identity.GetUserName & " AND
+                                    Users.userId = Complete.userID")
+            If queryConn.count = 0 Then
+                panNewUser.Visible = True
+            Else
+                panNewUser.Visible = False
+            End If
+
+        Catch ex As Exception
+        End Try
+    End Sub
+
+
 End Class

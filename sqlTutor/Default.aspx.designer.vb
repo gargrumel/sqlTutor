@@ -41,6 +41,24 @@ Partial Public Class _Default
     Protected WithEvents lbTopic As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''panNewUser control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panNewUser As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''panelProgress control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelProgress As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''lbPercent control.
     '''</summary>
     '''<remarks>

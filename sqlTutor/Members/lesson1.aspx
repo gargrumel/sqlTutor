@@ -17,13 +17,13 @@
 
         function checkWrong() {
             
-            wa = document.getElementById('<%= wrongAns.ClientID %>').innerHTML;
-            alert(wa)
-            if (wa.value < 3) {
-                alert("Please double check your SQL command")
-            } else if (wa.value > 4) {
+            wa = document.getElementById('<%= wrongAns.ClientID %>').value;
+          
+            if (wa < 3) {
+               
+            } else if (wa > 4) {
                 alert("The correct command is: SELECT * FROM Employees")
-                wa.value = 2
+                wa = document.getElementById('<%= wrongAns.ClientID %>').value = 2;
             }
         }
    
@@ -33,7 +33,7 @@
          <div id="lessonBody">
         <div class="docItem">
             <div class="lessonHeader">
-                <asp:Label ID="Label2" runat="server" Text="SELECT ALL STATEMENT - Reward: 20qp" Font-Size="Larger" Font-Bold="true"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="LEVEL 1: SELECT ALL STATEMENT - Reward: 20qp" Font-Size="Larger" Font-Bold="True"></asp:Label>
                  <br />
                    &nbsp;<asp:Label ID="lbPercent" runat="server" Font-Bold="True" ForeColor="Black">0</asp:Label>
                         <asp:Label ID="Label1" runat="server" Text="% complete"></asp:Label>                
@@ -45,21 +45,24 @@
                     <fieldset>
                         <asp:Panel ID="Panel3" runat="server">
                             <asp:Label ID="lbTask" runat="server" Font-Size="Larger" Text="Task 1"></asp:Label>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
                             <br />
                             <br />
                             <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: "></asp:Label>
                             <br />
+                            <asp:Panel ID="panelInstructions" runat="server" BackColor="#354551" ForeColor="White">
+                                <asp:Label ID="lbScenario" runat="server" Text="To SELECT all the records FROM a table"></asp:Label>
+                                <br />
+                                <br />
+                                <asp:Label ID="lbExample" runat="server" Text="For example, to SELECT all the records FROM a table named Cars "></asp:Label>
+                                <br />
+                                <br />
+                                <asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
+                            </asp:Panel>
                             <br />
-                            <asp:Label ID="lbScenario" runat="server" Text="To SELECT all the records FROM a table"></asp:Label>
                             <br />
-                            <br />
-                            <asp:Label ID="lbExample" runat="server" Text="For example, to SELECT all the records FROM a table named Cars "></asp:Label>
-                            <br />
-                            <br />
-                            <asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
-                            <br />
-                            <br />
-                            <asp:Panel ID="panelAns" runat="server" BackColor="#0099FF">
+                            <asp:Panel ID="panelAns" runat="server" BackColor="#D4D5D6">
                                 <asp:Label ID="lbAnswer" runat="server" Font-Bold="True" Font-Italic="True" Text="SELECT * FROM "></asp:Label>
                                 <asp:Label ID="lbTable" runat="server" Font-Bold="True" Font-Italic="True" Text="Cars"></asp:Label>
                             </asp:Panel>
@@ -68,7 +71,7 @@
                         </asp:Panel>
                 <br />
                 <br />
-                        <asp:HiddenField ID="wrongAns" runat="server" />
+                        <asp:HiddenField ID="wrongAns" runat="server" Value="0" />
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>
@@ -92,17 +95,23 @@
                             <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" height="36px" Width="100%"></asp:TextBox>
                             <br />
                             <br />
-                            <asp:Button ID="btnRun" onclientclick="javascript:return checkWrong();" runat="server" CssClass="button" Text="Run SQL &gt;&gt;" />
+                            <asp:Button ID="btnRun" runat="server" OnClientClick="checkWrong();" CssClass="button" Text="Run SQL &gt;&gt;" />
                             &nbsp;
                             <asp:Button ID="btnShowAns" runat="server" height="36px" Text="Show answer" Visible="False" width="140px" CssClass="button" />
                         </asp:Panel>
                           <br /> 
+                         <asp:Panel ID="panelVideo" runat="server" Visible="False">
+                             <video controls="controls">
+                                 <source src="/Videos/selectMp4.mp4" type="video/mp4" />
+                                 
+                             </video>
+                        </asp:Panel>
                          <br /> 
                          <br /> 
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>
-                    <asp:AsyncPostBackTrigger ControlID="btnOk" />
+                    <asp:AsyncPostBackTrigger ControlID="btnRun" />
                 </Triggers>
             </asp:UpdatePanel>           
         </div>
@@ -116,7 +125,7 @@
                     <fieldset>
                         <div id="message">
                         <br />
-                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="#FF3300" Font-Size="Larger"></asp:Label>  
+                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="Black" Font-Size="Larger"></asp:Label>  
                             <br />
                             <br />
                             <asp:Panel ID="panLess1" runat="server" Visible="False">
@@ -173,6 +182,9 @@
                         <br />
                         <asp:Button ID="btnNext" runat="server" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="btn btn-default" Visible="False" />
                         &nbsp;<asp:Image ID="imgCorrect" runat="server" ImageUrl="~/Images/ok-icon.png" Visible="False" />
+                        <br />
+                        <br />
+                        <asp:Button ID="btnWatch" runat="server" CssClass="button" Text="Watch a video" Visible="False" />
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>

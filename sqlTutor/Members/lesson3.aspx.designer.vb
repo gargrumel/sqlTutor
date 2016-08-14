@@ -131,13 +131,13 @@ Partial Public Class lesson3
     Protected WithEvents lbTable As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Label8 control.
+    '''lbCondition control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label8 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbCondition As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''lbCommand control.
