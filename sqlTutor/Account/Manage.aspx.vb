@@ -42,12 +42,14 @@ Partial Public Class Manage
                 Next
             End If
         Catch ex As Exception
-            MsgBox(ex.ToString)
+
         End Try
 
 
 
+    End Sub
 
+    Public Sub getComplete()
 
 
     End Sub
@@ -143,6 +145,7 @@ Partial Public Class Manage
         getCount()
         getLessons()
         getNextLesson()
+        getComplete()
 
 
     End Sub

@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class lessons
     
     '''<summary>
+    '''lbQptitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbQptitle As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbPercent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbPercent As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''imgLess1 control.
     '''</summary>
     '''<remarks>
@@ -129,24 +147,6 @@ Partial Public Class lessons
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents imgBonus As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
-    '''lbQptitle control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbQptitle As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''lbPercent control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbPercent As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''lbBonus control.

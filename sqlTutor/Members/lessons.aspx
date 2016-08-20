@@ -1,47 +1,15 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="lessons.aspx.vb" Inherits="sqlTutor.lessons" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="lessonsHeader">
-     
-
-   <div id ="outer">
-   <div id="inner"></div>
-  </div>
-  </div>   
-                 
-     <div id="content" > 
-         
+    <div id="lessonPageHeader">              
+                <asp:Label ID="lbQptitle" runat="server" Text="QP Earned: "></asp:Label>
+                &nbsp;
+                <asp:Label ID="lbPercent" runat="server" ForeColor="white">0</asp:Label>
+    </div>
+        <h4>SQL Missions</h4>     
+     <div id="content" >          
     <div class="tile">LEVEL 1<br />
-        <br />
-       
-        <script src="Scripts/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {                          
-            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML            
-
-            animateProgressBar(amount);
-        
-            function animateProgressBar(p)
-            {                
-                /**oW = $("#outer").width();/*The current with of the outer Div element of the progress bar*/
-                $('#inner').animate({                 
-                    'width': (350 * p) / 100 
-                }, 3000);
-
-                val = p / 350 * 100 /*points gained / total points * 100 to display text as a percentage of the total points*/
-
-                $({ counter: 1 }).animate({ counter: val }, {
-
-                    duration: 3000,
-                    step : function()
-                    {
-                        $('#inner').text(Math.ceil(this.counter) + ' % Overall progress');
-                    }
-                })
-            }        
-        });
-   
-    </script>
-       
+        <br />   
+             
          <asp:ImageButton ID="imgLess1" runat="server" Height="74px" Width="96px" ImageUrl="~/Images/database.png" BackColor="#1A7B72" />
         <br />   
         <br />      
@@ -84,8 +52,6 @@
              
               <br />
             <div id="bonusBar">
-                <asp:Label ID="lbQptitle" runat="server" Text="QP Earned: "></asp:Label>
-                <asp:Label ID="lbPercent" runat="server" ForeColor="Black">0</asp:Label>
 
                 <br />                
                 <asp:Label ID="lbBonus" runat="server" Text="Earn 100QP to unlock"></asp:Label>
@@ -101,6 +67,9 @@
         <div class="tile">LEVEL 6<br />
             <br />
             <asp:ImageButton ID="imgLess5" runat="server" ImageUrl="~/Images/locked-icon.png" height="74px" width="96px" Enabled="False" BackColor="#1A7B72" />
+            
+            
+            <br />
             
             
             <br />

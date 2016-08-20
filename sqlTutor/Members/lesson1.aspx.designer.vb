@@ -86,15 +86,6 @@ Partial Public Class lesson1
     Protected WithEvents lbTask As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''ScriptManager1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-    
-    '''<summary>
     '''lbOutcome control.
     '''</summary>
     '''<remarks>

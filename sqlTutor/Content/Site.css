@@ -9,6 +9,13 @@ body {
     height:calc(100vh - 300);
 }
 
+#lessonPageHeader{
+    height:20px;
+    background-color:black;
+    text-align:right;
+    color:white;
+}
+
 #logo{
     
     color:white;
@@ -22,7 +29,7 @@ body {
 
 
 #menuHeader{
-  
+  background-color:black;
     color:white;
    
  
@@ -150,7 +157,7 @@ input[type="select"] {
 
 
 
-    #lessonBody {
+    #lessonBody, #lesson2 {
         flex-direction: column;
     }
 
@@ -273,7 +280,7 @@ input[type="select"] {
     }
 
     .tile:nth-child(5) {
-        
+        color:black;
     }
 
 #tileFrame {
@@ -287,11 +294,11 @@ input[type="select"] {
 }
 
 #bonus {
-    background-color: gold;
+    background-color: gold;    
 }
 
 #bonus:hover{
-    color:red;
+    color:green;
 }
 
 /*Lesson 2*******************************************************************/
@@ -305,12 +312,14 @@ input[type="select"] {
 #window1, #window2 {
     width: 50%;
     text-align: center;
-    background-color: white;
+    background-color: #354551;
+    color:white;    
+   
     flex-direction: row;
     height: 500px;
     margin: 5px;
     padding: 5px;
-    color: black;
+   
     text-align: left;
 }
 
@@ -321,8 +330,8 @@ input[type="select"] {
 
 #welcomeArea{
     justify-content:center;
-    display:flex;
-    flex-direction:column;
+   
+   
 }
 
 #window {
@@ -339,19 +348,6 @@ input[type="select"] {
 
 
 
-#outer {
-   width:100%;
-    height: 20px;
-    background-color: gray;
-}
-
-#inner {
-    width: 0px;
-    height: 100%;
-    background-color: blue;
-    color: white;
-    text-align: center;
-}
 
 #btnLogin:hover {
     border-color: deepskyblue;

@@ -41,6 +41,15 @@ Partial Public Class Manage
     Protected WithEvents cngPass As Global.System.Web.UI.WebControls.HyperLink
     
     '''<summary>
+    '''lbQp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbQp As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Label1 control.
     '''</summary>
     '''<remarks>
@@ -158,11 +167,11 @@ Partial Public Class Manage
     Protected WithEvents lbAmount As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lbQp control.
+    '''lbTotal control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbQp As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbTotal As Global.System.Web.UI.WebControls.Label
 End Class

@@ -36,7 +36,7 @@
                                     &nbsp;seconds
                                 </ContentTemplate>
                                 <Triggers>
-                                    <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                                   
                                 </Triggers>
                             </asp:UpdatePanel>
                             <br />
@@ -53,7 +53,7 @@
                             <br />
                             column_name = value<br />
                     <br />
-                    <asp:Panel ID="panelTask" runat="server" BackColor="White">
+                    <asp:Panel ID="panelTask" runat="server" BackColor="White" ForeColor="Black">
                         <asp:Label ID="lbTryIt" runat="server" Text="For example:"></asp:Label>
                         &nbsp;To <strong>SELECT</strong> the column named
                         <asp:Label ID="lbColumn" runat="server" Font-Bold="True" Font-Italic="True" Text="ID"></asp:Label>
@@ -65,27 +65,28 @@
                         <br />
                         SQL Command:
                         <asp:Label ID="lbCommand" runat="server" Font-Bold="True" Font-Italic="True" Text="SELECT ID FROM Employees WHERE FirstName = 'Frank'"></asp:Label>
-                        <asp:Timer ID="Timer1" runat="server" Interval="1000" ValidateRequestMode="Enabled" OnTick="Timer1_Tick">
-                        </asp:Timer>
+                        
+                      
                     </asp:Panel>
                     <br />
                     <br />
                         <asp:Button ID="btnOk" runat="server" ForeColor="Black" Text="I Understand" CssClass="button" BorderStyle="None" />
                     &nbsp;<br />
+                    <asp:Panel ID="panelTry" runat="server" Visible="False" BackColor="#CCCCCC" Height="100%">
+                        <asp:Label ID="Label7" runat="server" Font-Size="Larger" Text="Try It"></asp:Label>
+                        ..<br />
+                        <asp:TextBox ID="txtRunSql" runat="server" BorderStyle="None" Height="34px" Width="100%"></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:Button ID="btnRun" runat="server" BackColor="#FF3300" CssClass="caption" ForeColor="White" Text="Run SQL &gt;&gt;" BorderStyle="None" />
+                    </asp:Panel>
+                            <br />
                     <br />
                     <br />
 
                 </div>
 
                 <div id="runSql">
-                    <asp:Panel ID="panelTry" runat="server" Visible="False" BackColor="#CCCCCC">
-                        <asp:Label ID="Label7" runat="server" Font-Size="Larger" Text="Try It"></asp:Label>
-                        ..<br />
-                        <asp:TextBox ID="txtRunSql" runat="server" BorderStyle="None" Height="34px" Width="100%"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:Button ID="btnRun" runat="server" BackColor="#FF3300" CssClass="button" ForeColor="White" Text="Run SQL &gt;&gt;" BorderStyle="None" />
-                    </asp:Panel>
                 </div>
 
 
@@ -99,20 +100,17 @@
 
         </div>
 
-                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="Black"></asp:Label>  
-                            <asp:Panel ID="panLess1" runat="server" Height="131px" Visible="False">
+                        <br />
+
+                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="White"></asp:Label>  
+                            <br />
+                            <asp:Panel ID="panLess1" runat="server" Visible="False">
                                 <table style="width: 30%; height: 30%; border: 1px solid #000000">
                                     <tr>
-                                        <td style="border: thin solid #000000"><strong>MAKE</strong></td>
+                                        <td style="border: thin solid #000000; width: 140px;"><strong>ID</strong></td>
                                     </tr>
                                     <tr>
-                                        <td style="border: thin solid #000000">Jaguar</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="border: thin solid #000000">Bently</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="border: thin solid #000000">Lotus</td>
+                                        <td style="border: thin solid #000000; width: 140px;">001</td>
                                     </tr>
                                 </table>
                                 <br />
@@ -121,16 +119,13 @@
             <asp:Panel ID="panLess2" runat="server" Visible="False">
                 <table style="width: 30%; height: 30%; border: 1px solid #000000">
                     <tr>
-                        <td style="border: thin solid #000000"><strong>ID</strong></td>
+                        <td style="border: thin solid #000000"><strong>MAKE</strong></td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #000000">001</td>
+                        <td style="border: thin solid #000000">Jaguar</td>
                     </tr>
                     <tr>
-                        <td style="border: thin solid #000000">002</td>
-                    </tr>
-                    <tr>
-                        <td style="border: thin solid #000000">003</td>
+                        <td style="border: thin solid #000000">Bently</td>
                     </tr>
                 </table>
                 <br />

@@ -30,6 +30,7 @@ Public Class SiteMaster
         End If
 
         AddHandler Page.PreLoad, AddressOf master_Page_PreLoad
+
     End Sub
 
     Protected Sub master_Page_PreLoad(sender As Object, e As EventArgs)

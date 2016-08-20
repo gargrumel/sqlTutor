@@ -1,6 +1,6 @@
 ﻿
 .body{
-     
+  width:100%;  
     
 }
 
@@ -8,6 +8,8 @@
     text-decoration: none;
     list-style: none;
     font-family:'Segoe UI';
+
+  
     
     
     /*Flexbox*/
@@ -18,10 +20,11 @@
         
 }
 
-.item, .iconItem{    
-   width:300px;
+.item, .iconItem{
+    height:250px;
+   width:30%;  
+ 
 
-    margin: 5px;
     background-color:#354551;
     border-style: solid;
     border-color: white;
@@ -35,10 +38,7 @@
     background-color:lightgrey;
     margin:5px; 
     text-align:center;
-    vertical-align:central; 
-    border:solid;
-    border-width:2px;
-    border-color:deepskyblue;  
+    vertical-align:central;     
 
 }
 
@@ -56,18 +56,13 @@
 }
 
 .item:nth-child(5){   
-   
-     flex-grow:1;  
-  
-}
-
-.item:nth-child(4){   
-   
-   
-}
+    flex-grow:1;
+     padding-left:5px; 
+     padding-right:5px; 
+   }
 
 .iconItem{
-    background-color:deepskyblue;  
+    
     color:gray;
     
 }
@@ -98,7 +93,38 @@
 @media only screen and (max-width : 500px) {
     body{
         background-color:gray;
+        
     }
+
+    .parent{
+        flex-direction:column;
+    }
+    .item, .iconItem{
+    height:300px; 
+    width:100%;    
+    
+}
+}
+
+#outer {  
+   
+    height: 20px;
+    background-color: lightgray;
+    
+}
+
+#inner {
+    width: 0px;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+.tileHeader{
+    height:20%;
+    background-color:green;
+    padding-left:0px;
 }
 
 

@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="loggedOut.aspx.vb" Inherits="sqlTutor.loggedOut" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="logOut" class="text-center">
+    <div id="logOut" class="text-center" style="background-repeat: no-repeat">
 
 
             
-        <asp:Panel ID="logoutContent" runat="server" CssClass="img-responsive" Wrap="False"  >
+        <asp:Panel ID="logoutContent" runat="server" CssClass="img-responsive" Wrap="False" Width="100%" Height="100%">
              <br />
              <br />
              <br />
 
                 <div class="text-center">
-                    <asp:Label ID="Label1" runat="server" Text="Have fun while you Learn" Font-Size="XX-Large"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Have fun while you Learn" Font-Size="XX-Large" ></asp:Label>
                     <br />
                     <asp:Image ID="Image1" runat="server" Height="89px" ImageUrl="~/Images/database.png" Width="107px" />
                 <br />

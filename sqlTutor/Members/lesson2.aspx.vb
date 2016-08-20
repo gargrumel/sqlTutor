@@ -118,10 +118,10 @@ Public Class lesson2
             btnNext.BackColor = Drawing.Color.LightGray
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
-            r.updateLesson(9, userId, 80)
+            r.updateLesson(9, userId, 100)
             disable()
             imgCorrect.Visible = True
-            lbPercent.Text = 80
+            lbPercent.Text = 100
             panLess2.Visible = True
 
         Else

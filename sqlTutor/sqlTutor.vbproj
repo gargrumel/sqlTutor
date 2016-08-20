@@ -216,7 +216,6 @@
     <Content Include="Images\checked_checkbox.png" />
     <Content Include="Images\database.png" />
     <Content Include="Images\database_2.jpg" />
-    <Content Include="Images\emailBack.png" />
     <Content Include="Images\Gender Neutral User-100.png" />
     <Content Include="Images\Gender Neutral User-64.png" />
     <Content Include="Images\Home-64.png" />
@@ -226,6 +225,7 @@
     <Content Include="Images\Learn-SQL.jpg" />
     <Content Include="Images\learn-sql.png" />
     <Content Include="Images\Literature-64.png" />
+    <Content Include="Images\Lock-64.png" />
     <Content Include="Images\locked-icon.png" />
     <Content Include="Images\logogoeshere.gif" />
     <Content Include="Images\Logout Rounded Left-100.png" />
@@ -237,6 +237,7 @@
     <Content Include="Images\sqlLogo.png" />
     <Content Include="Images\star.png" />
     <Content Include="Images\tick.png" />
+    <Content Include="Images\Unlock-64.png" />
     <Content Include="loggedOut.aspx" />
     <Content Include="Members\articles.aspx" />
     <Content Include="Members\bonus.aspx" />

@@ -19,16 +19,20 @@ Public Class lesson3
     Dim task1 As String = "Task 1" 'String value for the first task
     Dim task2 As String = "Task 2" 'String value for the second task
 
-    Dim wrong As Integer = 0
+
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-            queryConn.queryData("SELECT Users.userId, userProgress.lessonId
+            queryConn.queryData("SELECT Users.userId, userProgress.lessonId, userProgress.seqId
                                 From Users, userProgress
                                 Where (Users.email = '" & User.Identity.GetUserName & "') AND (userProgress.lessonId = 10)")
+
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 userId = r("userId")
                 lessId = r("lessonId")
+                seq = r("seqId")
+
+                MsgBox(userId & " " & lessId & " " & seq)
             Next
         Catch ex As Exception
         End Try
@@ -84,7 +88,7 @@ Public Class lesson3
             txtRunSql.Text = "" 'Resets the txtRunSql control text to Blank
             btnNext.Visible = True 'Makes the btnNext control visible
             btnNext.BackColor = Drawing.Color.Blue 'Changes the btnNext control background to blue
-            r.updateLesson(9, userId, 32) 'Calls the updateLesson method from the record class
+            r.updateLesson(10, userId, 32) 'Calls the updateLesson method from the record class
             disable() 'Calls the disable method
             imgCorrect.Visible = True
             lbPercent.Text = 32
@@ -92,14 +96,6 @@ Public Class lesson3
         Else
             lbResult.Text = error1 'Displays the error message label
             btnOk.Visible = False
-            wrong = wrong + 1
-            If wrong = 3 Then
-                MsgBox("You may want to look at the example once again")
-            ElseIf wrong = 5 Then
-                lbCommand.Visible = True
-                lbCommand.BackColor = Drawing.Color.Red
-            End If
-
         End If
     End Sub
 
@@ -115,10 +111,11 @@ Public Class lesson3
             btnNext.BackColor = Drawing.Color.LightGray
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
-            r.updateLesson(9, userId, 80)
+            r.updateLesson(10, userId, 100)
+            r.updateQp(userId, 100)
             disable()
             imgCorrect.Visible = True
-            lbPercent.Text = 80
+            lbPercent.Text = 100
             panLess2.Visible = True
 
         Else
@@ -132,10 +129,10 @@ Public Class lesson3
 
     Protected Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         If lbTask.Text = task1 Then
-            r.updateLesson(9, userId, 16)
+            r.updateLesson(10, userId, 16)
             lbPercent.Text = 16
         Else
-            r.updateLesson(9, userId, 64)
+            r.updateLesson(10, userId, 64)
             lbPercent.Text = 64
         End If
         enable()
@@ -188,7 +185,5 @@ Public Class lesson3
         End If
     End Sub
 
-    Protected Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lbCounter.Text = DateTime.Now.ToString()
-    End Sub
+
 End Class

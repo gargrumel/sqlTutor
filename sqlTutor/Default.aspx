@@ -35,22 +35,27 @@
    <br />
    <br />
    <br />
-   <asp:Label ID="lbWelcome" runat="server" Text="Welcome" Font-Size="X-Large"></asp:Label>
+   <asp:Label ID="lbWelcome" runat="server" Text="Welcome: " Font-Size="X-Large"></asp:Label>
    <asp:Label ID="lbUser" runat="server" Font-Size="X-Large"></asp:Label>
    <br />
    <br />
-   <asp:Label ID="lbTopic" runat="server" ForeColor="Black"></asp:Label>
+   <asp:Label ID="lbTopic" runat="server" ForeColor="Black" Font-Size="Larger"></asp:Label>
+               &nbsp;<asp:Label ID="lbPercent" runat="server" ForeColor="Black" Font-Size="Larger" ToolTip="Percent complete">0</asp:Label> 
+
+      &nbsp;<asp:Label ID="lbcompleted" runat="server" Font-Size="Larger" Text="% completed" Visible="False"></asp:Label>
+
       <br />
       <asp:Panel ID="panNewUser" runat="server" Font-Size="Large" Visible="False">
-          Begin your mission to becomming a SQL Master. Complete each to and earn Query Points.</asp:Panel>
+          Begin your mission to becoming a SQL Master. Complete each level to earn Query Points.</asp:Panel>
    </div>
 
 
     <asp:Panel ID="panelProgress" runat="server">          
-    <div id ="outer" class="text-center">                   
+    <div id ="outer" class="text-center">                  
                    
-    <div id= "inner" style="vertical-align: bottom" ;width="0px">
-    <asp:Label ID="lbPercent" runat="server" ForeColor="Black" Font-Size="Larger" ToolTip="Percent complete">0</asp:Label> 
+    <div id= "inner" style="vertical-align: bottom" width="0px">
+   </div>
+        </div>
     <br />
    
     </asp:Panel>
@@ -63,17 +68,8 @@
          <div id="continueButton">
              <asp:Button CssClass="button" ID="btnContinue" runat="server" Text="" BackColor="#0033CC" ForeColor="White" BorderStyle="None" Height="55px" Width="149px" />
    
-    </div>
-
+    </div>   
  
+    
 
-   
- 
-
-
-
- 
-
-
-
-</asp:Content>
+    </asp:Content>

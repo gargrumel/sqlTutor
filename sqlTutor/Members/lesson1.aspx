@@ -4,8 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-     <script src="Scripts/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
+     <script src="Scripts/jquery-1.10.2.js" type="text/javascript"> 
 
 
         $(document).ready(function () {      
@@ -45,8 +44,6 @@
                     <fieldset>
                         <asp:Panel ID="Panel3" runat="server">
                             <asp:Label ID="lbTask" runat="server" Font-Size="Larger" Text="Task 1"></asp:Label>
-                            <asp:ScriptManager ID="ScriptManager1" runat="server">
-                            </asp:ScriptManager>
                             <br />
                             <br />
                             <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: "></asp:Label>

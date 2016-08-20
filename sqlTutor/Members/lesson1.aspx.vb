@@ -112,7 +112,7 @@ Public Class lesson1
     End Sub
 
 
-    '@If statement - Defines what string is used as the answer (Task 2) and updates the database with the relavant information and displays the appropriate feedback label
+    '@If statement - Defines what string is used as the answer (Task 2) and updates the database with the relevant information and displays the appropriate feedback label
 
     Public Sub execute2() 'Same logic as execute1
         lbResult.Visible = True
@@ -164,6 +164,7 @@ Public Class lesson1
 
 
     'Handles action based on button text
+
     Protected Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
         If btnNext.Text = completeText Then
@@ -184,11 +185,11 @@ Public Class lesson1
     'Loads appropriate task, based on task label value
 
     Private Sub nextLesson()
-        If lbTask.Text = task1 Then
-            loadTask2()
-            btnNext.BackColor = Drawing.Color.LightGray
+        If lbTask.Text = task1 Then 'If the task label text is Task 1
+            loadTask2() 'Loads Task 2
+            btnNext.BackColor = Drawing.Color.LightGray 'Sets the btnNext button color to light gray
             panLess1.Visible = False
-        ElseIf lbTask.text = task2 Then
+        ElseIf lbTask.Text = task2 Then
             finish()
         End If
         If seq <> 100 Then
