@@ -8,24 +8,12 @@
 
 
         $(document).ready(function () {      
-            go = document.getElementById("#btnOk")
-            amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML
+          
             
         
         });
 
-        function checkWrong() {
-            
-            wa = document.getElementById('<%= wrongAns.ClientID %>').value;
-          
-            if (wa < 3) {
-               
-            } else if (wa > 4) {
-                alert("The correct command is: SELECT * FROM Employees")
-                wa = document.getElementById('<%= wrongAns.ClientID %>').value = 2;
-            }
-        }
-   
+    
     </script>
 
     <asp:Panel ID="Panel1" runat="server">
@@ -46,7 +34,7 @@
                             <asp:Label ID="lbTask" runat="server" Font-Size="Larger" Text="Task 1"></asp:Label>
                             <br />
                             <br />
-                            <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: "></asp:Label>
+                            <asp:Label ID="lbOutcome" runat="server" Text="Learning Outcome: " Font-Size="Larger"></asp:Label>
                             <br />
                             <asp:Panel ID="panelInstructions" runat="server" BackColor="#354551" ForeColor="White">
                                 <asp:Label ID="lbScenario" runat="server" Text="To SELECT all the records FROM a table"></asp:Label>
@@ -54,12 +42,12 @@
                                 <br />
                                 <asp:Label ID="lbExample" runat="server" Text="For example, to SELECT all the records FROM a table named Cars "></asp:Label>
                                 <br />
-                                <br />
-                                <asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
                             </asp:Panel>
                             <br />
                             <br />
                             <asp:Panel ID="panelAns" runat="server" BackColor="#D4D5D6">
+                                &nbsp;<asp:Label ID="lbCommand" runat="server" Text="SQL command:"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;
                                 <asp:Label ID="lbAnswer" runat="server" Font-Bold="True" Font-Italic="True" Text="SELECT * FROM "></asp:Label>
                                 <asp:Label ID="lbTable" runat="server" Font-Bold="True" Font-Italic="True" Text="Cars"></asp:Label>
                             </asp:Panel>
@@ -92,7 +80,7 @@
                             <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" height="36px" Width="100%"></asp:TextBox>
                             <br />
                             <br />
-                            <asp:Button ID="btnRun" runat="server" OnClientClick="checkWrong();" CssClass="button" Text="Run SQL &gt;&gt;" />
+                            <asp:Button ID="btnRun" runat="server" CssClass="button" Text="Run SQL &gt;&gt;" />
                             &nbsp;
                             <asp:Button ID="btnShowAns" runat="server" height="36px" Text="Show answer" Visible="False" width="140px" CssClass="button" />
                         </asp:Panel>
@@ -116,13 +104,15 @@
 
         <div class="docItem">
             <div class="lessonHeader" id="resultWindow">               
+                <asp:Image ID="imgBulb" runat="server" BackColor="Black" Height="50%" ImageUrl="~/Images/bulb.jpg" Width="49px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbResult" runat="server" Font-Size="Larger" ForeColor="Black" Visible="False"></asp:Label>
             </div>
              <asp:UpdatePanel ID="updatePanel3" runat="server">
                 <ContentTemplate>
                     <fieldset>
                         <div id="message">
                         <br />
-                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="Black" Font-Size="Larger"></asp:Label>  
                             <br />
                             <br />
                             <asp:Panel ID="panLess1" runat="server" Visible="False">

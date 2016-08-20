@@ -31,8 +31,6 @@ Public Class lesson3
                 userId = r("userId")
                 lessId = r("lessonId")
                 seq = r("seqId")
-
-                MsgBox(userId & " " & lessId & " " & seq)
             Next
         Catch ex As Exception
         End Try

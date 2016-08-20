@@ -10,8 +10,8 @@ body {
 }
 
 #lessonPageHeader{
-    height:20px;
-    background-color:black;
+    height:50px;
+    background-color:green;
     text-align:right;
     color:white;
 }
@@ -34,6 +34,8 @@ body {
    
  
 }
+
+
 
 #loginForm{
     align-content:center;
@@ -165,15 +167,25 @@ input[type="select"] {
         width: 100%;
     }
 
-    .lessonHeader {
+    
+}
+/*End of media query*/
+
+.lessonHeader {
         height: 80px;
     }
 
     #inner {
         background-color: green;
+        width:0%;
+        color:white;
+        font-weight:600;
     }
-}
 
+    #outer{
+        width:100%;
+        background-color:lightgray;
+    }
 
 .docItem {
     text-align: center;
@@ -420,4 +432,6 @@ text-align:center;
 
 #progressOuter{
     width:100%;
+   
+    
 }

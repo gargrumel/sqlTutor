@@ -12,7 +12,10 @@ Public Class lesson1
     Dim ANS2 As String = "SELECT * FROM Employees" 'String value for the second answer
     Dim error1 As String = "Check your command and try again." 'String value for the error message
     Dim feedback As String = "You are correct, Great Job" 'String value for the feedback message
-    Dim completeText As String = "Mark as complete" 'String value for the button when the task is completed
+    Dim completeText As String = "Complete Mission" 'String value for the button when the task is completed
+    Dim feedBack2 As String = "You may want to look at the example and try again."
+    Dim help As String = "Ok, let me help you. Click on the Show answer button"
+    Dim help1 As String = "Ok, I will enter the correct answer for you."
     Dim back As String = "Back to lessons" 'String value for the button if the user visits the page, after they have completed the task
     'Dim lessonCompleteText As String = "You have already completed this level" - No longer required, handled by javaScript
     Dim table1 As String = "Cars" 'String value for the first table
@@ -215,13 +218,25 @@ Public Class lesson1
     Protected Sub btnShowAns_Click(sender As Object, e As EventArgs) Handles btnShowAns.Click
         panelAns.Visible = True
         btnRun.Visible = True
+        lbResult.Text = ""
+        wrongAns.Value = 1
+        btnShowAns.Visible = False
     End Sub
 
     Public Sub addWrong()
         wrongAns.Value += 1
-        If wrongAns.Value = 5 Then
+        If wrongAns.Value = 3 Then
+            lbResult.Text = feedBack2
+        ElseIf wrongAns.Value > 4 And lbTask.Text = task1 Then
+            lbResult.Text = help1
+            txtRunSql.Text = ""
+            txtRunSql.Text = ANS1
+            txtRunSql.BackColor = Drawing.Color.DeepSkyBlue
+        ElseIf wrongAns.Value > 4 And lbTask.Text = task2 Then
+            lbResult.Text = help
             btnShowAns.Visible = True
             btnRun.Visible = False
+            lbAnswer.ForeColor = Drawing.Color.DeepSkyBlue
         End If
     End Sub
 

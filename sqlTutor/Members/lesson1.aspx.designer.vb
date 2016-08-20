@@ -122,15 +122,6 @@ Partial Public Class lesson1
     Protected WithEvents lbExample As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lbCommand control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbCommand As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''panelAns control.
     '''</summary>
     '''<remarks>
@@ -138,6 +129,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents panelAns As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''lbCommand control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbCommand As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''lbAnswer control.
@@ -230,13 +230,13 @@ Partial Public Class lesson1
     Protected WithEvents panelVideo As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''updatePanel3 control.
+    '''imgBulb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents updatePanel3 As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents imgBulb As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
     '''lbResult control.
@@ -246,6 +246,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''updatePanel3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents updatePanel3 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''panLess1 control.
