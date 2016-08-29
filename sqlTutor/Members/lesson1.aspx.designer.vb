@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class lesson1
     
     '''<summary>
+    '''imgBulb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgBulb As Global.System.Web.UI.WebControls.Image
+    
+    '''<summary>
+    '''lbResult control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Panel1 control.
     '''</summary>
     '''<remarks>
@@ -149,15 +167,6 @@ Partial Public Class lesson1
     Protected WithEvents lbAnswer As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lbTable control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbTable As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''btnOk control.
     '''</summary>
     '''<remarks>
@@ -174,6 +183,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents wrongAns As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''hfComplete control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfComplete As Global.System.Web.UI.WebControls.HiddenField
     
     '''<summary>
     '''updatePane2 control.
@@ -230,22 +248,13 @@ Partial Public Class lesson1
     Protected WithEvents panelVideo As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''imgBulb control.
+    '''Label3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents imgBulb As Global.System.Web.UI.WebControls.Image
-    
-    '''<summary>
-    '''lbResult control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''updatePanel3 control.

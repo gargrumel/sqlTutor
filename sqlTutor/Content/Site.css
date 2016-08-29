@@ -4,16 +4,18 @@ body {
     color: black;
     padding-top: 70px;
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: 0px; 
     font-family: 'Segoe UI';
-    height:calc(100vh - 300);
+    
 }
 
 #lessonPageHeader{
-    height:50px;
-    background-color:green;
-    text-align:right;
-    color:white;
+    
+    width:100%;
+    background-color:white;
+    text-align:left;
+    color:black;
+    padding-right:5px;
 }
 
 #logo{
@@ -43,6 +45,7 @@ body {
 
 .button{
     color:black;
+    background-color:#D4D5D6;
     height:70px;
     width:140px;
     border-style:none;
@@ -154,30 +157,50 @@ input[type="select"] {
 @media only screen and (max-width : 500px) {
     body {
         background-color: lightGray;
-        width: 100%;
+       
     }
 
 
 
     #lessonBody, #lesson2 {
         flex-direction: column;
+        width:100%; 
     }
 
     .docItem {
         width: 100%;
     }
-
+    #window1, #window2{
+        width:100%;
+    }
     
 }
 /*End of media query*/
 
+#bulbHeader{
+    height:80px;
+
+}
+
+#resultWindow{
+    background-color:#354551;
+    text-align:center;
+    color:white;
+}
+
+#imgBulb{
+    height:100%;
+}
+
 .lessonHeader {
         height: 80px;
+       
     }
 
     #inner {
-        background-color: green;
+        background-color: green;        
         width:0%;
+        height:30px;
         color:white;
         font-weight:600;
     }
@@ -185,6 +208,9 @@ input[type="select"] {
     #outer{
         width:100%;
         background-color:lightgray;
+        height:40px;
+        padding-top:5px;
+        padding-bottom:5px;
     }
 
 .docItem {
@@ -205,8 +231,6 @@ input[type="select"] {
     background-color: #2A3034;
 }
 
-#resultWindow {
-}
 
 #txtRunSql {
     width: 100%;
@@ -243,6 +267,7 @@ input[type="select"] {
 
 #lbDoc {
     text-align: center;
+     width:100%;
 }
 
 .txtInfo {
@@ -250,36 +275,27 @@ input[type="select"] {
 
 /*********************Lesson tiles content area:********************************/
 
-
-
-#lessonPageHeader {
-    width: 100%;
-    display: flex;
-}
-
-
-
-
-
 #content {
     text-decoration: none;
     list-style: none;
     display: flex;
     /*Flexbox*/
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+ 
+
+    
+   
 }
 
 /*Lesson Tiles*/
 .tile {
-    flex-direction: row;
-    width: 200px;
-    height: 200px;
+    flex-direction: row;    
+    width: 300px;
+    height: 300px;
     margin: 5px;
-     background-color:#354551;
-  
-   
+    background-color:#354551;   
     vertical-align: middle;
     text-align: center;
     color: white;
@@ -313,15 +329,25 @@ input[type="select"] {
     color:green;
 }
 
+
+/*Lesson 1*/
+
+#lbResult{
+    color:green;
+    background-color:yellow;
+}
 /*Lesson 2*******************************************************************/
 
 #lesson2 {
     display: flex;
     justify-content: center;
 }
+#panelTry{
+    color:black;
+}
 
 
-#window1, #window2 {
+#window1 {
     width: 50%;
     text-align: center;
     background-color: #354551;
@@ -330,13 +356,22 @@ input[type="select"] {
     flex-direction: row;
     height: 500px;
     margin: 5px;
-    padding: 5px;
-   
+    padding: 5px;   
     text-align: left;
 }
 
-
-
+ #window2{
+ width: 50%;
+    text-align: center;
+    background-color:white;
+    color:black;    
+   
+    flex-direction: row;
+    height: 500px;
+    margin: 5px;
+    padding: 5px;   
+    text-align: left;
+ }
 
 /**Graph area***************************************/
 
@@ -357,9 +392,6 @@ input[type="select"] {
     text-align: center;
     justify-content:center;
 }
-
-
-
 
 #btnLogin:hover {
     border-color: deepskyblue;
@@ -424,14 +456,16 @@ text-align:center;
     background-color:darkgray;
 }
 
-#progress{
+#loadingInner{
     width:0px;
     background-color:red;
     height:3px;
 }
 
-#progressOuter{
+#loadingOuter{
     width:100%;
+    height:3px;
+   
    
     
 }

@@ -8,22 +8,26 @@ Public Class lesson1
     Dim lessId As Integer 'Variable to store the lesson id
 
     Dim seq As Integer ''Variable to store the sequence id from the current lesson
-    Dim ANS1 As String = "SELECT * FROM Cars" 'String value for the first answer
-    Dim ANS2 As String = "SELECT * FROM Employees" 'String value for the second answer
+    Dim ques1 As String 'String variable for question 1
+    Dim ques2 As String 'String variable for question 2
+    Dim ANS1 As String  'String value for the first answer
+    Dim ANS2 As String 'String value for the second answer
     Dim error1 As String = "Check your command and try again." 'String value for the error message
     Dim feedback As String = "You are correct, Great Job" 'String value for the feedback message
     Dim completeText As String = "Complete Mission" 'String value for the button when the task is completed
     Dim feedBack2 As String = "You may want to look at the example and try again."
+    Dim feedBack3 As String = "Be careful, the SQL command is Case Sensitive"
     Dim help As String = "Ok, let me help you. Click on the Show answer button"
     Dim help1 As String = "Ok, I will enter the correct answer for you."
     Dim back As String = "Back to lessons" 'String value for the button if the user visits the page, after they have completed the task
     'Dim lessonCompleteText As String = "You have already completed this level" - No longer required, handled by javaScript
-    Dim table1 As String = "Cars" 'String value for the first table
-    Dim table2 As String = "Employees" 'String value for the second table
-    Dim complete As Boolean = False
+    Dim complete As Boolean = False 'Boolean variable to hold value if lesson is already completed or not
 
     Dim task1 As String = "Task 1" 'String value for the first task
     Dim task2 As String = "Task 2" 'String value for the second task
+    Dim bulbOn As String = "~/Images/bulb.jpg" 'Bulb image illuminated
+    Dim bulbOff As String = "~/Images/bulbOff.jpg" 'Bulb image not illuminated
+    Dim lesson As Integer = 8 'Variable for the lesson ID for this page
 
     Dim t1 As System.Threading.Thread 'Thread instance to improve performance after the testing phase***********************************************************************
 
@@ -32,43 +36,64 @@ Public Class lesson1
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-            queryConn.queryData("SELECT Users.userId, userProgress.lessonId, userProgress.seqId
-                                From Users, userProgress
-                                Where (Users.email = '" & User.Identity.GetUserName & "') AND (userProgress.lessonId = 8)")
-
-
+            queryConn.queryData("SELECT Lessons.ans1, Lessons.ans2, Lessons.ques1, Lessons.ques2, userProgress.seqId, Users.userId
+                                FROM (userProgress INNER JOIN
+                                Users ON userProgress.userId = Users.userId), Lessons
+                                WHERE (Users.email = '" & User.Identity.GetUserName & "') AND (Lessons.ID = " & lesson & ")")
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
                 userId = r("userId")
-                lessId = r("lessonId")
+                lessId = lesson
                 seq = r("seqId")
-
+                ques1 = r("ques1")
+                ques2 = r("ques2")
+                ANS1 = r("ans1")
+                ANS2 = r("ans2")
             Next
         Catch ex As Exception
         End Try
         lbPercent.Text = seq
 
         r.getComplete(userId, lessId) 'Calls a method of the record class to check if the lesson was already completed
+
         If r.complete = True Then
             complete = True 'Sets the complete variable to true if Method returns true otherwise, the value is false
+
+        End If
+        If seq = 16 Then
+            enable()
+        ElseIf seq = 32 Then
+
+        ElseIf seq = 48 Then
+            loadTask2() 'Calls the loadTask2 method if the sequence value is 48
+        ElseIf seq = 64 Then
+            loadTask2()
+            enable() 'Calls the loadTask2 method and enables the runSQL textbox if the sequence value is 64
         End If
 
-
+        If Page.IsPostBack Then
+        Else
+            lbExample.Text = ques1 'Sets the lable text only on page load, not postback
+            lbAnswer.Text = ANS1 'Sets the lable text only on page load, not postback
+        End If
     End Sub
 
+    'Method to redirect to the lessons page
     Public Sub redirect()
         Response.Redirect("/Members/lessons.aspx")
     End Sub
 
-    'Updates the database and enables \ updates the btnNext control text and color
+    'Updates the complete table and enables \ updates the btnNext control text and color
+    'Modifies the queryPoints table, only if the lesson has not been completed.
 
     Public Sub finish()
         btnNext.Text = completeText
+        hfComplete.Value = 1
         btnNext.BackColor = Drawing.Color.Blue
-        r.updateLesson(8, userId, 100)
-        lbPercent.Text = 100
-        If complete = False Then
-            r.completeLesson(userId, lessId)
-            r.updateQp(userId, 30)
+        r.updateLesson(lesson, userId, 100) 'Calls the updateLesson Method in the record class and passes the lessonId, userId and sequence (100)
+        lbPercent.Text = 100 'Changes the label text to 100
+        If complete = False Then 'Checks the complete variable value and if the lesson is not found in the complete table..
+            r.completeLesson(userId, lessId) 'Calls the completeLesson method in the record class and passes the values userId and lessId
+            r.updateQp(userId, 30) 'Calls the updateQp Method in the record class and passes the userId and qp value
         End If
 
     End Sub
@@ -98,19 +123,20 @@ Public Class lesson1
         If txtRunSql.Text = ANS1 Then 'If the user's entered text and the answer matches
             panRun.Visible = False
             lbResult.Text = feedback 'Shows the feedback message
+            bOn() 'Calls the bOn method which changes the bulb image
             txtRunSql.Text = "" 'Resets the txtRunSql control text to Blank
             btnNext.Visible = True 'Enables the btnNext control
             btnNext.BackColor = Drawing.Color.Blue 'Changes the btnNext control background to blue
             panLess1.Visible = True
             imgCorrect.Visible = True
             lbPercent.Text = 32
-            r.updateLesson(8, userId, 32) 'Calls the updateLesson method from the record class
-
+            r.updateLesson(lesson, userId, 32) 'Calls the updateLesson method from the record class
         Else
             lbResult.Text = error1 'Displays the error message label
+            bOn()
             btnNext.Visible = False
+            txtRunSql.Text = ""
             addWrong()
-
         End If
     End Sub
 
@@ -121,12 +147,13 @@ Public Class lesson1
         lbResult.Visible = True
         If txtRunSql.Text = ANS2 Then
             lbResult.Text = feedback
+            bOn()
             panRun.Visible = False
             btnNext.Visible = True
             btnNext.Enabled = True 'Control disabled when state is changed to visible
             btnNext.Text = completeText
             btnNext.BackColor = Drawing.Color.Blue
-            r.updateLesson(8, userId, 100)
+            r.updateLesson(lesson, userId, 100)
             panLess2.Visible = True
             imgCorrect.Visible = True
             lbPercent.Text = 100
@@ -135,6 +162,7 @@ Public Class lesson1
         Else
             lbResult.Text = error1
             btnNext.Enabled = False
+            bOn()
             addWrong()
 
         End If
@@ -145,11 +173,11 @@ Public Class lesson1
 
     Protected Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
         If lbTask.Text = task1 Then
-            r.updateLesson(8, userId, 16)
+            r.updateLesson(lesson, userId, 16)
             lbPercent.Text = 16
 
         ElseIf lbTask.Text = task2 Then
-            r.updateLesson(8, userId, 64)
+            r.updateLesson(lesson, userId, 64)
             lbPercent.Text = 64
         End If
         enable()
@@ -163,17 +191,16 @@ Public Class lesson1
         txtRunSql.BorderColor = Drawing.Color.DeepSkyBlue
         txtRunSql.Focus()
         btnRun.BackColor = Drawing.Color.Orange
+        txtRunSql.BackColor = Drawing.Color.White
     End Sub
 
 
     'Handles action based on button text
 
     Protected Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-
         If btnNext.Text = completeText Then
             finish()
             redirect()
-
         ElseIf btnNext.Text = back Then
             redirect()
         Else
@@ -186,34 +213,37 @@ Public Class lesson1
     End Sub
 
     'Loads appropriate task, based on task label value
-
     Private Sub nextLesson()
         If lbTask.Text = task1 Then 'If the task label text is Task 1
             loadTask2() 'Loads Task 2
-            btnNext.BackColor = Drawing.Color.LightGray 'Sets the btnNext button color to light gray
-            panLess1.Visible = False
-        ElseIf lbTask.Text = task2 Then
-            finish()
+
+        ElseIf lbTask.Text = task2 Then 'If the task label is Task 2
+            finish() 'Calls the finish method
         End If
         If seq <> 100 Then
-            r.updateLesson(8, userId, 48)
+            r.updateLesson(lesson, userId, 48) 'Calls the updateLesson Method in the record class 
             lbPercent.Text = 48
         End If
     End Sub
 
     'Sets the value and state of associated controls for task 2
     Public Sub loadTask2()
-        lbExample.Text = "Now test your understanding of the SELECT Statement. Select all the records FROM a table named Employees"
+        lbExample.Text = ques2 '
+        lbAnswer.Text = ANS2
+
         lbTask.Text = task2
         btnOk.Visible = True
         panRun.Visible = False
+        panLess1.Visible = False
         txtRunSql.BorderColor = Drawing.Color.LightGray
-        lbTable.Text = table2
         btnNext.Visible = False
         lbResult.Visible = False
         panelAns.Visible = False
         btnShowAns.Visible = False
+        bOff()
     End Sub
+
+
 
     Protected Sub btnShowAns_Click(sender As Object, e As EventArgs) Handles btnShowAns.Click
         panelAns.Visible = True
@@ -221,26 +251,50 @@ Public Class lesson1
         lbResult.Text = ""
         wrongAns.Value = 1
         btnShowAns.Visible = False
+        bOff()
     End Sub
 
+    'Tracks the amount of incorrect answers and displays a message at specific count
+    'Passes the count to a Hidden Field 
     Public Sub addWrong()
-        wrongAns.Value += 1
-        If wrongAns.Value = 3 Then
-            lbResult.Text = feedBack2
+        wrongAns.Value += 1 'Adds 1 to the hiiden field value
+        If wrongAns.Value = 2 Then
+            lbResult.Text = feedBack2 'Shows the feedback2 text if the hidden field value is 2
+        ElseIf wrongAns.Value = 3 Then
+            lbResult.Text = feedBack3 'Shows the feedback3 text if the hidden field value is 3
         ElseIf wrongAns.Value > 4 And lbTask.Text = task1 Then
-            lbResult.Text = help1
-            txtRunSql.Text = ""
-            txtRunSql.Text = ANS1
-            txtRunSql.BackColor = Drawing.Color.DeepSkyBlue
-        ElseIf wrongAns.Value > 4 And lbTask.Text = task2 Then
-            lbResult.Text = help
-            btnShowAns.Visible = True
-            btnRun.Visible = False
-            lbAnswer.ForeColor = Drawing.Color.DeepSkyBlue
+            lbResult.Text = help1 'Shows the help message if the hidden field value is 4
+            txtRunSql.Text = "" 'Clears the sql text box
+            txtRunSql.Text = ANS1 'Places the answer in the txtRunSql textbox
+            txtRunSql.BackColor = Drawing.Color.DeepSkyBlue 'Changes the sql textbox background color 
+            wrongAns.Value = 1 'Resets the hidden field value to 1
+        ElseIf wrongAns.Value > 4 And lbTask.Text = task2 Then 'If during task 2 and the hidden field value is 4
+            lbResult.Text = help 'Shows the help message
+            btnShowAns.Visible = True 'Makes the show answer button visible
+            btnRun.Visible = False 'Makes the run sql button visible
+            lbAnswer.ForeColor = Drawing.Color.DeepSkyBlue 'Changes the answer label color
         End If
     End Sub
 
+    'Changes the visibility of the panel containing a video
     Protected Sub btnWatch_Click(sender As Object, e As EventArgs) Handles btnWatch.Click
         panelVideo.Visible = True
     End Sub
+
+    'Changes the source image of the bulb to the bulbOff variable value
+    Private Sub bOff()
+        imgBulb.ImageUrl = bulbOff
+    End Sub
+
+    'Changes the source image of the bulb to the bulbOff variable value
+    Public Sub bOn()
+        imgBulb.ImageUrl = bulbOn
+    End Sub
+
+    'This event does not fire. intended to call the bulb off method and clear the lbResult text
+    Protected Sub txtRunSql_TextChanged(sender As Object, e As EventArgs) Handles txtRunSql.TextChanged
+        bOff()
+        lbResult.Visible = False
+    End Sub
+
 End Class

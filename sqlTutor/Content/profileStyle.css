@@ -106,24 +106,27 @@
 }
 }
 
-#outer {  
-   
-    height: 20px;
-    background-color: lightgray;
-    
-}
 
-#inner {
-    width: 0px;
-    height: 100%;
-    background-color: blue;
-    color: white;
-    text-align: center;
-}
+    #inner {
+        background-color: green;
+        
+        width:0%;
+        height:30px;
+        color:white;
+        font-weight:600;
+    }
+
+    #outer{
+        width:100%;
+        background-color:lightgray;
+        height:40px;
+        padding-top:5px;
+        padding-bottom:5px;
+    }
 
 .tileHeader{
     height:20%;
-    background-color:green;
+    background-color:orange;
     padding-left:0px;
 }
 

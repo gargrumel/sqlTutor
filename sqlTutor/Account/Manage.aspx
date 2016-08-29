@@ -15,7 +15,7 @@
             amount = document.getElementById('<%= lbAmount.ClientID %>').innerHTML    
             total = document.getElementById('<%= lbTotal.ClientID %>').innerHTML  
 
-
+            highlight();
             animateProgressBar(amount);
         
             function animateProgressBar(p)
@@ -38,7 +38,11 @@
                         $('#inner').text(Math.ceil(this.counter) + ' %');
                     }
                 })
-            }        
+            }
+            function highlight() {
+                document.getElementById('mainProfile').style.backgroundColor = "blue";
+            }
+
         });
    
     </script>
@@ -47,7 +51,7 @@
     <h4>Your Profile</h4> 
     <div class="parent">
         <div class="item"><br />
-            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png" class="subIcon" ToolTip="Click to change picture" />
+            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png"  ToolTip="Click to change picture" />
             <br />
             <asp:Label ID="lbEmail" runat="server"></asp:Label>
             <br />            

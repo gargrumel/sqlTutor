@@ -2,8 +2,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-    <script src="Scripts/jquery-1.10.2.js"></script>
+  
     <script type="text/javascript">
+          
+        document.getElementById('logo').style.backgroundColor = "blue";
+  
         $(document).ready(function () {      
                        
             amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML             
@@ -45,18 +48,27 @@
       &nbsp;<asp:Label ID="lbcompleted" runat="server" Font-Size="Larger" Text="% completed" Visible="False"></asp:Label>
 
       <br />
+      
       <asp:Panel ID="panNewUser" runat="server" Font-Size="Large" Visible="False">
-          Begin your mission to becoming a SQL Master. Complete each level to earn Query Points.</asp:Panel>
+          Begin your mission to becoming a SQL Master. Complete each level to earn Query Points.<br /> </asp:Panel>
    </div>
 
+                 <br />
 
-    <asp:Panel ID="panelProgress" runat="server">          
+                 <asp:Button CssClass="button" ID="btnContinue" runat="server" Text="" BackColor="#0033CC" ForeColor="White" BorderStyle="None" Height="55px" Width="149px" />
+     
+                 <br />
+                 <br />
+    <asp:Panel ID="panelProgress" runat="server" Height="100%">          
     <div id ="outer" class="text-center">                  
                    
     <div id= "inner" style="vertical-align: bottom" width="0px">
    </div>
         </div>
     <br />
+           <div id="continueButton">
+   
+    </div>
    
     </asp:Panel>
        &nbsp;
@@ -65,10 +77,7 @@
      
           <asp:Label ID="lbValue" runat="server"></asp:Label>
          <br />
-         <div id="continueButton">
-             <asp:Button CssClass="button" ID="btnContinue" runat="server" Text="" BackColor="#0033CC" ForeColor="White" BorderStyle="None" Height="55px" Width="149px" />
-   
-    </div>   
+         
  
     
 

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="videos.aspx.vb" Inherits="sqlTutor.videos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <script>
+        document.getElementById('videos').style.backgroundColor = "blue";
+    </script>
     <h4>Videos</h4>
        
         <br/>

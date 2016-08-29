@@ -14,49 +14,31 @@ Option Explicit On
 Partial Public Class lesson2
     
     '''<summary>
-    '''lbTopic control.
+    '''imgBulb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbTopic As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents imgBulb As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
-    '''lbPercent control.
+    '''lbResult control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbPercent As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Label4 control.
+    '''Panel1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''lbTask control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbTask As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Label1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''Label2 control.
@@ -68,49 +50,103 @@ Partial Public Class lesson2
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Label5 control.
+    '''lbPercent control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lbPercent As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''panelTask control.
+    '''Label1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents panelTask As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''lbTryIt control.
+    '''Panel2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbTryIt As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Panel2 As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''lbColumn control.
+    '''updatePanel1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbColumn As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents updatePanel1 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
-    '''lbTable control.
+    '''Panel3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbTable As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Panel3 As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''lbTask control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbTask As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbOutcome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbOutcome As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''panelInstructions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelInstructions As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''lbScenario control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbScenario As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lbExample control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbExample As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''panelAns control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelAns As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''lbCommand control.
@@ -122,6 +158,15 @@ Partial Public Class lesson2
     Protected WithEvents lbCommand As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''lbAnswer control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbAnswer As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''btnOk control.
     '''</summary>
     '''<remarks>
@@ -131,22 +176,40 @@ Partial Public Class lesson2
     Protected WithEvents btnOk As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''panelTry control.
+    '''wrongAns control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents panelTry As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents wrongAns As Global.System.Web.UI.WebControls.HiddenField
     
     '''<summary>
-    '''Label7 control.
+    '''hfComplete control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label7 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents hfComplete As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''updatePane2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents updatePane2 As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
+    '''panRun control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panRun As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''txtRunSql control.
@@ -167,13 +230,40 @@ Partial Public Class lesson2
     Protected WithEvents btnRun As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''lbResult control.
+    '''btnShowAns control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnShowAns As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''panelVideo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelVideo As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Label3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''updatePanel3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents updatePanel3 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
     '''panLess1 control.
@@ -210,4 +300,13 @@ Partial Public Class lesson2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents imgCorrect As Global.System.Web.UI.WebControls.Image
+    
+    '''<summary>
+    '''btnWatch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnWatch As Global.System.Web.UI.WebControls.Button
 End Class

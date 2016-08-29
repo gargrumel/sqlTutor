@@ -68,6 +68,15 @@ Partial Public Class _Default
     Protected WithEvents panNewUser As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
+    '''btnContinue control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnContinue As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''panelProgress control.
     '''</summary>
     '''<remarks>
@@ -93,13 +102,4 @@ Partial Public Class _Default
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbValue As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''btnContinue control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnContinue As Global.System.Web.UI.WebControls.Button
 End Class

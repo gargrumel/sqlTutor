@@ -211,9 +211,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <None Include="My Project\PublishProfiles\testLab.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\89.gif" />
     <Content Include="Images\bulb.jpg" />
+    <Content Include="Images\bulbOff.jpg" />
     <Content Include="Images\checked_checkbox.png" />
     <Content Include="Images\database.png" />
     <Content Include="Images\database_2.jpg" />

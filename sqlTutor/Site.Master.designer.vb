@@ -23,6 +23,15 @@ Partial Public Class SiteMaster
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
     
     '''<summary>
+    '''panelLoad control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents panelLoad As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''logo control.
     '''</summary>
     '''<remarks>
@@ -30,6 +39,42 @@ Partial Public Class SiteMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents logo As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''mainProfile control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mainProfile As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''lessons control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lessons As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''articles control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents articles As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''videos control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents videos As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''MainContent control.

@@ -6,12 +6,8 @@
 
 <html lang="en">
 <head runat="server">
-
-
-     <script type="text/javascript">
-  
-        
-    </script>
+   
+     
 
 
 
@@ -45,15 +41,23 @@
                 <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                
+                <asp:ScriptReference Name="WebFormsBundle" />               
                  
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+    
 
         <div id ="menuHeader" class="navbar navbar-inverse navbar-fixed-top">            
-           
+            <asp:Panel ID="panelLoad" runat="server" height=100%>
+                <div id ="loadingOuter">
+
+     <div id="loadingInner">
+
+     </div>
+
+                </div>
+            </asp:Panel>
             <div class="container">
                 
                  
@@ -65,15 +69,15 @@
                         <span class="icon-bar"></span>  
                     </button>
                     <a id="logo" class="navbar-brand" runat="server" href="~/">SQL Tutor</a>
-                </div>
+                </div>               
 
 
                 <div class="navbar-collapse collapse" id="menu">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Account/Manage.aspx">Profile</a></li>
-                        <li><a runat="server" href="Members/lessons.aspx">SQL Missions</a></li>                                          
-                        <li><a runat="server" href="Members/articles.aspx">Quick Reference</a></li>
-                        <li><a runat="server" href="Members/videos.aspx">Videos</a></li>                                                
+                        <li><a runat="server" id="mainProfile" href="~/Account/Manage.aspx">Profile</a></li>
+                        <li><a runat="server" id="lessons" href="Members/lessons.aspx">SQL Missions</a></li>                                          
+                        <li><a runat="server" id="articles" href="Members/articles.aspx">Quick Reference</a></li>
+                        <li><a runat="server" id="videos" href="Members/videos.aspx">Videos</a></li>                                                
                     </ul>
 
 

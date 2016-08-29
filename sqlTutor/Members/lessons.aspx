@@ -1,11 +1,21 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="lessons.aspx.vb" Inherits="sqlTutor.lessons" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="lessonPageHeader">              
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+
+        document.getElementById('lessons').style.backgroundColor = "blue";
+   
+    </script>
+      
+   
+    <div id="lessonPageHeader"> 
+        <h4>SQL Missions</h4>              
                 <asp:Label ID="lbQptitle" runat="server" Text="QP Earned: "></asp:Label>
                 &nbsp;
-                <asp:Label ID="lbPercent" runat="server" ForeColor="white">0</asp:Label>
+                <asp:Label ID="lbPercent" runat="server" ForeColor="black">0</asp:Label>
     </div>
-        <h4>SQL Missions</h4>     
+          
      <div id="content" >          
     <div class="tile">LEVEL 1<br />
         <br />   

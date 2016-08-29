@@ -67,18 +67,16 @@
                         <asp:Label ID="lbCommand" runat="server" Font-Bold="True" Font-Italic="True" Text="SELECT ID FROM Employees WHERE FirstName = 'Frank'"></asp:Label>
                         
                       
-                    </asp:Panel>
-                    <br />
-                    <br />
+                    </asp:Panel>                   
                         <asp:Button ID="btnOk" runat="server" ForeColor="Black" Text="I Understand" CssClass="button" BorderStyle="None" />
-                    &nbsp;<br />
+                   
                     <asp:Panel ID="panelTry" runat="server" Visible="False" BackColor="#CCCCCC" Height="100%">
-                        <asp:Label ID="Label7" runat="server" Font-Size="Larger" Text="Try It"></asp:Label>
+                        <asp:Label ID="Label7" runat="server" Font-Size="Larger" Text="Try It" ForeColor="Black"></asp:Label>
                         ..<br />
                         <asp:TextBox ID="txtRunSql" runat="server" BorderStyle="None" Height="34px" Width="100%"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Button ID="btnRun" runat="server" BackColor="#FF3300" CssClass="caption" ForeColor="White" Text="Run SQL &gt;&gt;" BorderStyle="None" />
+                        <asp:Button ID="btnRun" runat="server" BackColor="#FF3300" CssClass="button" ForeColor="White" Text="Run SQL &gt;&gt;" BorderStyle="None" />
                     </asp:Panel>
                             <br />
                     <br />
@@ -95,14 +93,13 @@
 
         <div id="window2">
 
-        <div class="lessonHeader">
+        <div class="lessonHeader" id="resultWindow">
+            <asp:Image ID="imgBulb" runat="server" BackColor="Black" Height="50%" ImageUrl="~/Images/bulb.jpg" Width="49px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lbResult" runat="server" Font-Size="Larger" ForeColor="Black" Visible="False"></asp:Label>
 
-
-        </div>
-
-                        <br />
-
-                        <asp:Label ID="lbResult" runat="server" Visible="False" ForeColor="White"></asp:Label>  
+        </div>                      
+          
                             <br />
                             <asp:Panel ID="panLess1" runat="server" Visible="False">
                                 <table style="width: 30%; height: 30%; border: 1px solid #000000">
