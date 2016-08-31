@@ -1,7 +1,7 @@
 ﻿Public Class record
     'This class holds the methods to update the Lesson and User records. 
     Dim queryConn As New connections
-    Public complete As Boolean
+    Public complete As Boolean 'Boolean value to validate id the lesson was completed.
 
 
     'Accepts two parameters and updates the 'Complete' table
@@ -33,6 +33,7 @@
         End Try
     End Sub
 
+    'Updates the queryPoints table based on the userId
     Public Sub updateQp(ByVal id As Integer, ByVal qp As Integer)
         Try
             queryConn.queryData("UPDATE queryPoints SET queryPoints = " & qp & " WHERE userId = " & id)
@@ -44,7 +45,7 @@
     End Sub
 
 
-    'Method to add queryPoints to the queryPoints table
+    'Method to add queryPoints to the queryPoints table. Inserts a record into the queryPoints table based on the userId
 
     Public Sub addQp(ByVal id As Integer, ByVal qp As Integer)
         Try
@@ -54,11 +55,8 @@
         End Try
     End Sub
 
-    Public Sub minusQp(ByVal id As Integer, ByVal qp As Integer)
-
-
-    End Sub
-
+    'Accepts two parameters userId and lessonId
+    'Queries the complete table and sets true or false to the complete variable
     Public Sub getComplete(ByVal id As Integer, ByVal lessid As Integer)
         Try
             queryConn.queryData("SELECT * FROM complete WHERE userId = " & id & "AND lessonId = " & lessid)

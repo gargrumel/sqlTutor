@@ -5,4 +5,7 @@
 
     End Sub
 
+    Protected Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listLessons.SelectedIndexChanged
+        txtDisplay.Text = listLessons.SelectedItem.Value.ToString
+    End Sub
 End Class

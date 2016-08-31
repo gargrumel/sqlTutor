@@ -1,18 +1,16 @@
-﻿
+﻿'This class handles the main connections\queries to the Access database. 
 
 Public Class connections
-    ' Dim conn As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\watchtower\Dropbox\EAAD\sqlTutor\sqlTutor\App_Data\eLearning.accdb;Persist Security Info=True")
-
-    Dim data As String = My.Settings.connection
-    Dim conn As New OleDb.OleDbConnection(data)
-
-
-    Dim cmd As New OleDb.OleDbCommand
-    Public da As OleDb.OleDbDataAdapter
-    Public ds As DataSet
+    Dim data As String = My.Settings.connection 'Stored connection string
+    Dim conn As New OleDb.OleDbConnection(data) 'OleDb connection using stored connection string
+    Dim cmd As New OleDb.OleDbCommand 'Query string
+    Public da As OleDb.OleDbDataAdapter 'Data adapter
+    Public ds As DataSet ' Data set to hold data
     Public params As New List(Of OleDb.OleDbParameter)
     Public count As Integer 'To capture the amount of records for statistics
 
+
+    'Inserts a new record into the Access database during registration
     Public Sub register(ByVal email As String) 'Method to insert registered user into the database. 
 
         cmd.Connection = conn 'assigns the OleDb connection string as the OledbCommand connection
@@ -26,17 +24,16 @@ Public Class connections
         Catch ex As Exception
             'Handles any exceptions
         End Try
-
         If conn.State = ConnectionState.Open Then
             conn.Close() 'Ensures that the connection is closed after method execution
         End If
-
     End Sub
 
+    'Query the database, accepts a string parameter and passes into an OLEDB command, using the OleDb connection
     Public Sub queryData(Query As String) 'Method to query the database
         Try
             conn.Open() 'Opens the connection
-            cmd = New OleDb.OleDbCommand(Query, conn) 'Defines the SQL command (using the Oledb connection and the Query String)
+            cmd = New OleDb.OleDbCommand(Query, conn) 'Defines the SQL command (using the OleDb connection and the Query String)
             params.ForEach(Sub(x) cmd.Parameters.Add(x)) 'Adds the parameters of the query
             params.Clear() 'Clears the parameters
             ds = New DataSet 'Instance of a new Dataset
@@ -52,15 +49,5 @@ Public Class connections
         End If
 
     End Sub
-
-    Public Sub addParam(Name As String, Value As Object)
-        Dim newParam As New OleDb.OleDbParameter(Name, Value)
-        params.Add(newParam)
-    End Sub
-
-
-
-
-
 
 End Class

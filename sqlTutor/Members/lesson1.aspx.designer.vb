@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class lesson1
     
     '''<summary>
+    '''Panel1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
     '''imgBulb control.
     '''</summary>
     '''<remarks>
@@ -30,15 +39,6 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lbResult As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Panel1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''Label2 control.
@@ -174,6 +174,15 @@ Partial Public Class lesson1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnOk As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''anchor1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents anchor1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''wrongAns control.

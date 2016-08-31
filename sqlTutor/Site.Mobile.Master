@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.Mobile.master.vb" Inherits="sqlTutor.Site_Mobile" %>
 
 <%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
-
+<link href="Content/Site.css" rel="stylesheet" />
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -10,9 +10,110 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
+
+    <style>
+        
+#mobileHeader{
+    height:50px;     
+    vertical-align:top;
+    position:fixed;
+    width:100%;
+   
+   
+      
+}
+
+#mobileHeader ul{
+   
+  height:100%;
+  padding:0px;
+ 
+}
+
+#mobileHeader ul li a{    
+    text-decoration:none;
+   
+    color:white;
+    
+     
+}
+
+#mobileHeader ul li{
+    display:inline-block;
+    padding:5px;
+     padding-bottom:10px;
+     background-color:green;
+    
+   
+}
+
+.tile {    
+    margin: 5px;
+    background-color:#354551;   
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+
+}
+
+@media only screen and (max-width : 771px) {
+    body {
+      background-color:deepskyblue;    
+       
+    }
+   
+
+    .tile{
+        width:40%;
+          flex-direction:row;
+    }
+
+
+    
+    
+}
+  
+
+@media only screen and (max-width : 470px) {
+    body {
+      background-color:lightgray; 
+       
+    }
+
+    .tile{
+        width:100%;
+    }
+
+
+    
+    
+}
+
+
+       
+
+
+    </style>
+   
+                <div id="mobileHeader">
+                    <ul class="nav navbar-nav">
+                         <li><a runat="server" id="Home" href="~/loggedOut.aspx">Home</a></li>
+                        <li><a runat="server" id="mainProfile" href="~/Account/Manage.aspx">Profile</a></li>
+                        <li><a runat="server" id="lessons" href="Members/lessons.aspx">SQL Missions</a></li>                                          
+                        <li><a runat="server" id="articles" href="Members/articles.aspx">Quick Reference</a></li>
+                        <li><a runat="server" id="videos" href="Members/videos.aspx">Videos</a></li>                                                
+                    </ul>
+                    </div>
+
+
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableViewState="False"></asp:ScriptManager>
     <div>
-        <h1>Mobile Master Page</h1>
+        <br/>
+         <br/>
+         <br/>
+        <h1>SQL-Tutor Mobile</h1>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />

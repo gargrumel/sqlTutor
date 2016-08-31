@@ -1,13 +1,9 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="lesson2.aspx.vb" Inherits="sqlTutor.lesson2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id ="bulbHeader">
-
-
-                <asp:Image ID="imgBulb" runat="server" BackColor="Black" Height="50%" ImageUrl="~/Images/bulbOff.jpg" Width="49px" />
-                <asp:Label ID="lbResult" runat="server" Font-Size="Larger" Visible="False" BackColor="Yellow"></asp:Label>
-
-
+    <div id="bulbHeader">
+        <asp:Image ID="imgBulb" runat="server" BackColor="Black" ImageUrl="~/Images/bulbOff.jpg" Width="49px" />
+        <asp:Label ID="lbResult" runat="server" class="alert alert-warning" Font-Size="Larger" Visible="False"></asp:Label>
     </div>
     <script type="text/javascript">
 
@@ -91,10 +87,9 @@
                         </asp:Panel>
                           <br /> 
                          <asp:Panel ID="panelVideo" runat="server" Visible="False">
-                             <video controls="controls">
-                                 <source src="/Videos/selectMp4.mp4" type="video/mp4" />
-                                 
-                             </video>
+                             
+                                 <iframe src="https://www.youtube.com/embed/JeZCabShIFk" frameborder="0" allowfullscreen></iframe>
+                            
                         </asp:Panel>
                          <br /> 
                          <br /> 
@@ -139,7 +134,7 @@
                             <br />
                             </div>
                         <br />
-                        <asp:Button ID="btnNext" runat="server" OnClientClick="missionComplete();" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="btn btn-default" Visible="False" />
+                        <asp:Button ID="btnNext" runat="server" OnClientClick="missionComplete();" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="button" Visible="False" />
                         &nbsp;<asp:Image ID="imgCorrect" runat="server" ImageUrl="~/Images/ok-icon.png" Visible="False" />
                         <br />
                         <br />

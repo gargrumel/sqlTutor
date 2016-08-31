@@ -60,9 +60,9 @@
         <div class="col-md-4">
             <asp:Image ID="Image1" runat="server" Height="100%" ImageUrl="~/Images/database_2.jpg" Width="100%" />
             <br />
-            <p>
-                Learn one of the most powerful programming languages in the World!!
-            </p>
+           
+                <h4>Learn one of the most powerful programming languages in the World!!</h4>
+          
         </div>
     </div>
 </asp:Content>

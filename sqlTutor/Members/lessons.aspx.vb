@@ -17,10 +17,9 @@ Public Class lessons
         Else
             queryConn.queryData("SELECT UserId FROM Users WHERE Email = '" & User.Identity.GetUserName() & "'")
             For Each r As DataRow In queryConn.ds.Tables(0).Rows
-                userId = r("userId")
+                userId = r("userId") 'Sets the user id to the userId variable
             Next
-
-            loadLesson1()
+            loadLesson1() 'calls the loadLesson method
             'Calls the populate method to load each lesson, reuses the code
             populate(7, lbLess2, imgLess2)
             populate(8, lbLess3, imgLess3)
@@ -72,7 +71,7 @@ Public Class lessons
 
     End Sub
 
-    'Starts the specified lesson ID when the image button is clicked
+    'Starts the specified lesson ID when the image button is clicked, calls the startLesson method
     Protected Sub imgLess1_Click(sender As Object, e As ImageClickEventArgs) Handles imgLess1.Click
         startLesson(7, "/Members/introduction.aspx")
     End Sub
@@ -111,7 +110,7 @@ Public Class lessons
 
     'Accepts an integer and string as parameters
     'Queries the userProgress table. If no record is found, a new record is inserted with the userId variable value
-    'If the user already exists, the record is update to reflect the current lesson only. The user is then redirected to the page parameter value.
+    'If the user already exists, the record is updated to reflect the current lesson only. The user is then redirected to the page parameter value.
 
     Public Sub startLesson(ByVal less As Integer, ByVal page As String)
         Try

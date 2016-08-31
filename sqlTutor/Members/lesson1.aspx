@@ -1,15 +1,8 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="lesson1.aspx.vb" Inherits="sqlTutor.lesson1" %>
+﻿<%@ Page Title="" MaintainScrollPositionOnPostback="True" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="lesson1.aspx.vb" Inherits="sqlTutor.lesson1" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id ="bulbHeader">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server" >
 
-
-                <asp:Image ID="imgBulb" runat="server" BackColor="Black" Height="50%" ImageUrl="~/Images/bulbOff.jpg" Width="49px" />
-                <asp:Label ID="lbResult" runat="server" Font-Size="Larger" Visible="False" BackColor="Yellow"></asp:Label>
-
-
-    </div>
     <script type="text/javascript">
 
         function missionComplete() {
@@ -18,8 +11,25 @@
                 alert("Mission Completed")            }
         }
 
+        function scroll() {           
+            window.scrollTo(0, 400);
+        }
+
+        function scroll2() {
+            window.scrollTo(0, 500);
+        }
+        function scrollTop() {
+            document.getElementById('bulbHeader').scrollTop(true);
+        }
+
+
     </script>
     <asp:Panel ID="Panel1" runat="server">
+        
+    <div id="bulbHeader">
+        <asp:Image ID="imgBulb" runat="server" BackColor="Black" ImageUrl="~/Images/bulbOff.jpg" Width="49px" />
+        <asp:Label ID="lbResult" runat="server" class="alert alert-warning" Font-Size="Larger" Visible="False"></asp:Label>
+    </div>
          <div id="lessonBody">
         <div class="docItem">
             <div class="lessonHeader">
@@ -54,8 +64,9 @@
                                 &nbsp;&nbsp;&nbsp;
                                 <asp:Label ID="lbAnswer" runat="server" Font-Bold="True" Font-Italic="True"></asp:Label>
                             </asp:Panel>
-                            &nbsp;<br />&nbsp;&nbsp;<br />&nbsp;<asp:Button CssClass="button" ID="btnOk" runat="server" Text="I Understand" BorderStyle="None" />
-                            &nbsp;<br /> 
+                            &nbsp;<br />&nbsp;&nbsp;<br />&nbsp;<asp:Button CssClass="button" ID="btnOk" runat="server" OnClientClick="scroll();" Text="I Understand" BorderStyle="None" />
+                            &nbsp;<asp:Label ID="anchor1" runat="server"></asp:Label>
+                            <br /> 
                         </asp:Panel>
                 <br />
                 <br />
@@ -64,7 +75,7 @@
                     </fieldset>
                 </ContentTemplate>
                 <Triggers>
-                    <asp:AsyncPostBackTrigger ControlID="btnOk" />
+                    <asp:AsyncPostBackTrigger ControlID="btnRun" />
                 </Triggers>
                </asp:UpdatePanel>
             </asp:Panel>
@@ -82,17 +93,17 @@
                     <fieldset>
                         <asp:Panel ID="panRun" runat="server" Visible="False">
 
-                            <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" height="36px" Width="100%"></asp:TextBox>
+                           <a> <asp:TextBox ID="txtRunSql" runat="server" BorderColor="LightGray" BorderStyle="Solid" BorderWidth="2px" height="36px" Width="100%"></asp:TextBox></a>
                             <br />
                             <br />
-                            <asp:Button ID="btnRun" runat="server" CssClass="button" Text="Run SQL &gt;&gt;" />
+                            <asp:Button ID="btnRun" runat="server" CssClass="button" OnClientClick="scroll2();" Text="Run SQL &gt;&gt;" />
                             &nbsp;
                             <a name="middle"></a>
                             <asp:Button ID="btnShowAns" runat="server" height="36px" Text="Show answer" Visible="False" width="140px" CssClass="button" />
                         </asp:Panel>
                           <br /> 
                          <asp:Panel ID="panelVideo" runat="server" Visible="False">
-                             <video controls="controls">
+                             <video controls="controls">    
                                  <source src="/Videos/selectMp4.mp4" type="video/mp4" />
                                  
                              </video>
@@ -168,7 +179,7 @@
                             <br />
                             </div>
                         <br />
-                        <asp:Button ID="btnNext" runat="server" OnClientClick="missionComplete();" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="btn btn-default" Visible="False" />
+                        <asp:Button ID="btnNext" runat="server" OnClientClick="scrollTop();" ForeColor="White" Text="Next Task &gt;&gt;" CssClass="button" Visible="False" />
                         &nbsp;<asp:Image ID="imgCorrect" runat="server" ImageUrl="~/Images/ok-icon.png" Visible="False" />
                         <br />
                         <br />

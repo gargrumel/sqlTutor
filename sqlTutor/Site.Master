@@ -5,12 +5,10 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head runat="server">
-   
-     
 
-
-
+    <link href="Content/Site.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - SQL Tutor</title>
@@ -23,7 +21,10 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
+  
+
 <body>
+
     <form runat="server" autocomplete="off">
           <asp:ScriptManager runat="server" ID="ScriptManager1">
             <Scripts>

@@ -66,8 +66,7 @@
 </div>
        
         <div class="item">            
-            <br />
-            <br />
+           
             <br />
             <asp:Label ID="Label1" runat="server" Font-Size="Larger" Text="Current Mission"></asp:Label>
             <br />
@@ -87,8 +86,7 @@
 
 
         <div class="item">
-            <br />
-            <br />
+           
             <br />
             <asp:Label ID="Label2" runat="server" Font-Size="Larger" Text="Next Mission"></asp:Label>
             <br />

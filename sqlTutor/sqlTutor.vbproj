@@ -221,6 +221,7 @@
     <Content Include="Images\database_2.jpg" />
     <Content Include="Images\Gender Neutral User-100.png" />
     <Content Include="Images\Gender Neutral User-64.png" />
+    <Content Include="Images\greenBg.jpg" />
     <Content Include="Images\Home-64.png" />
     <Content Include="Images\Home-icon.png" />
     <Content Include="Images\icon.png" />
@@ -481,7 +482,7 @@
     </Compile>
     <Compile Include="Members\lesson3.aspx.vb">
       <DependentUpon>lesson3.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Members\lesson4.aspx.designer.vb">
       <DependentUpon>lesson4.aspx</DependentUpon>

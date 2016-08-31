@@ -5,8 +5,15 @@ body {
     padding-top: 70px;
     padding-left: 0px;
     padding-right: 0px; 
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI'; 
     
+}
+
+
+
+
+#landing{
+    opacity:0.9;
 }
 
 #lessonPageHeader{
@@ -88,6 +95,7 @@ body {
     height: 100px;
     text-align: center;
     width:100%;
+    font-size:larger;
 }
 
 
@@ -136,6 +144,7 @@ input[type="select"] {
 #lessonBody {
     display: flex;
     justify-content: center;
+    padding-top:100px;
 }
 
 #lessonsHeader {
@@ -144,23 +153,21 @@ input[type="select"] {
 
 @media only screen and (max-width : 1224px) {
     body {
-        background-color: deeppink;
+      
     }
 }
 
 @media only screen and (max-width : 768px) {
     body {
-        background-color: red;
+     
     }
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 420px) {
     body {
-        background-color: lightGray;
+      background-color:lightgray; 
        
     }
-
-
 
     #lessonBody, #lesson2 {
         flex-direction: column;
@@ -173,12 +180,27 @@ input[type="select"] {
     #window1, #window2{
         width:100%;
     }
+
+    .tile{
+        width:100%;
+    }
+
     
+    
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .tile{
+        width:100%;
+        background-color:blue;
+    }
 }
 /*End of media query*/
 
 #bulbHeader{
-    height:80px;
+ 
+    background-color:white;
+    position:fixed;
+    vertical-align:top;
 
 }
 
@@ -189,7 +211,7 @@ input[type="select"] {
 }
 
 #imgBulb{
-    height:100%;
+    height:50px;
 }
 
 .lessonHeader {
@@ -251,6 +273,7 @@ input[type="select"] {
 .docItem:nth-child(1) {
     color: black;
     background-color: white;
+    height:100%;
 }
 
 
@@ -333,7 +356,7 @@ input[type="select"] {
 /*Lesson 1*/
 
 #lbResult{
-    color:green;
+    color:black;
     background-color:yellow;
 }
 /*Lesson 2*******************************************************************/
@@ -468,4 +491,29 @@ text-align:center;
    
    
     
+}
+
+/*****************/
+#articles{
+    height:calc(100vh - 150);
+    display:flex;
+    flex-direction:row;
+    
+}
+
+#listBox{
+width:30%;
+height:500px;
+background-color:green
+}
+
+#listDisplay{
+    padding-left:30px;
+width:70%;
+height:500px;
+}
+
+#mobileHeader{
+    height:60px;
+    background-color:lightgray;
 }
