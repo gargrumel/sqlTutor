@@ -5,10 +5,16 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head runat="server">
+    
 
-    <link href="Content/Site.css" rel="stylesheet" />
+     <script type="text/javascript">
+  
+        
+    </script>
+
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - SQL Tutor</title>
@@ -21,10 +27,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-  
-
 <body>
-
     <form runat="server" autocomplete="off">
           <asp:ScriptManager runat="server" ID="ScriptManager1">
             <Scripts>
@@ -42,42 +45,34 @@
                 <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />               
+                <asp:ScriptReference Name="WebFormsBundle" />
+                
                  
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-    
 
         <div id ="menuHeader" class="navbar navbar-inverse navbar-fixed-top">            
-            <asp:Panel ID="panelLoad" runat="server" height=100%>
-                <div id ="loadingOuter">
-
-     <div id="loadingInner">
-
-     </div>
-
-                </div>
-            </asp:Panel>
+           
             <div class="container">
                 
-                 
+                 <asp:HiddenField runat="server" ID="hiddenPage"></asp:HiddenField>
 
-                <div class="navbar-header">
+               
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
+                        <span class="button-toggle"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>  
                     </button>
                     <a id="logo" class="navbar-brand" runat="server" href="~/">SQL Tutor</a>
-                </div>               
+              
 
 
                 <div class="navbar-collapse collapse" id="menu">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" id="mainProfile" href="~/Account/Manage.aspx">Profile</a></li>
+                        <li><a runat="server" id="main" href="~/Account/Manage.aspx">Profile</a></li>
                         <li><a runat="server" id="lessons" href="Members/lessons.aspx">SQL Missions</a></li>                                          
-                        <li><a runat="server" id="articles" href="Members/articles.aspx">Quick Reference</a></li>
+                        <li><a runat="server" id="aricles" href="Members/articles.aspx">Quick Reference</a></li>
                         <li><a runat="server" id="videos" href="Members/videos.aspx">Videos</a></li>                                                
                     </ul>
 

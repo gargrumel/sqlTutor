@@ -50,24 +50,6 @@ Partial Public Class Login
     Protected WithEvents Password As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RememberMe control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
-    
-    '''<summary>
-    '''Label1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''btnLogin control.
     '''</summary>
     '''<remarks>
@@ -75,6 +57,15 @@ Partial Public Class Login
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''RememberMe control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RememberMe As Global.System.Web.UI.WebControls.CheckBox
     
     '''<summary>
     '''RegisterHyperLink control.

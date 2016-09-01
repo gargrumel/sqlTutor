@@ -270,7 +270,7 @@ Public Class lesson1
     'Tracks the amount of incorrect answers and displays a message at specific count
     'Passes the count to a Hidden Field 
     Public Sub addWrong()
-        wrongAns.Value += 1 'Adds 1 to the hiiden field value
+        wrongAns.Value += 1 'Adds 1 to the hidden field value
         If wrongAns.Value = 2 Then
             lbResult.Text = feedBack2 'Shows the feedback2 text if the hidden field value is 2
         ElseIf wrongAns.Value = 3 Then

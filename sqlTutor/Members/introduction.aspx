@@ -65,7 +65,7 @@
         <div>
         <br />
 
-      <asp:Button class ="cButton" ID ="btnComplete" runat="server" Text="Complete Lesson" BackColor="#0099FF" CssClass="btn btn-default" ForeColor="White" Visible="False"/>
+      <asp:Button class ="cButton" ID ="btnComplete" runat="server" Text="Complete Lesson" BackColor="#0099FF" CssClass="button" ForeColor="White" Visible="False"/>
    </div>
     </div>
 </asp:Content>

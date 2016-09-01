@@ -14,12 +14,12 @@
     <style>
         
 #mobileHeader{
+   
+   
     height:50px;     
     vertical-align:top;
     position:fixed;
     width:100%;
-   
-   
       
 }
 
@@ -31,8 +31,7 @@
 }
 
 #mobileHeader ul li a{    
-    text-decoration:none;
-   
+    text-decoration:none;   
     color:white;
     
      

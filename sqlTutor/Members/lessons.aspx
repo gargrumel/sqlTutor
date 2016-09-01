@@ -18,8 +18,7 @@
           
      <div id="content" >          
     <div class="tile">
-        <br />
-        <br />
+        
         <br />
         LEVEL 1<br />
         <br />   
@@ -33,8 +32,7 @@
         <br />
         </div>
         <div class="tile">
-            <br />
-            <br />
+           
             <br />
             LEVEL 2<br />
             <br />
@@ -46,8 +44,7 @@
         <asp:Label ID="Label3" runat="server" Text="Reward: 20QP"></asp:Label>
         </div>
         <div class="tile">
-            <br />
-            <br />
+          
             <br />
             LEVEL 3<br />
             <br />
@@ -59,8 +56,7 @@
         <asp:Label ID="Label4" runat="server" Text="Reward: 30QP"></asp:Label>
         </div>
         <div class="tile">
-            <br />
-            <br />
+            
             <br />
             LEVEL 4<br />
             <br />
@@ -72,13 +68,12 @@
         <asp:Label ID="Label5" runat="server" Text="Reward: 40QP" Enabled="False"></asp:Label>
         </div>
         <div class="tile" id="bonus">
-            <br />
-            <br />
+            
             <br />
             BONUS STAGE
             <br />
              <br />
-            <asp:ImageButton ID="imgBonus" runat="server" height="74px" width="96px" Enabled="False" BackColor="#1A7B72" />
+            <asp:ImageButton ID="imgBonus" runat="server" height="74px" width="96px" Enabled="False" BackColor="#1A7B72" ImageUrl="~/Images/Lock-64.png" />
              
               <br />
             <div id="bonusBar">
@@ -95,8 +90,7 @@
         </div>
 
         <div class="tile">
-            <br />
-            <br />
+            
             <br />
             LEVEL 6<br />
             <br />
@@ -112,8 +106,7 @@
         <asp:Label ID="Label6" runat="server" Text="Reward: 45QP"></asp:Label>
         </div>
         <div class="tile">
-            <br />
-            <br />
+            
             <br />
             STAGE 7<br />
             <br />
@@ -125,8 +118,7 @@
         <asp:Label ID="Label7" runat="server" Text="Reward: 50QP"></asp:Label>
         </div>
         <div class="tile">
-            <br />
-            <br />
+            
             <br />
             STAGE 8<br />
             <br />
@@ -138,8 +130,7 @@
         <asp:Label ID="Label8" runat="server" Text="Reward: 75QP"></asp:Label>
         </div>
         <div class="tile">
-            <br />
-            <br />
+            
             <br />
             STAGE 9<br />
             <br />
@@ -151,12 +142,11 @@
         <asp:Label ID="Label9" runat="server" Text="Reward: 80QP"></asp:Label>
         </div>
         <div class="tile">
-            <br />
-            <br />
+            
             <br />
             STAGE 10<br />
             <br />
-            <asp:ImageButton ID="imgLess9" runat="server" height="74px" width="96px" Enabled="False" BackColor="#1A7B72" />
+            <asp:ImageButton ID="imgLess9" runat="server" height="74px" width="96px" Enabled="False" BackColor="#1A7B72" ImageUrl="~/Images/Lock-64.png" />
             <br />
             <br />
             <asp:Label ID="lbLess9" runat="server" Text="Query Master Challenge"></asp:Label>

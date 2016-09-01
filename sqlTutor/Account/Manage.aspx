@@ -13,11 +13,9 @@
     <script>
         $(document).ready(function () {                          
             amount = document.getElementById('<%= lbAmount.ClientID %>').innerHTML    
-            total = document.getElementById('<%= lbTotal.ClientID %>').innerHTML  
-
+            total = document.getElementById('<%= lbTotal.ClientID %>').innerHTML 
             highlight();
-            animateProgressBar(amount);
-        
+            animateProgressBar(amount);        
             function animateProgressBar(p)
             {
                 val = p / total * 100 /*lessons completed / total lessons * 100 to display text as a percentage of the total lessons*/
@@ -39,10 +37,10 @@
                     }
                 })
             }
-            function highlight() {
-                document.getElementById('mainProfile').style.backgroundColor = "blue";
-            }
 
+            function highlight() {
+                document.getElementById('main').style.backgroundColor = "blue";
+            }
         });
    
     </script>
@@ -51,7 +49,7 @@
     <h4>Your Profile</h4> 
     <div class="parent">
         <div class="item"><br />
-            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png"  ToolTip="Click to change picture" />
+            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png"  ToolTip="Click to change picture" Height="30%" Width="30%" />
             <br />
             <asp:Label ID="lbEmail" runat="server"></asp:Label>
             <br />            

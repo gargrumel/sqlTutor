@@ -36,10 +36,12 @@
                             </div>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
                             <br />
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe" ID="Label1">Remember me?</asp:Label>
-                            <br />
                             <asp:Button runat="server" class="button" OnClick="LogIn" Text="LOG IN" ID="btnLogin" Width="189px" Height="52px" BorderStyle="None" />
+                        &nbsp;
+                            <asp:CheckBox ID="RememberMe" runat="server" Visible="False" />
+                            <br />
+                                <br />
+                            <br />
                         </div>
                     </div>
                 </div>

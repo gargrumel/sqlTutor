@@ -3,11 +3,10 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
   
-    <script type="text/javascript">
-          
-        document.getElementById('logo').style.backgroundColor = "blue";
+    <script type="text/javascript">          
+        
   
-        $(document).ready(function () {      
+        $(document).ready(function () { 
                        
             amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML             
 

@@ -28,6 +28,7 @@ Public Class lessons
             populate(11, lbLess6, imgLess6)
             populate(12, lbLess7, imgLess7)
             populate(13, lbLess8, imgLess8)
+
         End If
 
         getQp() 'Calls the getQp Method

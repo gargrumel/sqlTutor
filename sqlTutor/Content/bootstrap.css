@@ -332,8 +332,8 @@ input,
 select[multiple],
 textarea {
   background-image: none;
-    width: 593px;
-    height: 228px;
+    width: 19px;
+    height: 35px;
 }
 
 a {
@@ -4548,6 +4548,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-toggle {
   border-color: #333333;
+    top: 0px;
+    left: 8px;
 }
 
 .navbar-inverse .navbar-toggle:hover,
