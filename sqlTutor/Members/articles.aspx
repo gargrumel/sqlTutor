@@ -18,7 +18,7 @@
         <div id="listDisplay">
        
            
-                    <asp:TextBox ID="txtDisplay" runat="server" ReadOnly="True" TextMode="MultiLine" AutoPostBack="True" BorderStyle="None"></asp:TextBox>
+                    <asp:TextBox ID="txtDisplay" runat="server" ReadOnly="True" TextMode="MultiLine" AutoPostBack="True" BorderStyle="None" Height="100%" Width="100%"></asp:TextBox>
               
        
         </div>

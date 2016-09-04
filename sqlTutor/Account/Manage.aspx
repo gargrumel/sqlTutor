@@ -49,7 +49,7 @@
     <h4>Your Profile</h4> 
     <div class="parent">
         <div class="item"><br />
-            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/1469158637_user.png"  ToolTip="Click to change picture" Height="30%" Width="30%" />
+            <asp:ImageButton ID="icon" runat="server" ImageUrl="~/Images/Gender Neutral User-100.png"  ToolTip="Click to change picture" Height="30%" Width="30%" />
             <br />
             <asp:Label ID="lbEmail" runat="server"></asp:Label>
             <br />            

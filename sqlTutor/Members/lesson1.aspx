@@ -84,6 +84,7 @@
         </div>
         <div class="docItem">
             <div class="lessonHeader" id="queryWindow">
+                <asp:Label Text="Try It.." runat="server" CssClass="labelHeader" />
             </div>
 
 
@@ -121,7 +122,7 @@
 
         <div class="docItem">
             <div class="lessonHeader" id="resultWindow">               
-                <asp:Label ID="Label3" runat="server" Text="Query Results"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Query Results" CssClass="labelHeader"></asp:Label>
                 </div>
              <asp:UpdatePanel ID="updatePanel3" runat="server">
                 <ContentTemplate>

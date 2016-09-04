@@ -7,11 +7,21 @@
 <html lang="en">
 <head runat="server">
     
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
 
-     <script type="text/javascript">
+        document.getElementById('lessons').style.backgroundColor = "blue";     
+
+        $(window).load(function () {
+            $(".loading").fadeOut("slow");
+        })
+
+      
+   
+    </script>      
   
-        
-    </script>
+   
+      
 
 
 
@@ -97,8 +107,9 @@
             </div>
         </div>
         <div class="container body-content">
+             
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-
+              
                 <p>
                     <br />
                 </p>
@@ -106,6 +117,7 @@
 
             </asp:ContentPlaceHolder>
             <hr />
+             
             <div id="footer">
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - 6WCM0009 - E-Learning Applications Design and Development</p>

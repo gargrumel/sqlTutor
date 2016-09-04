@@ -3,10 +3,9 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
   
-    <script type="text/javascript">          
-        
-  
-        $(document).ready(function () { 
+    <script type="text/javascript">       
+          
+        $(document).ready(function () {
                        
             amount = document.getElementById('<%= lbPercent.ClientID %>').innerHTML             
 
@@ -36,7 +35,6 @@
   <div id ="welcomeArea">            
    <br />
    <br />
-   <br />
    <asp:Label ID="lbWelcome" runat="server" Text="Welcome: " Font-Size="X-Large"></asp:Label>
    <asp:Label ID="lbUser" runat="server" Font-Size="X-Large"></asp:Label>
    <br />
@@ -49,7 +47,7 @@
       <br />
       
       <asp:Panel ID="panNewUser" runat="server" Font-Size="Large" Visible="False">
-          Begin your mission to becoming a SQL Master. Complete each level to earn Query Points.<br /> </asp:Panel>
+          Begin your mission to becoming a SQL Master. Complete each mission to earn Query Points.<br /> </asp:Panel>
    </div>
 
                  <br />

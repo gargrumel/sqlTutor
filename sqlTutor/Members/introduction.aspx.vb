@@ -34,9 +34,9 @@ Public Class introduction
             complete = True 'Sets the complete variable to true if Method returns true otherwise, the value is false
             showAll() 'if the lesson was already completed, calls the showAll method, which shows all the tasks and the complete button 
         End If
-        If seq = 2 Then ' Allows the user to continue the lesson at a specific point, based on the sequence ID
+        If seq = 50 Then ' Allows the user to continue the lesson at a specific point, based on the sequence ID
             runTask2()
-        ElseIf seq = 3 Then
+        ElseIf seq = 75 Then
             runTask3()
         End If
     End Sub
@@ -71,7 +71,7 @@ Public Class introduction
 
     'Makes the required panel for task 2 visible and updates the queryPoints table, once the lesson has not already been completed
     Public Sub runTask2()
-        r.updateLesson(lessId, userId, 2) 'Sets the sequence id for the lesson so the user can return to this point
+        r.updateLesson(lessId, userId, 50) 'Sets the sequence id for the lesson so the user can return to this point
         lbTask.Text = task2
         Panel1.Visible = False
         Panel2.Visible = True
@@ -83,7 +83,7 @@ Public Class introduction
 
     'Makes the required panel for task 3 visible and updates the queryPoints table, once the lesson has not already been completed
     Public Sub runTask3()
-        r.updateLesson(lessId, userId, 3) 'Sets the sequence id for the lesson so the user can return to this point
+        r.updateLesson(lessId, userId, 75) 'Sets the sequence id for the lesson so the user can return to this point
         lbTask.Text = task3
         Panel1.Visible = False
         Panel2.Visible = False

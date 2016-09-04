@@ -1,13 +1,7 @@
 ﻿<%@ Page Title="Log in" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Login.aspx.vb" Inherits="sqlTutor.Login" Async="true" %>
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
-
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-  
-    <script src="Scripts/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-    
-    </script>
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">  
 
     <div class="row">
         <div class="col-md-8">
@@ -23,7 +17,7 @@
                     <div class="form-group">
                         <div class="col-md-10" style="text-align: left">
                             <div class="text-center">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeHolder="Email" Width="50%" >lennon@gmail.com</asp:TextBox>
+                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" placeHolder="Email" >lennon@gmail.com</asp:TextBox>
                             </div>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                                 CssClass="text-danger" ErrorMessage="The email field is required." />
@@ -32,7 +26,7 @@
                     <div class="form-group">
                         <div class="col-md-10" style="text-align: left">
                             <div class="text-center">
-                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeHolder="Password" Width="50%" >Test123?</asp:TextBox>
+                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" placeHolder="Password" >Test123?</asp:TextBox>
                             </div>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
                             <br />

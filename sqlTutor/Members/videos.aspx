@@ -10,6 +10,7 @@
 
 <div class="videoTile">
     <div class="divHeader">
+        <asp:Label Text="SELECT ALL Statement" runat="server" />
 
     </div>
     <video controls="controls" class="player">
@@ -22,9 +23,9 @@
 
 <div class="videoTile">
      <div class="divHeader">
-         
+          <asp:Label Text="SELECT ALL Statement (WHERE CLAUSE)" runat="server" />
     </div>
-      <iframe src="https://www.youtube.com/embed/JeZCabShIFk" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/JeZCabShIFk"frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div class="videoTile">
@@ -37,5 +38,7 @@
 
 </div>
 
-    </div>
+</div>
+ 
+  
 </asp:Content>

@@ -242,6 +242,7 @@
     <Content Include="Images\star.png" />
     <Content Include="Images\tick.png" />
     <Content Include="Images\Unlock-64.png" />
+    <Content Include="Members\loading.aspx" />
     <Content Include="loggedOut.aspx" />
     <Content Include="Members\articles.aspx" />
     <Content Include="Members\bonus.aspx" />
@@ -434,6 +435,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Members\loading.aspx.designer.vb">
+      <DependentUpon>loading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Members\loading.aspx.vb">
+      <DependentUpon>loading.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="loggedOut.aspx.designer.vb">
       <DependentUpon>loggedOut.aspx</DependentUpon>

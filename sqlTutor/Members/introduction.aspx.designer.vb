@@ -32,6 +32,15 @@ Partial Public Class introduction
     Protected WithEvents lbTask As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''introPanel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents introPanel As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
     '''Panel1 control.
     '''</summary>
     '''<remarks>

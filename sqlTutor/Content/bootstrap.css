@@ -52,9 +52,10 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -332,9 +333,7 @@ input,
 select[multiple],
 textarea {
   background-image: none;
-    width: 19px;
-    height: 35px;
-}
+    }
 
 a {
   color: #428bca;

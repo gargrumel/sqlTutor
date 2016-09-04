@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.AspNet.Identity
+Imports System.Threading
 
 Public Class lessons
     Inherits System.Web.UI.Page
@@ -8,9 +9,18 @@ Public Class lessons
     Dim imgUrl As String = "~/Images/unlock-64.png" 'Unlocked image
     Dim imgUrl3 As String = "~/Images/star.png" 'Star image
     Dim bonusUnlocked As String = "Congratulations, Bonus Mission Unlocked.."
+    Dim t As System.Threading.Thread
+    Dim t2 As System.Threading.Thread
 
     'Loads all the lessons 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        loadPage()
+
+        getQp() 'Calls the getQp Method
+    End Sub
+
+    Public Sub loadPage()
         'If the user is anonymous
         If User.Identity.GetUserName = "" Then
             Response.Redirect("/loggedOut.aspx") 'Redirects anonymous users to the loggedOut page
@@ -30,9 +40,8 @@ Public Class lessons
             populate(13, lbLess8, imgLess8)
 
         End If
-
-        getQp() 'Calls the getQp Method
     End Sub
+
 
     'Accepts an integer (lesson ID), label (Lesson Label) and image (Lesson Image) as parameters
     'Queries the Lessons table with the lesson ID and passes the lesson information to the label and image

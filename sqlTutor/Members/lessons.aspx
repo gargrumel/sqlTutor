@@ -5,18 +5,30 @@
     <script type="text/javascript">
 
         document.getElementById('lessons').style.backgroundColor = "blue";
+
+        $(window).load(function () {
+            $(".loading").fadeOut("slow");
+        })
+
+      
    
     </script>      
   
 
               <div id="lessonPageHeader"> 
-        <h4>SQL Missions</h4>              
-                <asp:Label ID="lbQptitle" runat="server" Text="QP Earned: "></asp:Label>
+               
+        <h4>SQL Missions</h4> 
+                  <asp:Image ID="imgBulb" runat="server" ImageUrl="~/Images/bulb.jpg" Height="50px" Width="50px" />             
+                <asp:Label ID="lbQptitle" runat="server" Text="QP Earned: " Font-Size="X-Large"></asp:Label>
                 &nbsp;
-                <asp:Label ID="lbPercent" runat="server" ForeColor="black">0</asp:Label>
+                <asp:Label ID="lbPercent" runat="server" ForeColor="Black" Font-Size="X-Large">0</asp:Label>
     </div>
+      
           
-     <div id="content" >          
+     <div id="content" > 
+         <div class="loading">
+          <asp:Label Text="LOADING...Please Wait.." runat="server" />
+              </div>          
     <div class="tile">
         
         <br />

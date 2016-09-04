@@ -14,8 +14,8 @@ Public Class lesson1
     Dim ANS2 As String 'String value for the second answer
 
     'Alert messages. Needs to move to database
-    Dim error1 As String = "Check your command and try again." 'String value for the error message
-    Dim feedback As String = "You are correct, Great Job" 'String value for the feedback message
+    Dim error1 As String = "...Try Again" 'String value for the error message
+    Dim feedback As String = "You are correct" 'String value for the feedback message
     Dim completeText As String = "Complete Mission" 'String value for the button when the task is completed
     Dim feedBack2 As String = "Look at the example and try again."
     Dim feedBack3 As String = "The SQL command is Case Sensitive"
@@ -71,7 +71,7 @@ Public Class lesson1
         ElseIf seq = 48 Then
             loadTask2() 'Calls the loadTask2 method if the sequence value is 48
         ElseIf seq = 64 Then
-            loadTask2()
+            nextLesson()
             enable() 'Calls the loadTask2 method and enables the runSQL textbox if the sequence value is 64
         End If
 
